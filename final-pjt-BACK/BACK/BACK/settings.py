@@ -31,9 +31,27 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'rest_framework',
-    'corsheaders',
+    # Django Apps
     'movies',
+    'accounts',
+
+    'rest_framework',
+    
+    # CORS policy
+    'corsheaders',
+
+    # AUth
+    'rest_framework.authtoken',
+    'dj_rest_auth',
+
+    # registraction
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'dj_rest_auth.registration',
+
+    # Django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -134,3 +152,11 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 CORS_ALLOWED_ALL_ORIGINS = True
+
+AUTH_USER_MODEL = 'accounts.User'
+
+REST_AUTH = {
+    'SESSION_LOGIN' : False
+}
+
+SITE_ID = 1
