@@ -97,10 +97,10 @@ def comment_detail(request,review_pk, comment_pk):
 #         my_like = True
 #     return Response(my_like)
 
-@api_view(['POST'])
-@permission_classes([IsAuthenticated])
-def movie_like(request, movie_pk):
-    movie = get_object_or_404(Movie, pk=movie_pk)
-    user = request.user
+# @api_view(['POST'])
+# @permission_classes([IsAuthenticated])
+# def movie_like(request, movie_pk):
+#     movie = get_object_or_404(Movie, pk=movie_pk)
+#     user = request.user
 
-    if movie.like_users
+#     if movie.like_users

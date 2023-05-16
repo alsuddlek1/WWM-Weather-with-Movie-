@@ -16,5 +16,5 @@ urlpatterns = [
     path('<int:review_pk>/comments/<int:comment_pk>/', views.comment_detail),
 
     # movie_like
-    path('<int:user_pk>/<int:movie_id>/like/', views.movie_like),
+    # path('<int:user_pk>/<int:movie_id>/like/', views.movie_like),
 ]
