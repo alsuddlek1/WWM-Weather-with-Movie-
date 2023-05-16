@@ -1,10 +1,9 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
+from django.contrib.auth import get_user_model
 from rest_framework.decorators import api_view,permission_classes
-from django.views.decorators.http import require_POST
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
-from django.http import JsonResponse
 
 from .models import Movie, Genre, Review, Comment
 from .serializers import MovieSerializer,MovieListSerializer, GenreSerializer, ReviewListSerializer, CommentListSerializer
@@ -79,21 +78,29 @@ def comment_detail(request,review_pk, comment_pk):
             serializer.save(review=review)
             return Response(serializer.data)
         
-@api_view(['POST'])
-def like(request, movie_pk):
-    if request.user.is_authenticated:
-        movie = get_object_or_404(Movie, pk=movie_pk)
-        user = request.user
+# @api_view(['POST'])
+# def test(request):
+#     like_movies = request.data.get('like_movies')
+#     movies = get_list_or_404(Movie)
 
-        if movie.like_userse.filter(pk=user.pk).exists():
-            review.like_users.remove(user)
-            is_liked = False
-        else:
-            review.like_users.add(user)
-            is_liked = True
-        context = {
-            'is_liked' : is_liked,
-            'like_count' : movie.like_users.count(),
-        }
-        return JsonResponse(context)
-        
+
+# @api_view(['POST'])
+# def movie_like(request, user_pk, movie_pk):
+#     # like_movies = request.data.get('like_movies')
+#     movie = get_object_or_404(Movie, movie_id=movie_pk)
+#     user = get_object_or_404(get_user_model(), pk=user_pk)
+#     if user.like_movies.filter(pk=movie_pk).exists():
+#         user.like_movies.remove(movie.pk)
+#         my_like = False
+#     else:
+#         user.like_movies.add(movie.pk)
+#         my_like = True
+#     return Response(my_like)
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def movie_like(request, movie_pk):
+    movie = get_object_or_404(Movie, pk=movie_pk)
+    user = request.user
+
+    if movie.like_users
