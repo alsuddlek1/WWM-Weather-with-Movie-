@@ -1,7 +1,10 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view,permission_classes
+from django.views.decorators.http import require_POST
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
+from django.http import JsonResponse
 
 from .models import Movie, Genre, Review, Comment
 from .serializers import MovieSerializer,MovieListSerializer, GenreSerializer, ReviewListSerializer, CommentListSerializer
@@ -21,6 +24,7 @@ def movie_detail(request, movie_pk):
 
 
 @api_view(['POST', 'GET'])
+@permission_classes([IsAuthenticated])
 def review(request, movie_pk):
     movie = get_object_or_404(Movie, pk=movie_pk)
     if request.method == 'GET':
@@ -74,3 +78,22 @@ def comment_detail(request,review_pk, comment_pk):
         if serializer.is_valid(raise_exception=True):
             serializer.save(review=review)
             return Response(serializer.data)
+        
+@api_view(['POST'])
+def like(request, movie_pk):
+    if request.user.is_authenticated:
+        movie = get_object_or_404(Movie, pk=movie_pk)
+        user = request.user
+
+        if movie.like_userse.filter(pk=user.pk).exists():
+            review.like_users.remove(user)
+            is_liked = False
+        else:
+            review.like_users.add(user)
+            is_liked = True
+        context = {
+            'is_liked' : is_liked,
+            'like_count' : movie.like_users.count(),
+        }
+        return JsonResponse(context)
+        
