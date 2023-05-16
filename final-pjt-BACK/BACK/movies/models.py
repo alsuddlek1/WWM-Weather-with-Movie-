@@ -19,3 +19,12 @@ class Movie(models.Model):
     popularity = models.FloatField()
     adult = models.BooleanField()
     backdrop_path = models.CharField(max_length=500)
+
+
+class Review(models.Model):
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
+
+    title = models.CharField(max_length=50)
+    content = models.TextField()
+    create_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

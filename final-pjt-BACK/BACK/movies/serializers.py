@@ -19,3 +19,17 @@ class MovieSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movie
         fields = '__all__'
+
+# Review_list (각 영화의 리뷰 생성)
+class ReviewListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Review
+        # fields = ('title', 'content',)
+        fields = '__all__'
+        read_only_fields = ['movie',]
+
+# Review_detail (각 영화의 각 리뷰 디테일)
+# class ReviewSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Review
+#         fields = '__all__'
