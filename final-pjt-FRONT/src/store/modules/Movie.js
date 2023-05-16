@@ -63,7 +63,10 @@ const Movie = {
         getReview(context, payload) {
             axios({
                 method : 'get',
-                url: `${API_URL}/movies/${payload}/reviews/`
+                url: `${API_URL}/movies/${payload}/reviews/`,
+                headers: {
+                    Authorization: `Token ${this.state.accounts.token}`
+                }
             })
             .then(res => {
                 context.commit('GET_REVIEW', res.data)

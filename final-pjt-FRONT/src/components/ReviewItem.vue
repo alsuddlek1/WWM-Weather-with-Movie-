@@ -1,7 +1,6 @@
 <template>
   <div>
     {{content}}
-    {{isLogin}}
   </div>
 </template>
 
@@ -13,7 +12,7 @@ export default {
         return this.$store.state.Movie.reviewContent
       },
       isLogin() {
-        return this.$store.getters.accounts.isLogin
+        return this.$store.getters.isLogin
       }
     },
     methods: {

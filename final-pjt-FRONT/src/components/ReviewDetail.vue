@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link :to="{name:'ReviewItem', params:{reviewId : reviewItem.id}}">{{reviewItem.title}}</router-link>
+    <router-link :to="{name:'ReviewItem', params:{reviewId : reviewItem.id}}">{{reviewItem.title}}</router-link><br>
   </div>
 </template>
 
