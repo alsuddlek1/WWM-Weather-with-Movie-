@@ -33,3 +33,10 @@ class ReviewListSerializer(serializers.ModelSerializer):
 #     class Meta:
 #         model = Review
 #         fields = '__all__'
+
+# Comments (리뷰에 대한 댓글)
+class CommentListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comment
+        fields = '__all__'
+        read_only_fields = ['review',]

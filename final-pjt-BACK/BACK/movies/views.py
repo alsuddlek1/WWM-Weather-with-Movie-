@@ -46,3 +46,31 @@ def review_detail(request,movie_pk, review_pk):
         if serializer.is_valid(raise_exception=True):
             serializer.save(movie=movie)
             return Response(serializer.data)
+        
+       
+@api_view(['GET', 'POST'])
+def comments(request, review_pk):
+    review = get_object_or_404(Review, pk=review_pk)
+    if request.method == 'GET':
+        comments = Comment.objects.all().filter(review_id = review_pk)
+        serializer = CommentListSerializer(comments, many=True)
+        return Response(serializer.data)
+    elif request.method == 'POST':
+        serializer = CommentListSerializer(data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save(review=review)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        
+@api_view(['PUT', 'DELETE'])
+def comment_detail(request,review_pk, comment_pk):
+    review = get_object_or_404(Review, pk=review_pk)
+    comment = get_object_or_404(Comment, pk=comment_pk)
+    if request.method == 'DELETE':
+        comment.delete()
+        data = { 'delete' : f'comment {comment_pk} is deleted'}
+        return Response(data, status=status.HTTP_204_NO_CONTENT)
+    elif request.method == 'PUT':
+        serializer = CommentListSerializer(comment, data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save(review=review)
+            return Response(serializer.data)
