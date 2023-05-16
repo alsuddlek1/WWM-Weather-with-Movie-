@@ -21,9 +21,20 @@ export default {
         url: `https://image.tmdb.org/t/p/original/${this.movieItem.poster_path}`
       }
     },
+    computed: {
+      isLogin() {
+        return this.$store.getters.isLogin
+      }
+    },
     methods: {
       goDetail(movieItem) {
-        this.$router.push({name:'MovieDetailView', params: {movie_id: movieItem.id}})
+        // this.$router.push({name:'MovieDetailView', params: {movie_id: movieItem.id}})
+        if (this.isLogin) {
+          this.$router.push({name:'MovieDetailView', params: {movie_id: movieItem.id}})
+        } else {
+          alert('로그인이 필요한 서비스 입니다')
+          this.$router.push({name:'LoginView'})
+        }
       }
     }
 }

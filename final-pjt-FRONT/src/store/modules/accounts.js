@@ -13,7 +13,7 @@ const accounts = {
     mutations: {
         SAVE_TOKEN(state, token) {
             state.token = token
-            router.push({name: 'MovieListVIew'})
+            router.push({name: 'movies'})
         }
     },
     actions: {
