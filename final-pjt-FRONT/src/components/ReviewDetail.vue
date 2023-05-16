@@ -1,0 +1,18 @@
+<template>
+  <div>
+    <router-link :to="{name:'ReviewItem', params:{reviewId : reviewItem.id}}">{{reviewItem.title}}</router-link>
+  </div>
+</template>
+
+<script>
+export default {
+    name : 'ReviewDetail',
+    props : {
+        reviewItem: Object
+    }
+}
+</script>
+
+<style>
+
+</style>
