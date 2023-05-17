@@ -17,7 +17,9 @@ urlpatterns = [
 
     # movie_like
     path('<int:user_pk>/<int:movie_pk>/like/', views.movie_like),
+    
 
-    # popular_movies
-    path('popular/', views.recommend),
+    # recommend
+    path('recommend/popular/', views.popular_movies),
+    path('recommend/like/', views.user_like),
 ]

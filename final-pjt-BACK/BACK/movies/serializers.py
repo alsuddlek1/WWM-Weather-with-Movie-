@@ -28,7 +28,7 @@ class ReviewListSerializer(serializers.ModelSerializer):
         model = Review
         # fields = ('title', 'content',)
         fields = '__all__'
-        read_only_fields = ['movie',]
+        read_only_fields = ['movie', 'user',]
 
 # Review_detail (각 영화의 각 리뷰 디테일)
 # class ReviewSerializer(serializers.ModelSerializer):

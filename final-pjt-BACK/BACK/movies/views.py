@@ -28,27 +28,30 @@ def review(request, movie_pk):
     movie = get_object_or_404(Movie, pk=movie_pk)
     if request.method == 'GET':
         reviews = Review.objects.all().filter(movie_id = movie_pk)
-        serializer = ReviewListSerializer(reviews, many=True)
+        serializer = ReviewListSerializer(reviews,many=True)
         return Response(serializer.data)
     elif request.method == 'POST':
         serializer = ReviewListSerializer(data=request.data)
         if serializer.is_valid(raise_exception=True):
-            serializer.save(movie=movie)
+            serializer.save(user = request.user,movie=movie)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
     
 @api_view(['PUT', 'DELETE'])
 def review_detail(request,movie_pk, review_pk):
     movie = get_object_or_404(Movie, pk=movie_pk)
     review = get_object_or_404(Review, pk=review_pk)
-    if request.method == 'DELETE':
-        review.delete()
-        data = { 'delete' : f'review {review_pk} is deleted'}
-        return Response(data, status=status.HTTP_204_NO_CONTENT)
-    elif request.method == 'PUT':
-        serializer = ReviewListSerializer(review, data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            serializer.save(movie=movie)
-            return Response(serializer.data)
+    if not request.user.reviews.filter(pk=review_pk).exists():
+        return Response({'권한 없을 無'})
+    else:
+        if request.method == 'DELETE':
+            review.delete()
+            data = { 'delete' : f'review {review_pk} is deleted'}
+            return Response(data, status=status.HTTP_204_NO_CONTENT)
+        elif request.method == 'PUT':
+            serializer = ReviewListSerializer(review, data=request.data)
+            if serializer.is_valid(raise_exception=True):
+                serializer.save(movie=movie)
+                return Response(serializer.data)
         
        
 @api_view(['GET', 'POST'])
@@ -84,6 +87,9 @@ def comment_detail(request,review_pk, comment_pk):
 def movie_like(request, user_pk, movie_pk):
     movie = get_object_or_404(Movie, pk=movie_pk)
     user = get_object_or_404(get_user_model(), pk=user_pk)
+    if not request.user.reviews.filter(pk=user_pk).exists():
+        return Response({'권한 없을 無'})
+    
     if movie.like_users.filter(pk=user.pk).exists():
         movie.like_users.remove(user)
         is_liked = False
@@ -92,16 +98,31 @@ def movie_like(request, user_pk, movie_pk):
         is_liked = True
     return Response(is_liked)
 
+
+# 좋아요한 영화
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def user_like(request):
+    movies = get_list_or_404(Movie)
+    # user = get_object_or_404(get_user_model(), pk=user_pk)
+    like_movie_list = set()
+    for movie in movies:
+        if movie.like_users.exists():
+            like_movie_list.add(movie)
+    
+    serializer = MovieListSerializer(like_movie_list, many=True)
+    return Response(serializer.data)
+
 # 인기 영화
 @api_view(['GET'])
-def recommend(request):
+def popular_movies(request):
     movies = get_list_or_404(Movie)
-    movie_list = set()
+    popular_movie_list = set()
     for movie in movies:
-        movie_list.add(movie)
+        popular_movie_list.add(movie)
         
-    movie_list = list(movie_list)
-    popular_movies = sorted(movie_list, key= lambda x : x.popularity, reverse = True)[:10]
+    popular_movie_list = list(popular_movie_list)
+    popular_movies = sorted(popular_movie_list, key= lambda x : x.popularity, reverse = True)[:10]
 
     serializer = MovieListSerializer(popular_movies, many=True)
     return Response(serializer.data)
