@@ -1,14 +1,19 @@
 <template>
   <div>
     {{content}}
-    <button @click="deleteReview">리뷰 삭제</button>
-    <router-link :to="{name: 'ReviewUpdata', params: {reviewId : this.$route.params.reviewId}}">리뷰 수정</router-link>
+    <button v-if="userConfig" @click="deleteReview">리뷰 삭제</button>
+    <router-link v-if="userConfig" :to="{name: 'ReviewUpdata', params: {reviewId : this.$route.params.reviewId}}">리뷰 수정</router-link>
   </div>
 </template>
 
 <script>
 export default {
     name: 'RiviewItem',
+    data () {
+      return {
+        userConfig : null
+      }
+    },
     computed: {
       content() {
         return this.$store.state.Movie.reviewContent
@@ -45,10 +50,21 @@ export default {
         this.$store.dispatch('deleteReview',data)
       },
 
+      WhoAmI() {
+        if(this.$store.state.Movie.Review.revieId === this.$store.state.accounts.userpk){
+          this.userConfig = true
+          return 
+        } else {
+          this.userConfig = false
+          return 
+        }
+      }
+
     },
     created() {
       this.getReviewContent()
       this.searchMovieId()
+      this.WhoAmI()
     }
 }
 </script>

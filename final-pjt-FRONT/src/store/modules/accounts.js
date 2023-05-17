@@ -3,7 +3,8 @@ import router from "@/router"
 const API_URL = 'http://127.0.0.1:8000'
 const accounts = {
     state: {
-        token: null
+        token: null,    
+        userpk : null
     },
     getters: {
         isLogin(state){
@@ -14,6 +15,14 @@ const accounts = {
         SAVE_TOKEN(state, token) {
             state.token = token
             router.push({name: 'movies'})
+            axios({
+                method: 'get',
+                url: `${API_URL}/accounts/user/`,
+                headers: {
+                Authorization: `Token ${token}`
+                }
+            })
+            .then(res => state.userpk = res.data.pk)
         },
 
         DELETE_TOKEN(state) {

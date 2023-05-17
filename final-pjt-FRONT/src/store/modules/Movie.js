@@ -42,7 +42,8 @@ const Movie = {
                     state.ReviewOfmovie = review.movie
                     const title = review.title
                     const content = review.content
-                    const rev = {title, content}
+                    const revieId = payload
+                    const rev = {title, content, revieId}
                     state.Review = rev
                     // console.log(state.ReviewOfmovie)
                     return
