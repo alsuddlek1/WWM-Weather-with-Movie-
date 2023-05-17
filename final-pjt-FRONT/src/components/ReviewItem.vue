@@ -3,12 +3,22 @@
     {{content}}
     <button v-if="userConfig" @click="deleteReview">리뷰 삭제</button>
     <router-link v-if="userConfig" :to="{name: 'ReviewUpdata', params: {reviewId : this.$route.params.reviewId}}">리뷰 수정</router-link>
+
+    <CommentItem v-for="comment in Comments" :key="comment.id" :comment="comment"/>
+    <router-link :to="{name:'CommentCreate', params:{reviewId : this.$route.params.reviewId}}">댓글 작성</router-link>
+      <!-- <ReviewDetail v-for="review in reviews" :key="review.id" :review-item="review"/>
+      <router-link :to="{name:'ReviewCreate', params:{reviewId : movie.id}}">리뷰 생성</router-link> -->
   </div>
 </template>
 
 <script>
+import CommentItem from './CommentItem.vue'
+
 export default {
     name: 'RiviewItem',
+    components: {
+      CommentItem
+    },
     data () {
       return {
         userConfig : null
@@ -23,7 +33,10 @@ export default {
       },
       movieId() {
         return this.$store.state.Movie.ReviewOfmovie
-      }
+      },
+      Comments() {
+        return this.$store.state.Movie.CommentList
+      },
     },
     methods: {
       getReviewContent() {
@@ -50,14 +63,18 @@ export default {
         this.$store.dispatch('deleteReview',data)
       },
 
-      WhoAmI() {
-        if(this.$store.state.Movie.Review.revieId === this.$store.state.accounts.userpk){
+      WhoAmI() {  
+        if(this.$store.state.Movie.Review.userId === this.$store.state.accounts.userpk){
           this.userConfig = true
           return 
         } else {
           this.userConfig = false
           return 
         }
+      },
+
+      getComments() {
+        this.$store.dispatch('getComments',this.$route.params.reviewId)
       }
 
     },
@@ -65,6 +82,7 @@ export default {
       this.getReviewContent()
       this.searchMovieId()
       this.WhoAmI()
+      this.getComments()
     }
 }
 </script>

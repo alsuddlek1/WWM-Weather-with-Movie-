@@ -6,6 +6,8 @@ import MovieDetail from '@/components/MovieDetail.vue'
 import ReviewItem from '@/components/ReviewItem.vue'
 import ReviewCreate from '@/components/ReviewCreate.vue'
 import ReviewUpdata from '@/components/ReviewUpdata.vue'
+import CommentCreate from '@/components/CommentCreate.vue'
+import CommentUpdate from '@/components/CommentUpdate.vue'
 import signUpView from '../views/signUpView.vue'
 import LoginView from '../views/LoginView.vue'
 
@@ -42,6 +44,17 @@ const routes = [
     name: 'ReviewUpdata',
     component: ReviewUpdata
   },
+  {
+    path: '/comment/create/:reviewId',
+    name: 'CommentCreate',
+    component: CommentCreate
+  },
+  {
+    path: '/comment/update/:commentId',
+    name: 'CommentUpdate',
+    component: CommentUpdate
+  },
+  
   {
     path: '/signup',
     name: 'signUpView',
