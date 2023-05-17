@@ -9,7 +9,9 @@ const Movie = {
         reviewList : null,
         reviewContent : null,
         ReviewOfmovie : null,
-        Review : null
+        Review : null,
+        CommentList : null,
+        Comment: null
     },
     getters: {
         
@@ -42,12 +44,29 @@ const Movie = {
                     state.ReviewOfmovie = review.movie
                     const title = review.title
                     const content = review.content
-                    const revieId = payload
-                    const rev = {title, content, revieId}
+                    const reviewId = payload
+                    const userId = review.user
+                    const rev = {title, content, reviewId, userId}
                     state.Review = rev
                     // console.log(state.ReviewOfmovie)
                     return
                 }        
+            }
+        },
+
+        GET_COMMENTS(state, payload) {
+            state.CommentList = payload
+        },
+
+        SEARCH_REVIEW(state,payload) {
+            for (const comment of state.CommentList) {
+                if (comment.id === payload){
+                    const content = comment.content
+                    const ReviewId = comment.review
+                    const Com = {content,ReviewId}
+                    state.Comment = Com
+                    return
+                }
             }
         }
 
@@ -116,6 +135,27 @@ const Movie = {
             .catch(err => {
                 console.log(err)
             })
+        },
+
+        getComments(context, payload) {
+            axios({
+                method : 'get',
+                url: `${API_URL}/movies/${payload}/comments/`,
+                headers: {
+                    Authorization: `Token ${this.state.accounts.token}`
+                }
+            })
+            .then((res) => {
+                console.log(res.data)
+                context.commit('GET_COMMENTS',res.data)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+        },
+
+        serachReview(context, payload){
+            context.commit('SEARCH_REVIEW', payload)
         }
 
     }

@@ -1,11 +1,12 @@
 <template>
-  <div id="app" >
-    
-    <nav>
-      <router-link :to="{name : 'MovieMainView'}">Main</router-link> |
-      <router-link :to="{name : 'signUpView'}">signup</router-link> |
-      <router-link :to="{name : 'LoginView'}">logIn</router-link> |
-      <router-link :to="{name : 'MovieMainView'}" @click.native="logOut">logOut</router-link> |
+  <div id="app">
+    <nav class="navbar bg-body-tertiary ">
+    <form class="container-fluid justify-content-center">
+      <button class="btn btn-outline-success ms-3 me-3" type="button"><router-link :to="{name : 'MovieMainView'}">Main</router-link></button>
+      <button class="btn btn-outline-success ms-3 me-3" type="button" v-if="isLogin === false"><router-link :to="{name : 'signUpView'}">signup</router-link> </button>
+      <button class="btn btn-outline-success ms-3 me-3" type="button" v-if="isLogin === false"><router-link :to="{name : 'LoginView'}">logIn</router-link> </button>
+      <button class="btn btn-outline-success ms-3 me-3" type="button" v-if="isLogin !== false"><router-link :to="{name : 'MovieMainView'}" @click.native="logOut">logOut</router-link></button> 
+      </form>
     </nav>
       
  
@@ -17,11 +18,17 @@
 <script>
 export default {
   name: 'App',
+  computed: {
+    isLogin() {
+      return this.$store.getters.isLogin
+    }
+  },
   methods: {
     logOut() {
       this.$store.dispatch('logOut')
-    }
-  }
+    },
+  },
+  
 }
 </script>
 
