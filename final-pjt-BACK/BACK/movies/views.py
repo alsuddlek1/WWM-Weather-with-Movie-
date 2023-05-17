@@ -77,30 +77,31 @@ def comment_detail(request,review_pk, comment_pk):
         if serializer.is_valid(raise_exception=True):
             serializer.save(review=review)
             return Response(serializer.data)
+
+# 영화 좋아요
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def movie_like(request, user_pk, movie_pk):
+    movie = get_object_or_404(Movie, pk=movie_pk)
+    user = get_object_or_404(get_user_model(), pk=user_pk)
+    if movie.like_users.filter(pk=user.pk).exists():
+        movie.like_users.remove(user)
+        is_liked = False
+    else:
+        movie.like_users.add(user)
+        is_liked = True
+    return Response(is_liked)
+
+# 인기 영화
+@api_view(['GET'])
+def recommend(request):
+    movies = get_list_or_404(Movie)
+    movie_list = set()
+    for movie in movies:
+        movie_list.add(movie)
         
-# @api_view(['POST'])
-# def test(request):
-#     like_movies = request.data.get('like_movies')
-#     movies = get_list_or_404(Movie)
+    movie_list = list(movie_list)
+    popular_movies = sorted(movie_list, key= lambda x : x.popularity, reverse = True)[:10]
 
-
-# @api_view(['POST'])
-# def movie_like(request, user_pk, movie_pk):
-#     # like_movies = request.data.get('like_movies')
-#     movie = get_object_or_404(Movie, movie_id=movie_pk)
-#     user = get_object_or_404(get_user_model(), pk=user_pk)
-#     if user.like_movies.filter(pk=movie_pk).exists():
-#         user.like_movies.remove(movie.pk)
-#         my_like = False
-#     else:
-#         user.like_movies.add(movie.pk)
-#         my_like = True
-#     return Response(my_like)
-
-# @api_view(['POST'])
-# @permission_classes([IsAuthenticated])
-# def movie_like(request, movie_pk):
-#     movie = get_object_or_404(Movie, pk=movie_pk)
-#     user = request.user
-
-#     if movie.like_users
+    serializer = MovieListSerializer(popular_movies, many=True)
+    return Response(serializer.data)

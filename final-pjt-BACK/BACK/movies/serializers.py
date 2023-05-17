@@ -9,6 +9,8 @@ class GenreSerializer(serializers.ModelSerializer):
 
 # 영화 리스트 : main 
 class MovieListSerializer(serializers.ModelSerializer):
+    # genres = GenreSerializer(many=True, read_only=True)
+
     class Meta:
         model = Movie
         # fields = ('title', 'overview','poster_path', 'movie_id',)
