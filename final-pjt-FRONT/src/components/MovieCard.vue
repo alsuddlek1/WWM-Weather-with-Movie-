@@ -28,9 +28,8 @@ export default {
     },
     methods: {
       goDetail(movieItem) {
-        // this.$router.push({name:'MovieDetailView', params: {movie_id: movieItem.id}})
         if (this.isLogin) {
-          this.$router.push({name:'MovieDetailView', params: {movie_id: movieItem.id}})
+          this.$router.push({name:'MovieDetail', params: {movie_id: movieItem.id}})
         } else {
           alert('로그인이 필요한 서비스 입니다')
           this.$router.push({name:'LoginView'})

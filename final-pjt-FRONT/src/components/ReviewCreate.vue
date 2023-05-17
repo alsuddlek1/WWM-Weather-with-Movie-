@@ -22,6 +22,11 @@ export default {
             content : null
         }
     },
+    computed: {
+        isLogin() {
+        return this.$store.getters.isLogin
+      }
+    },
     methods: {
         createReview() {
             const title = this.title
@@ -46,8 +51,16 @@ export default {
             .then(() => {
                 this.$router.push({name:'MovieDetailView', params: {movie_id : this.$route.params.reviewId}})
             })
-            .catch(err => console.log(err))
+            .catch(err => console.log(err))         
         }
+    },
+    created() {
+        if (this.isLogin) {
+            return
+        } else {
+        alert('로그인이 필요한 서비스 입니다')
+        this.$router.push({name:'LoginView'})
+        }   
     }
 }
 </script>

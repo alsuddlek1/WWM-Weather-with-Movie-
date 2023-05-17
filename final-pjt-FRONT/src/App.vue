@@ -1,14 +1,27 @@
 <template>
   <div id="app">
     <nav>
-      <router-link :to="{name : 'movies'}">Movie</router-link> |
+      <router-link :to="{name : 'MovieMainView'}">Main</router-link> |
       <router-link :to="{name : 'signUpView'}">signup</router-link> |
-      <router-link :to="{name : 'LoginView'}">login</router-link> |
- 
+      <router-link :to="{name : 'LoginView'}">logIn</router-link> |
+      <router-link :to="{name : 'MovieMainView'}" @click.native="logOut">logOut</router-link> |
     </nav>
+      
+ 
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'App',
+  methods: {
+    logOut() {
+      this.$store.dispatch('logOut')
+    }
+  }
+}
+</script>
 
 <style>
 #app {

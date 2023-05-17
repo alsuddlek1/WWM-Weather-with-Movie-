@@ -19,10 +19,10 @@
 </template>
 
 <script>
-import ReviewDetail from '../components/ReviewDetail.vue'
+import ReviewDetail from './ReviewDetail.vue'
 
 export default {
-    name: 'MovieDetailView',
+    name: 'MovieDetail',
     data() {
       return {
         movie_id : this.$route.params.movie_id,

@@ -14,6 +14,10 @@ const accounts = {
         SAVE_TOKEN(state, token) {
             state.token = token
             router.push({name: 'movies'})
+        },
+
+        DELETE_TOKEN(state) {
+            state.token = null
         }
     },
     actions: {
@@ -48,6 +52,18 @@ const accounts = {
             })
             .then(res => {
                 context.commit('SAVE_TOKEN', res.data.key)
+            })
+            .catch(err => console.log(err))
+        },
+
+        logOut(context) {
+            
+            axios({
+                method: 'post',
+                url: `${API_URL}/accounts/logout/`,
+            })
+            .then(res => {
+                context.commit('DELETE_TOKEN', res.data.key)
             })
             .catch(err => console.log(err))
         }

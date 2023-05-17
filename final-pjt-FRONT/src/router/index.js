@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import MovieMainView from '../views/MovieMainView.vue'
 import MovieListVIew from '../views/MovieListVIew.vue'
-import MovieDetailView from '../views/MovieDetailView.vue'
+import MovieDetail from '@/components/MovieDetail.vue'
 import ReviewItem from '@/components/ReviewItem.vue'
 import ReviewCreate from '@/components/ReviewCreate.vue'
 import signUpView from '../views/signUpView.vue'
@@ -12,13 +13,18 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
+    name: 'MovieMainView',
+    component: MovieMainView
+  },
+  {
+    path: '/movies',
     name: 'movies',
     component: MovieListVIew
   },
   {
     path: '/movie/:movie_id',
-    name: 'MovieDetailView',
-    component: MovieDetailView
+    name: 'MovieDetail',
+    component: MovieDetail
   },
   {
     path: '/review/:reviewId',

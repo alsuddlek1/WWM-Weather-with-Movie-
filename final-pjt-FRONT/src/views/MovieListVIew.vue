@@ -18,7 +18,10 @@ export default {
     computed: {
         movies() {
             return this.$store.state.Movie.movieList
-        }
+        },
+        isLogin() {
+        return this.$store.getters.isLogin
+      }
     },
     methods: {
         getMovies() {
@@ -26,7 +29,13 @@ export default {
         }
     },
     created() {
-        this.getMovies()
+        if (this.isLogin) {
+          this.getMovies()
+        } else {
+          alert('로그인이 필요한 서비스 입니다')
+          this.$router.push({name:'LoginView'})
+        }
+        
     }
 }
 </script>
