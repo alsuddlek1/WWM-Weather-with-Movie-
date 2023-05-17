@@ -49,7 +49,7 @@ export default {
 
             })
             .then(() => {
-                this.$router.push({name:'MovieDetailView', params: {movie_id : this.$route.params.reviewId}})
+                this.$router.push({name:'MovieDetail', params: {movie_id : this.$route.params.reviewId}})
             })
             .catch(err => console.log(err))         
         }

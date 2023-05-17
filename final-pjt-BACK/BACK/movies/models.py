@@ -8,7 +8,12 @@ class Genre(models.Model):
 
 class Movie(models.Model):
     genres = models.ManyToManyField(Genre)
+<<<<<<< HEAD
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_movies')
+=======
+    # user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    # like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_reviews')
+>>>>>>> front
 
     movie_id = models.TextField()
     title = models.TextField()

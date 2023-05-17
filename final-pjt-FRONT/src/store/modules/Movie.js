@@ -1,3 +1,4 @@
+import router from "@/router"
 import axios from "axios"
 const API_URL = 'http://127.0.0.1:8000'
 
@@ -7,7 +8,8 @@ const Movie = {
         movieDetail: null,
         reviewList : null,
         reviewContent : null,
-   
+        ReviewOfmovie : null,
+        Review : null
     },
     getters: {
         
@@ -31,6 +33,20 @@ const Movie = {
                     state.reviewContent = review.content
                     return
                 }
+            }
+        },
+
+        SEARCH_MOVIE_ID(state, payload) {
+            for (const review of state.reviewList){
+                if (review.id === payload){
+                    state.ReviewOfmovie = review.movie
+                    const title = review.title
+                    const content = review.content
+                    const rev = {title, content}
+                    state.Review = rev
+                    // console.log(state.ReviewOfmovie)
+                    return
+                }        
             }
         }
 
@@ -78,6 +94,27 @@ const Movie = {
 
         getReviewContent(context, payload){
             context.commit('GET_REVIEW_CONTENT', payload)
+        },
+
+        searchMovieId(context, payload) {
+            context.commit('SEARCH_MOVIE_ID', payload)
+            
+        },
+
+        deleteReview(context, data) {
+            axios({
+                method : 'delete',
+                url: `${API_URL}/movies/${data.movieId}/${data.ReviewId}/`,
+                headers: {
+                    Authorization: `Token ${this.state.accounts.token}`
+                }
+            })
+            .then(() => {
+                router.push({name:'MovieDetail', params:{movie_id : data.movieId}})
+            })
+            .catch(err => {
+                console.log(err)
+            })
         }
 
     }

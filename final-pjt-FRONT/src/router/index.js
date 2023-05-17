@@ -5,6 +5,7 @@ import MovieListVIew from '../views/MovieListVIew.vue'
 import MovieDetail from '@/components/MovieDetail.vue'
 import ReviewItem from '@/components/ReviewItem.vue'
 import ReviewCreate from '@/components/ReviewCreate.vue'
+import ReviewUpdata from '@/components/ReviewUpdata.vue'
 import signUpView from '../views/signUpView.vue'
 import LoginView from '../views/LoginView.vue'
 
@@ -35,6 +36,11 @@ const routes = [
     path: '/review/:reviewId/create/',
     name: 'ReviewCreate',
     component: ReviewCreate
+  },
+  {
+    path: '/review/:reviewId/update/',
+    name: 'ReviewUpdata',
+    component: ReviewUpdata
   },
   {
     path: '/signup',
