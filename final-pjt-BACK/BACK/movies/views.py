@@ -91,3 +91,17 @@ def movie_like(request, user_pk, movie_pk):
         movie.like_users.add(user)
         is_liked = True
     return Response(is_liked)
+
+# 인기 영화
+@api_view(['GET'])
+def recommend(request):
+    movies = get_list_or_404(Movie)
+    movie_list = set()
+    for movie in movies:
+        movie_list.add(movie)
+        
+    movie_list = list(movie_list)
+    popular_movies = sorted(movie_list, key= lambda x : x.popularity, reverse = True)[:10]
+
+    serializer = MovieListSerializer(popular_movies, many=True)
+    return Response(serializer.data)
