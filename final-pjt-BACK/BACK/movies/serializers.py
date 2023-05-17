@@ -15,9 +15,11 @@ class MovieListSerializer(serializers.ModelSerializer):
         model = Movie
         # fields = ('title', 'overview','poster_path', 'movie_id',)
         fields = '__all__'
+        # read_only_fields = ('like_users',)
 
 # movie_detail
 class MovieSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Movie
         fields = '__all__'
@@ -41,4 +43,4 @@ class CommentListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
         fields = '__all__'
-        read_only_fields = ['review',]
+        read_only_fields = ['review', 'user',]

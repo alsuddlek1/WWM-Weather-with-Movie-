@@ -21,7 +21,6 @@ def movie_detail(request, movie_pk):
     serializer = MovieSerializer(movie)
     return Response(serializer.data)
 
-
 @api_view(['POST', 'GET'])
 @permission_classes([IsAuthenticated])
 def review(request, movie_pk):
@@ -33,7 +32,7 @@ def review(request, movie_pk):
     elif request.method == 'POST':
         serializer = ReviewListSerializer(data=request.data)
         if serializer.is_valid(raise_exception=True):
-            serializer.save(user = request.user,movie=movie)
+            serializer.save(user = request.user, movie=movie)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
     
 @api_view(['PUT', 'DELETE'])
@@ -55,6 +54,7 @@ def review_detail(request,movie_pk, review_pk):
         
        
 @api_view(['GET', 'POST'])
+@permission_classes([IsAuthenticated])
 def comments(request, review_pk):
     review = get_object_or_404(Review, pk=review_pk)
     if request.method == 'GET':
@@ -64,13 +64,15 @@ def comments(request, review_pk):
     elif request.method == 'POST':
         serializer = CommentListSerializer(data=request.data)
         if serializer.is_valid(raise_exception=True):
-            serializer.save(review=review)
+            serializer.save(user = request.user, review=review)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         
 @api_view(['PUT', 'DELETE'])
 def comment_detail(request,review_pk, comment_pk):
     review = get_object_or_404(Review, pk=review_pk)
     comment = get_object_or_404(Comment, pk=comment_pk)
+    if not request.user.comments.filter(pk=comment_pk).exists():
+        return Response({'권한 없을 無'})
     if request.method == 'DELETE':
         comment.delete()
         data = { 'delete' : f'comment {comment_pk} is deleted'}
@@ -102,12 +104,12 @@ def movie_like(request, user_pk, movie_pk):
 # 좋아요한 영화
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
-def user_like(request):
+def user_like(request, user_pk):
     movies = get_list_or_404(Movie)
-    # user = get_object_or_404(get_user_model(), pk=user_pk)
+    user = get_object_or_404(get_user_model(), pk=user_pk)
     like_movie_list = set()
     for movie in movies:
-        if movie.like_users.exists():
+        if movie.like_users.filter(pk=user_pk).exists():
             like_movie_list.add(movie)
     
     serializer = MovieListSerializer(like_movie_list, many=True)
