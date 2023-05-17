@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <div id="app" >
+    
     <nav>
       <router-link :to="{name : 'MovieMainView'}">Main</router-link> |
       <router-link :to="{name : 'signUpView'}">signup</router-link> |
@@ -11,6 +12,7 @@
     <router-view/>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -31,6 +33,7 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+
 
 nav {
   padding: 30px;
