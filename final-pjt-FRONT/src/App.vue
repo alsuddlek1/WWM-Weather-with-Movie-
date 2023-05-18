@@ -24,14 +24,16 @@
         </p>
       </div>
     </div>
-    <nav class="navbar bg-body-tertiary " v-if="isLogin !== false">
+    <nav v-if="isLogin !== false">
       <ul>
         <li><a href="#intro">INTRO</a></li>
         <li><router-link :to="{name : 'randomRecommend'}">TODAY MOVIE</router-link></li>
         <li><router-link :to="{name : 'movies'}">MOVIE LIST</router-link></li>
         <li><router-link :to="{name : 'PopularMovie'}">POPULAR MOVIE</router-link></li>
         <li><router-link :to="{name : 'LikeMovie', params: {user: this.$store.state.accounts.userpk} }">LIKED MOVIE</router-link></li>
+
       </ul>
+  
     </nav>
     <router-view/>
   </div>
