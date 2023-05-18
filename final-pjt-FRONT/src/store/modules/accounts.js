@@ -14,7 +14,7 @@ const accounts = {
     mutations: {
         SAVE_TOKEN(state, token) {
             state.token = token
-            router.push({name: 'movies'})
+            router.push({name: 'MovieMainView'})
             axios({
                 method: 'get',
                 url: `${API_URL}/accounts/user/`,

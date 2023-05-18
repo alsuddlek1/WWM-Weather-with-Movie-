@@ -18,7 +18,7 @@ class Movie(models.Model):
     vote_average = models.FloatField()
     vote_count = models.IntegerField()
     release_date = models.TextField()
-    runtime = models.IntegerField()
+    # runtime = models.IntegerField()
     popularity = models.FloatField()
     adult = models.BooleanField()
     backdrop_path = models.CharField(max_length=500)
