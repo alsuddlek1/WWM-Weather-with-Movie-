@@ -17,7 +17,7 @@ export default {
     computed: {
         comment() {
             return this.$store.state.Movie.Comment
-        }
+        },
     },
     data() {
         return {
@@ -44,8 +44,8 @@ export default {
                 }
             })
             .then(() => {
-                this.$router.push({name:'ReviewItem', params: {reviewId : this.comment.ReviewId}})
-            })
+                this.$router.push({name:'ReviewItem', params:{reviewId : this.comment.ReviewId}})
+            }) 
             .catch(err => console.log(err))
         }
     },

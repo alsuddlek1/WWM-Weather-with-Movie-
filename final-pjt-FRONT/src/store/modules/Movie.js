@@ -68,9 +68,15 @@ const Movie = {
                     return
                 }
             }
+        },
+        DELETE_COMMENT(state,payload) {
+            const comment = state.CommentList.filter(comments => {
+                return comments.id === payload
+            })
+            const idx = state.CommentList.indexOf(comment)
+            state.CommentList.splice(idx,1)
         }
-
-       
+    
 
     },
     actions: {
@@ -146,7 +152,6 @@ const Movie = {
                 }
             })
             .then((res) => {
-                console.log(res.data)
                 context.commit('GET_COMMENTS',res.data)
             })
             .catch(err => {
@@ -156,7 +161,24 @@ const Movie = {
 
         serachReview(context, payload){
             context.commit('SEARCH_REVIEW', payload)
-        }
+        },
+
+        deleteComment(context, data) {
+            axios({
+                method : 'delete',
+                url: `${API_URL}/movies/${data.ReviewId}/comments/${data.CommentId}/`,
+                headers: {
+                    Authorization: `Token ${this.state.accounts.token}`
+                }
+            })
+            .then(() => {
+                context.commit('DELETE_COMMENT',data.CommentId)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+        },
+
 
     }
 }

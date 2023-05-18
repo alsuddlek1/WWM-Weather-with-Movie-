@@ -6,8 +6,6 @@
 
     <CommentItem v-for="comment in Comments" :key="comment.id" :comment="comment"/>
     <router-link :to="{name:'CommentCreate', params:{reviewId : this.$route.params.reviewId}}">댓글 작성</router-link>
-      <!-- <ReviewDetail v-for="review in reviews" :key="review.id" :review-item="review"/>
-      <router-link :to="{name:'ReviewCreate', params:{reviewId : movie.id}}">리뷰 생성</router-link> -->
   </div>
 </template>
 
@@ -75,7 +73,7 @@ export default {
 
       getComments() {
         this.$store.dispatch('getComments',this.$route.params.reviewId)
-      }
+      },
 
     },
     created() {
