@@ -3,15 +3,14 @@ import requests
 from pprint import pprint
 totla_data = []
 pk = 961
-page = 52
+page = 51
 for _ in range(2):
     URL = 'https://api.themoviedb.org/3/discover/movie'
     params = {
-        'include_adult' : 'true',
-        'include_video' : 'true',
+        'include_adult' : 'false',
+        'include_video' : 'false',
         'language' : 'ko-KR',
         'page' : page,
-        'sort_by' : 'popularity.desc',
         'api_key' : 'b578f3012a550948ffff4885867d7cab'
     }
 
@@ -41,6 +40,6 @@ for _ in range(2):
     page += 1
 
 # pprint(totla_data)
-with open("movies3.json", "w", encoding="utf-8") as w:
+with open("movies2.json", "w", encoding="utf-8") as w:
     json.dump(totla_data, w, indent="\t", ensure_ascii=False)
 
