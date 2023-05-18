@@ -9,7 +9,8 @@
       <div class="card-text">{{movie.vote_average}}</div>
       <div class="card-text">{{movie.release_date}}</div>
       <div class="card-text">{{movie.runtime}}</div>
-    </div>    
+    </div> 
+    <button @click="Like">좋아요</button>   
   </div>
 </div>    
   <ReviewDetail v-for="review in reviews" :key="review.id" :review-item="review"/>
@@ -19,8 +20,9 @@
 </template>
 
 <script>
+import axios from 'axios'
 import ReviewDetail from './ReviewDetail.vue'
-
+const API_URL = 'http://127.0.0.1:8000'
 export default {
     name: 'MovieDetail',
     data() {
@@ -50,7 +52,25 @@ export default {
       },
       getReview() {
         this.$store.dispatch('getReview', this.movie_id)
-        }
+        },
+
+      Like() {
+        axios({
+          method: 'post',
+          url: `${API_URL}/movies/${this.$store.state.accounts.userpk}/${this.movie_id}/like/`,
+          data: {
+            user : this.$store.state.accounts.userpk,
+            movie : this.movie_id
+          },
+          headers: {
+              Authorization: `Token ${this.$store.state.accounts.token}`
+            }
+          })
+        .then(res => {
+          console.log(res)
+        })
+        .catch(err => console.log(err))
+      }
     },
     created() {
       this.getMovieDetail()

@@ -6,6 +6,7 @@ const Movie = {
     state: {
         movieList : null,
         movieDetail: null,
+        movieLikeList : null,
         reviewList : null,
         reviewContent : null,
         ReviewOfmovie : null,
@@ -75,6 +76,10 @@ const Movie = {
             })
             const idx = state.CommentList.indexOf(comment)
             state.CommentList.splice(idx,1)
+        },
+
+        GET_LIKE_MOVIE(state, data){
+            state.movieLikeList = data
         }
     
 
@@ -178,6 +183,10 @@ const Movie = {
                 console.log(err)
             })
         },
+
+        getLikeMovie(context, data) {
+            context.commit('GET_LIKE_MOVIE', data)
+        }
 
 
     }

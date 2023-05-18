@@ -8,6 +8,7 @@ import ReviewCreate from '@/components/ReviewCreate.vue'
 import ReviewUpdata from '@/components/ReviewUpdata.vue'
 import CommentCreate from '@/components/CommentCreate.vue'
 import CommentUpdate from '@/components/CommentUpdate.vue'
+import LikeMovie from '@/components/LikeMovie.vue'
 import signUpView from '../views/signUpView.vue'
 import LoginView from '../views/LoginView.vue'
 
@@ -53,6 +54,11 @@ const routes = [
     path: '/comment/update/:commentId',
     name: 'CommentUpdate',
     component: CommentUpdate
+  },
+  {
+    path: '/movie/like/:user',
+    name: 'LikeMovie',
+    component: LikeMovie
   },
   
   {

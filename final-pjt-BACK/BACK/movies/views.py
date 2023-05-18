@@ -89,8 +89,8 @@ def comment_detail(request,review_pk, comment_pk):
 def movie_like(request, user_pk, movie_pk):
     movie = get_object_or_404(Movie, pk=movie_pk)
     user = get_object_or_404(get_user_model(), pk=user_pk)
-    if not request.user.reviews.filter(pk=user_pk).exists():
-        return Response({'권한 없을 無'})
+        # if not request.user.reviews.filter(pk=user_pk).exists():
+        #     return Response({'권한 없을 無'})
     
     if movie.like_users.filter(pk=user.pk).exists():
         movie.like_users.remove(user)

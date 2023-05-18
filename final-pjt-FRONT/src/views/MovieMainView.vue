@@ -6,7 +6,8 @@
         <!-- <img src="@/assets/main_movie2.jpg" class="image"> -->
       </div>
     </div>
-        <router-link :to="{name : 'movies'}">영화 전체 리스트 보기</router-link>
+        <router-link :to="{name : 'movies'}">영화 전체 리스트 보기</router-link><br>
+        <router-link :to="{name : 'LikeMovie', params: {user: this.$store.state.accounts.userpk}}">내가 좋아요한 영화</router-link>
   </div>
 </template>
 
