@@ -7,7 +7,9 @@
       </div>
     </div>
         <router-link :to="{name : 'movies'}">영화 전체 리스트 보기</router-link><br>
-        <router-link :to="{name : 'LikeMovie', params: {user: this.$store.state.accounts.userpk}}">내가 좋아요한 영화</router-link>
+        <router-link :to="{name : 'LikeMovie', params: {user: this.$store.state.accounts.userpk}}">내가 좋아요한 영화</router-link><br>
+        <router-link :to="{name : 'PopularMovie'}">인기 영화 추천</router-link><br>
+        <router-link :to="{name : 'randomRecommend'}">오늘의 추천 영화</router-link>
   </div>
 </template>
 

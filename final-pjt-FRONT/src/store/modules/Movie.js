@@ -7,12 +7,13 @@ const Movie = {
         movieList : null,
         movieDetail: null,
         movieLikeList : null,
+        popularMovie: null,
         reviewList : null,
         reviewContent : null,
         ReviewOfmovie : null,
         Review : null,
         CommentList : null,
-        Comment: null
+        Comment: null,
     },
     getters: {
         
@@ -80,6 +81,10 @@ const Movie = {
 
         GET_LIKE_MOVIE(state, data){
             state.movieLikeList = data
+        },
+
+        GET_POPULAR_MOVIE(state,payload) {
+            state.popularMovie = payload
         }
     
 
@@ -186,7 +191,12 @@ const Movie = {
 
         getLikeMovie(context, data) {
             context.commit('GET_LIKE_MOVIE', data)
+        },
+
+        getPopularMovie(context, payload) {
+            context.commit('GET_POPULAR_MOVIE', payload)
         }
+
 
 
     }

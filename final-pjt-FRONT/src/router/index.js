@@ -9,6 +9,8 @@ import ReviewUpdata from '@/components/ReviewUpdata.vue'
 import CommentCreate from '@/components/CommentCreate.vue'
 import CommentUpdate from '@/components/CommentUpdate.vue'
 import LikeMovie from '@/components/LikeMovie.vue'
+import PopularMovie from '@/components/PopularMovie.vue'
+import randomRecommend from '@/components/randomRecommend.vue'
 import signUpView from '../views/signUpView.vue'
 import LoginView from '../views/LoginView.vue'
 
@@ -59,6 +61,16 @@ const routes = [
     path: '/movie/like/:user',
     name: 'LikeMovie',
     component: LikeMovie
+  },
+  {
+    path: '/popular',
+    name: 'PopularMovie',
+    component: PopularMovie
+  },
+  {
+    path: '/random',
+    name: 'randomRecommend',
+    component: randomRecommend
   },
   
   {

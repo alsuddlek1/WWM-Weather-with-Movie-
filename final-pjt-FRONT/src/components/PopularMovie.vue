@@ -1,0 +1,43 @@
+<template>
+  <div>
+    <div class="row row-cols-1 row-cols-sm-3 row-cols-md-5 g-2">
+    <PopularMovieItem v-for="movie in movies" :key="movie.id" :movie="movie"/>
+    </div>
+  </div>
+</template>
+
+<script>
+import axios from 'axios'
+import PopularMovieItem from './PopularMovieItem.vue'
+const API_URL = 'http://127.0.0.1:8000'
+export default {
+    name: 'PopularMovie',
+    components: {
+        PopularMovieItem
+    },
+    computed: {
+        movies() {
+            return this.$store.state.Movie.popularMovie
+        } 
+    },
+    methods: {
+        getPopularMovie() {
+            axios({
+                method: 'get',
+                url: `${API_URL}/movies/recommend/popular/`
+            })
+            .then(res => {
+                this.$store.dispatch('getPopularMovie',res.data)
+            })
+            .catch(err => console.log(err))
+        }
+    },
+    created() {
+        this.getPopularMovie()
+    }
+}
+</script>
+
+<style>
+
+</style>
