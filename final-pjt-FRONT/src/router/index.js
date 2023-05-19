@@ -13,6 +13,7 @@ import PopularMovie from '@/components/PopularMovie.vue'
 import randomRecommend from '@/components/randomRecommend.vue'
 import signUpView from '../views/signUpView.vue'
 import LoginView from '../views/LoginView.vue'
+import NotFound from '@/components/NotFound.vue'
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,11 @@ const routes = [
     name: 'MovieMainView',
     component: MovieMainView
   },
+  {
+    path: '/404',
+    name: 'NotFound',
+    component: NotFound
+  }, 
   {
     path: '/movies',
     name: 'movies',
@@ -82,6 +88,10 @@ const routes = [
     path: '/login',
     name: 'LoginView',
     component: LoginView
+  },
+  {
+    path: '*',
+    redirect : '/404'
   },
 
 ]

@@ -2,7 +2,7 @@
 <div class="row row-cols-1 row-cols-sm-3 g-2">
 <div class="container">
   <div class="row">
-  <div class="card ">
+  <div class="card mouse" @click="goDetail(movies)">
     <img :src="url" class="card-img-top">
       <div class="card-body">
       <h5 class="card-title">{{movies.title}}</h5>
@@ -29,10 +29,17 @@ export default {
       url() {
       return `https://image.tmdb.org/t/p/original/${this.movies.poster_path}`
     },
+    },
+    methods: {
+      goDetail(movies) {
+        this.$router.push({name:'MovieDetail', params: {movie_id: movies.id}})
+      }
     }
 }
 </script>
 
 <style>
-
+.mouse{
+    cursor: pointer;
+  }
 </style>

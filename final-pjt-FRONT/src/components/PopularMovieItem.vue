@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="card ">
+      <div class="card mouse" @click="goDetail(movie)">
         <img :src="url" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title">{{movie.title}}</h5>
@@ -26,10 +26,17 @@ export default {
         url() {
         return `https://image.tmdb.org/t/p/original/${this.movie.backdrop_path}`
         }
+    },
+    methods: {
+      goDetail(movie) {
+        this.$router.push({name:'MovieDetail', params: {movie_id: movie.id}})
+      }
     }
 }
 </script>
 
 <style>
-
+.mouse{
+    cursor: pointer;
+  }
 </style>
