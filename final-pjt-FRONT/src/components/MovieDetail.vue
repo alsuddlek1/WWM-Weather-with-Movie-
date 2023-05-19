@@ -14,7 +14,8 @@
   </div>    
   <p class="fontcolor font"> ▶ 리 뷰 목 록 ◀ </p>
   <ReviewDetail v-for="review in reviews" :key="review.id" :review-item="review" class="fontcolor font"/>
-  <button><router-link :to="{name:'ReviewCreate', params:{reviewId : movie.id}}" class="fontcolor font">리뷰 생성</router-link></button>
+  <br>
+  <button @click="onClick" class="fontcolor font">리뷰 생성</button>
 </div>
 
 </template>
@@ -70,6 +71,9 @@ export default {
           console.log(res)
         })
         .catch(err => console.log(err))
+      },
+      onClick() {
+        this.$router.push({name:'ReviewCreate', params:{reviewId : this.movie.id}})
       }
     },
     created() {
@@ -83,6 +87,12 @@ export default {
   .fontcolor{
     color: white;
     text-decoration: none;
+  }
+  
+  .fontcolor:hover {
+    /* background-color: gray; */
+    color: white;
+    transition: 0.5s;
   }
   
   @font-face {

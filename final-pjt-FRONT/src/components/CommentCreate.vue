@@ -3,7 +3,7 @@
     <h1>댓글 작성</h1>
     <form @submit.prevent="createComment">
       <label for="content">내용 : </label>
-      <textarea id="content" cols="30" rows="10" v-model="content"></textarea><br>
+      <textarea id="content" cols="30" rows="10" v-model="content" class="fontcolor font"></textarea><br>
       <input type="submit" id="submit">
     </form>
   </div>

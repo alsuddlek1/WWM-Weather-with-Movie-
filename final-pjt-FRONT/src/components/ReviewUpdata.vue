@@ -1,11 +1,11 @@
 <template>
   <div>
-    <h1>리뷰 수정</h1>
+    <h1 class="fontcolor font">리뷰 수정</h1>
     <form @submit.prevent="updateReview">
-        <label for="title">제목 : </label>
+        <label for="title" class="fontcolor font">제목 : </label>
         <input type="text" id="title" v-model.trim="title"><br>
-        <label for="content">내용 : </label>
-        <textarea id="content" cols="30" rows="10" v-model="content"></textarea><br>
+        <label for="content" class="fontcolor font">내용 : </label>
+        <textarea id="content" cols="30" rows="10" v-model="content" class="fontcolor font"></textarea><br>
         <input type="submit" id="submit">
     </form>
   </div>

@@ -1,11 +1,12 @@
 <template>
-  <div>
-    {{content}} <br>
-    <button v-if="userConfig" @click="deleteReview" class="fontcolor font">리뷰 삭제</button>
-    <button v-if="userConfig"><router-link :to="{name: 'ReviewUpdata', params: {reviewId : this.$route.params.reviewId}}" class="fontcolor font">리뷰 수정</router-link></button>
-
+  <div class="fontcolor font">
+    <p> 내용 : {{content}}</p>
+    <hr>
     <CommentItem v-for="comment in Comments" :key="comment.id" :comment="comment"/>
-    <button><router-link :to="{name:'CommentCreate', params:{reviewId : this.$route.params.reviewId}}" class="fontcolor font">댓글 작성</router-link></button>
+    <br>
+    <button @click="GoComment" class="fontcolor font">댓글 작성</button>
+    <button v-if="userConfig" @click="deleteReview" class="fontcolor font">리뷰 삭제</button>
+    <button v-if="userConfig" @click="goUpdateReview" class="fontcolor font">리뷰 수정</button>
   </div>
 </template>
 
@@ -19,7 +20,8 @@ export default {
     },
     data () {
       return {
-        userConfig : null
+        userConfig : null,
+        ReviewId : this.$route.params.reviewId
       }
     },
     computed: {
@@ -74,6 +76,14 @@ export default {
       getComments() {
         this.$store.dispatch('getComments',this.$route.params.reviewId)
       },
+
+      GoComment(){
+        this.$router.push({name:'CommentCreate', params:{reviewId : this.ReviewId}})
+      },
+      
+      goUpdateReview() {
+        this.$router.push({name: 'ReviewUpdata', params: {reviewId : this.ReviewId}})
+      }
 
     },
     created() {

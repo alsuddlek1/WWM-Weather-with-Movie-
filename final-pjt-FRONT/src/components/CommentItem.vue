@@ -1,7 +1,7 @@
 <template>
   <div>
-    <p>{{comment.content}}</p>
-    <button v-if="userConfig" ><router-link :to="{name: 'CommentUpdate', params: {commentId : comment.id}}" class="fontcolor font">댓글 수정</router-link></button>
+    <p>댓글 : {{comment.content}}</p>
+    <button v-if="userConfig" @click="onClick(comment.id)" class="fontcolor font">댓글 수정</button>
     <button v-if="userConfig" @click="deleteComment">댓글 삭제</button>
   </div>
 </template>
@@ -35,6 +35,9 @@ export default {
         const CommentId = this.comment.id
         const data = {ReviewId, CommentId}
         this.$store.dispatch('deleteComment', data)
+      },
+      onClick(commentId) {
+        this.$router.push({name: 'CommentUpdate', params: {commentId : commentId}})
       }
     },
 
