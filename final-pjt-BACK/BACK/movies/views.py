@@ -7,13 +7,27 @@ from rest_framework import status
 
 from .models import Movie, Genre, Review, Comment
 from .serializers import MovieSerializer,MovieListSerializer, GenreSerializer, ReviewListSerializer, CommentListSerializer
+# from .pagination import MovieNumberPagination
 
 # Create your views here.
+# movie_list
+from rest_framework.pagination import PageNumberPagination
+class CustomPagination(PageNumberPagination):
+    page_size = 20  # 페이지당 항목 수
+    page_query_param = 'page'  # 페이지 번호를 전달하는 GET 매개변수 이름
+    page_size_query_param = 'size'  # 페이지 크기를 전달하는 GET 매개변수 이름
+    max_page_size = 20  # 페이지 크기의 최댓값
+
 @api_view(['GET'])
 def main(request):
     movies = get_list_or_404(Movie)
-    serializer = MovieListSerializer(movies, many=True)
-    return Response(serializer.data)
+    paginator = CustomPagination()
+    result_page = paginator.paginate_queryset(movies, request)
+    # serializer = MovieListSerializer(movies, many=True)
+    serializer = MovieListSerializer(result_page, many=True)
+    # pagination = MovieNumberPagination
+    # return Response(serializer.data)
+    return paginator.get_paginated_response(serializer.data)
 
 @api_view(['GET'])
 def movie_detail(request, movie_pk):
