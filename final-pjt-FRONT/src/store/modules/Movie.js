@@ -5,6 +5,7 @@ const API_URL = 'http://127.0.0.1:8000'
 const Movie = {
     state: {
         movieList : null,
+        movieListPlus : null,
         movieDetail: null,
         movieLikeList : null,
         popularMovie: null,
@@ -19,7 +20,24 @@ const Movie = {
         
     },
     mutations: {
+        MOVIE_LIST_PLUS_NULL(state){
+            state.movieListPlus = null
+        },
+
         GET_MOVIES(state, payload) {
+            if (state.movieListPlus === null) {
+                state.movieListPlus = []
+            }
+
+            payload.forEach(element => {
+                if (!state.movieListPlus.includes(element)) {
+                    state.movieListPlus.push(element)
+                }
+            });
+
+        },
+
+        GET_MOVIE_LIST(state,payload) {
             state.movieList = payload
         },
 
@@ -90,13 +108,29 @@ const Movie = {
 
     },
     actions: {
-        getMovies(context) {
+        getMovies(context, cnt) {
             axios({
                 methods: 'get',
-                url: `${API_URL}/movies/`
+                url: `${API_URL}/movies/`,
+                params : {
+                    page : cnt
+                }
             })
             .then(res => {
-                context.commit('GET_MOVIES',res.data)
+                if (res.config.params.page === 1) {
+                    context.commit('MOVIE_LIST_PLUS_NULL')
+                }
+                context.commit('GET_MOVIES',res.data.results)
+            })
+            .catch(err => console.log(err))
+        },
+        getMovieList(context) {
+            axios({
+                methods: 'get',
+                url: `${API_URL}/movies/random/`
+            })
+            .then(res => {
+                context.commit('GET_MOVIE_LIST',res.data)
             })
             .catch(err => console.log(err))
         },

@@ -3,6 +3,7 @@
         <div class="row row-cols-1 row-cols-sm-3 row-cols-md-5 g-2">
         <MovieCard v-for="movie in movies" :key="movie.id" :movie-item="movie"/>
         </div>
+        <button class="mouse fontcolor font" @click="getMovies">더보기</button>
     </div>
 </template>
 
@@ -15,9 +16,14 @@ export default {
     components: {
         MovieCard
     },
+    data() {
+        return {
+            ClickCnt : 0
+        }
+    },
     computed: {
         movies() {
-            return this.$store.state.Movie.movieList
+            return this.$store.state.Movie.movieListPlus
         },
         isLogin() {
         return this.$store.getters.isLogin
@@ -25,10 +31,12 @@ export default {
     },
     methods: {
         getMovies() {
-            this.$store.dispatch('getMovies')
+            this.ClickCnt ++
+            this.$store.dispatch('getMovies', this.ClickCnt)
         }
     },
     created() {
+        this.ClickCnt = 0
         if (this.isLogin) {
           this.getMovies()
         } else {
