@@ -6,7 +6,7 @@
 
 <script>
 
-export default {
+export default {  
     name : 'ReviewDetail',
     props : {
         reviewItem: Object

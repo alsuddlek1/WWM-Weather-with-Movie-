@@ -30,6 +30,13 @@ def main(request):
     return paginator.get_paginated_response(serializer.data)
 
 @api_view(['GET'])
+def random(request):
+    movies = get_list_or_404(Movie)
+    serializer = MovieListSerializer(movies, many=True)
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
 def movie_detail(request, movie_pk):
     movie = get_object_or_404(Movie, pk=movie_pk)
     serializer = MovieSerializer(movie)
