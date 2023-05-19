@@ -1,10 +1,9 @@
 <template>
   <div class="col">
-    <div class="card mouse" @click="goDetail(movieItem)">
+    <div class="card mouse bg-body bg-opacity-10" @click="goDetail(movieItem)">
       <img :src="url" class="card-img-top">
       <div class="card-body">
-      <h5 class="card-title">{{movieItem.title}}</h5>
-      <div class="card-text" style="text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;">{{movieItem.overview}}</div>
+      <h5 class="card-title font">{{movieItem.title}}</h5>
       </div>
     </div>
    </div>
@@ -42,5 +41,13 @@ export default {
 <style>
   .mouse{
     cursor: pointer;
+  }
+
+  @font-face {
+    font-family: 'Gowun Dodum';
+    src: url('@/assets/GowunDodum-Regular.ttf');
+  }
+  .font {
+      font-family: 'Gowun Dodum'
   }
 </style>

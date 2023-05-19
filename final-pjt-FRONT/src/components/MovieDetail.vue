@@ -1,14 +1,13 @@
 <template>
 <div class="container">
   <div class="row">
-    <div class="card ">
+    <div class="card bg-body bg-opacity-10">
       <img :src="url" class="card-img-top">
         <div class="card-body">
           <h5 class="card-title">{{movie.title}}</h5>
-          <div class="card-text" style="text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;">{{movie.overview}}</div>
-          <div class="card-text">{{movie.vote_average}}</div>
-          <div class="card-text">{{movie.release_date}}</div>
-          <div class="card-text">{{movie.runtime}}</div>
+          <div class="card-text fontcolor" style="text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;">{{movie.overview}}</div>
+          <div class="card-text fontcolor">{{movie.vote_average}}</div>
+          <div class="card-text fontcolor">{{movie.release_date}}</div>
         </div> 
       <button @click="Like">좋아요</button>   
     </div>
@@ -80,11 +79,7 @@ export default {
 </script>
 
 <style>
-  .size{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    width: 500px;
-    height: 500px;
+  .fontcolor{
+    color: white;
   }
 </style>

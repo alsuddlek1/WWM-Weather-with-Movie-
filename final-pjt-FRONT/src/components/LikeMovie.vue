@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="row row-cols-1 row-cols-sm-3 row-cols-md-5 g-2">
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
     <LikeMovieItem v-for="movie in movies" :key="movie.id" :movie="movie"/>
     </div>
   </div>
