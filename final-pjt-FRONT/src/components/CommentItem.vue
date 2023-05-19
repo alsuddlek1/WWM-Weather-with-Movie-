@@ -1,6 +1,7 @@
 <template>
   <div>
-    <p>{{comment.content}}<router-link v-if="userConfig" :to="{name: 'CommentUpdate', params: {commentId : comment.id}}">댓글 수정</router-link></p>
+    <p>{{comment.content}}</p>
+    <button v-if="userConfig" ><router-link :to="{name: 'CommentUpdate', params: {commentId : comment.id}}" class="fontcolor font">댓글 수정</router-link></button>
     <button v-if="userConfig" @click="deleteComment">댓글 삭제</button>
   </div>
 </template>
@@ -44,5 +45,16 @@ export default {
 </script>
 
 <style>
-
+.fontcolor{
+    color: white;
+    text-decoration: none;
+  }
+  
+@font-face {
+  font-family: 'Gowun Dodum';
+  src: url('@/assets/GowunDodum-Regular.ttf');
+}
+.font {
+    font-family: 'Gowun Dodum';
+  }
 </style>

@@ -2,7 +2,7 @@
   <div>
     {{content}} <br>
     <button v-if="userConfig" @click="deleteReview" class="fontcolor font">리뷰 삭제</button>
-    <button><router-link v-if="userConfig" :to="{name: 'ReviewUpdata', params: {reviewId : this.$route.params.reviewId}}" class="fontcolor font">리뷰 수정</router-link></button>
+    <button v-if="userConfig"><router-link :to="{name: 'ReviewUpdata', params: {reviewId : this.$route.params.reviewId}}" class="fontcolor font">리뷰 수정</router-link></button>
 
     <CommentItem v-for="comment in Comments" :key="comment.id" :comment="comment"/>
     <button><router-link :to="{name:'CommentCreate', params:{reviewId : this.$route.params.reviewId}}" class="fontcolor font">댓글 작성</router-link></button>
