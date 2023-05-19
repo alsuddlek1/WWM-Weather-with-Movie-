@@ -1,11 +1,11 @@
 <template>
   <div>
-    {{content}}
-    <button v-if="userConfig" @click="deleteReview">리뷰 삭제</button>
-    <router-link v-if="userConfig" :to="{name: 'ReviewUpdata', params: {reviewId : this.$route.params.reviewId}}">리뷰 수정</router-link>
+    {{content}} <br>
+    <button v-if="userConfig" @click="deleteReview" class="fontcolor font">리뷰 삭제</button>
+    <button><router-link v-if="userConfig" :to="{name: 'ReviewUpdata', params: {reviewId : this.$route.params.reviewId}}" class="fontcolor font">리뷰 수정</router-link></button>
 
     <CommentItem v-for="comment in Comments" :key="comment.id" :comment="comment"/>
-    <router-link :to="{name:'CommentCreate', params:{reviewId : this.$route.params.reviewId}}">댓글 작성</router-link>
+    <button><router-link :to="{name:'CommentCreate', params:{reviewId : this.$route.params.reviewId}}" class="fontcolor font">댓글 작성</router-link></button>
   </div>
 </template>
 
@@ -86,5 +86,17 @@ export default {
 </script>
 
 <style>
-
+.fontcolor{
+    color: white;
+    text-decoration: none;
+  }
+  
+@font-face {
+  font-family: 'Gowun Dodum';
+  src: url('@/assets/GowunDodum-Regular.ttf');
+}
+.font {
+    font-family: 'Gowun Dodum'
+  }
+  
 </style>

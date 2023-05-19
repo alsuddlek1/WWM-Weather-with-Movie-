@@ -4,16 +4,17 @@
     <div class="card bg-body bg-opacity-10">
       <img :src="url" class="card-img-top">
         <div class="card-body">
-          <h5 class="card-title">{{movie.title}}</h5>
-          <div class="card-text fontcolor" style="text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;">{{movie.overview}}</div>
-          <div class="card-text fontcolor">{{movie.vote_average}}</div>
-          <div class="card-text fontcolor">{{movie.release_date}}</div>
+          <h5 class="card-title font">{{movie.title}}</h5>
+          <div class="card-text fontcolor font" style="text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;">{{movie.overview}}</div>
+          <div class="card-text fontcolor font">{{movie.vote_average}}</div>
+          <div class="card-text fontcolor font">{{movie.release_date}}</div>
         </div> 
-      <button @click="Like">좋아요</button>   
+      <button @click="Like">좋아요❤</button>   
     </div>
   </div>    
-  <ReviewDetail v-for="review in reviews" :key="review.id" :review-item="review"/>
-  <router-link :to="{name:'ReviewCreate', params:{reviewId : movie.id}}">리뷰 생성</router-link>
+  <p class="fontcolor font"> ▶ 리 뷰 목 록 ◀ </p>
+  <ReviewDetail v-for="review in reviews" :key="review.id" :review-item="review" class="fontcolor font"/>
+  <button><router-link :to="{name:'ReviewCreate', params:{reviewId : movie.id}}" class="fontcolor font">리뷰 생성</router-link></button>
 </div>
 
 </template>
@@ -81,5 +82,47 @@ export default {
 <style>
   .fontcolor{
     color: white;
+    text-decoration: none;
   }
+  
+  @font-face {
+    font-family: 'Gowun Dodum';
+    src: url('@/assets/GowunDodum-Regular.ttf');
+  }
+  .font {
+      font-family: 'Gowun Dodum'
+  }
+  
+  input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		background-color: transparent;
+		border-radius: 4px;
+		border: 0;
+		box-shadow: inset 0 0 0 1px #ffffff;
+		color: #ffffff !important;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 0.8rem;
+		font-weight: 300;
+		height: 2.75rem;
+		letter-spacing: 0.2rem;
+		line-height: 2.75rem;
+		outline: 0;
+		padding: 0 1.25rem 0 1.35rem;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
+	}
 </style>
