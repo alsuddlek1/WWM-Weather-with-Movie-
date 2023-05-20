@@ -12,6 +12,12 @@ import LikeMovie from '@/components/LikeMovie.vue'
 import PopularMovie from '@/components/PopularMovie.vue'
 import randomRecommend from '@/components/randomRecommend.vue'
 import WorldCup64 from '@/components/WorldCup64.vue'
+import WorldCup32 from '@/components/WorldCup32.vue'
+import WorldCup16 from '@/components/WorldCup16.vue'
+import WorldCup8 from '@/components/WorldCup8.vue'
+import WorldCup4 from '@/components/WorldCup4.vue'
+import WorldCup2 from '@/components/WorldCup2.vue'
+import WorldCupFinal from '@/components/WorldCupFinal.vue'
 import weatherMovie from '@/components/weatherMovie.vue'
 import signUpView from '../views/signUpView.vue'
 import LoginView from '../views/LoginView.vue'
@@ -84,6 +90,36 @@ const routes = [
     path: '/worldcup64',
     name: 'WorldCup64',
     component: WorldCup64
+  },
+  {
+    path: '/worldcup32',
+    name: 'WorldCup32',
+    component: WorldCup32
+  },
+  {
+    path: '/worldCup16',
+    name: 'WorldCup16',
+    component: WorldCup16
+  },
+  {
+    path: '/worldCup8',
+    name: 'WorldCup8',
+    component: WorldCup8
+  },
+  {
+    path: '/worldCup4',
+    name: 'WorldCup4',
+    component: WorldCup4
+  },
+  {
+    path: '/worldCup2',
+    name: 'WorldCup2',
+    component: WorldCup2
+  },
+  {
+    path: '/worldCupFinal/:movie',
+    name: 'WorldCupFinal',
+    component: WorldCupFinal
   },
   
   {

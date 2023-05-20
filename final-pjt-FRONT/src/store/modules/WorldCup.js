@@ -1,8 +1,13 @@
+import router from '@/router'
 import _ from 'lodash'
 const WorldCup = {
     state: {
       worldcup64 : null,
       worldcup32 : null,
+      worldcup16 : null,
+      worldcup8 : null,
+      worldcup4 : null,
+      worldcup2 : null,
       worldTwoMovie : null,
     },
     getters: {
@@ -10,28 +15,189 @@ const WorldCup = {
     mutations: {
       GET_WORLD_CUP_MOVIE(state,payload) {
         state.worldcup64 = payload
-      },
+        state.worldcup32 = null
+        state.worldcup16 = null
+        state.worldcup8 = null
+        state.worldcup4 = null
+        state.worldcup2 = null
 
-      GET_TWO_MOVIE(state) {
         state.worldTwoMovie = _.sampleSize(state.worldcup64,2)
         state.worldTwoMovie.forEach(element => {
           const idx = state.worldcup64.indexOf(element)          
           state.worldcup64.splice(idx,1)
           console.log(state.worldcup64)
         });
+
+      },
+
+      SELECT_MOVIE(state,movie){
+        if (state.worldcup32 === null) {
+          state.worldcup32 = []
+        }
+        if (state.worldcup64.length === 0) {
+          router.push({name:'WorldCup32'})
+        }
+        state.worldcup32.push(movie)
+        state.worldTwoMovie = _.sampleSize(state.worldcup64,2)
+        state.worldTwoMovie.forEach(element => {
+          const idx = state.worldcup64.indexOf(element)          
+          state.worldcup64.splice(idx,1)
+          console.log('64강',state.worldcup64)
+          console.log('32강',state.worldcup32)
+        });
+    
+      },
+
+      GET_WORLD_CUP_MOVIE_2(state){
+        console.log(state.worldcup32)
+        state.worldTwoMovie = _.sampleSize(state.worldcup32,2)
+        state.worldTwoMovie.forEach(element => {
+          const idx = state.worldcup32.indexOf(element)          
+          state.worldcup32.splice(idx,1)
+        });
+      },
+
+      SELECT_MOVIE2(state,movie){
+        if (state.worldcup16 === null) {
+          state.worldcup16 = []
+        }
+        if (state.worldcup32.length === 0) {
+          router.push({name:'WorldCup16'})
+        }
+        state.worldcup16.push(movie)
+        state.worldTwoMovie = _.sampleSize(state.worldcup32,2)
+        state.worldTwoMovie.forEach(element => {
+          const idx = state.worldcup32.indexOf(element)          
+          state.worldcup32.splice(idx,1)
+          console.log('32강',state.worldcup32)
+          console.log('16강',state.worldcup16)
+        });
+      },
+
+      GET_WORLD_CUP_MOVIE_3(state){
+        console.log(state.worldcup16)
+        state.worldTwoMovie = _.sampleSize(state.worldcup16,2)
+        state.worldTwoMovie.forEach(element => {
+          const idx = state.worldcup16.indexOf(element)          
+          state.worldcup16.splice(idx,1)
+        });
+      },
+
+      SELECT_MOVIE3(state,movie){
+        if (state.worldcup8 === null) {
+          state.worldcup8 = []
+        }
+        if (state.worldcup16.length === 0) {
+          router.push({name:'WorldCup8'})
+        }
+        state.worldcup8.push(movie)
+        state.worldTwoMovie = _.sampleSize(state.worldcup16,2)
+        state.worldTwoMovie.forEach(element => {
+          const idx = state.worldcup16.indexOf(element)          
+          state.worldcup16.splice(idx,1)
+          console.log('16강',state.worldcup16)
+          console.log('8강',state.worldcup8)
+        });
+      },
+
+      GET_WORLD_CUP_MOVIE_4(state){
+        console.log(state.worldcup16)
+        state.worldTwoMovie = _.sampleSize(state.worldcup8,2)
+        state.worldTwoMovie.forEach(element => {
+          const idx = state.worldcup8.indexOf(element)          
+          state.worldcup8.splice(idx,1)
+        });
+      },
+
+      SELECT_MOVIE4(state,movie){
+        if (state.worldcup4 === null) {
+          state.worldcup4 = []
+        }
+        if (state.worldcup8.length === 0) {
+          router.push({name:'WorldCup4'})
+        }
+        state.worldcup4.push(movie)
+        state.worldTwoMovie = _.sampleSize(state.worldcup8,2)
+        state.worldTwoMovie.forEach(element => {
+          const idx = state.worldcup8.indexOf(element)          
+          state.worldcup8.splice(idx,1)
+          console.log('8강',state.worldcup8)
+          console.log('4강',state.worldcup4)
+        });
+      },
+
+      GET_WORLD_CUP_MOVIE_5(state){
+        console.log(state.worldcup8)
+        state.worldTwoMovie = _.sampleSize(state.worldcup4,2)
+        state.worldTwoMovie.forEach(element => {
+          const idx = state.worldcup4.indexOf(element)          
+          state.worldcup4.splice(idx,1)
+        });
+      },
+
+      SELECT_MOVIE5(state,movie){
+        if (state.worldcup2 === null) {
+          state.worldcup2 = []
+        }
+        if (state.worldcup4.length === 0) {
+          router.push({name:'WorldCup2'})
+        }
+        state.worldcup2.push(movie)
+        state.worldTwoMovie = _.sampleSize(state.worldcup4,2)
+        state.worldTwoMovie.forEach(element => {
+          const idx = state.worldcup4.indexOf(element)          
+          state.worldcup4.splice(idx,1)
+          console.log('4강',state.worldcup4)
+          console.log('2강',state.worldcup2)
+        });
+      },
+
+      GET_WORLD_CUP_MOVIE_6(state){
+        console.log(state.worldcup4)
+        state.worldTwoMovie = _.sampleSize(state.worldcup2,2)
       }
+    
     },
     actions: {
       getWorldCupMovie(context, data) {
         context.commit('GET_WORLD_CUP_MOVIE', data)
-    },
+      },
+      SelectMovie(context, movie){
+        context.commit('SELECT_MOVIE',movie)
+      },
 
-    getTwoMovie(context) {
-        context.commit('GET_TWO_MOVIE')
-    },
-    SelectMovie(context, movie){
-      context.commit('SELECT_MOVIE',movie)
-    }
+      getWorldCupMovie2(context){
+        context.commit('GET_WORLD_CUP_MOVIE_2')
+      },
+      SelectMovie2(context, movie){
+        context.commit('SELECT_MOVIE2',movie)
+      },
+
+      getWorldCupMovie3(context){
+        context.commit('GET_WORLD_CUP_MOVIE_3')
+      },
+      SelectMovie3(context, movie){
+        context.commit('SELECT_MOVIE3',movie)
+      },
+
+      getWorldCupMovie4(context){
+        context.commit('GET_WORLD_CUP_MOVIE_4')
+      },
+      SelectMovie4(context, movie){
+        context.commit('SELECT_MOVIE4',movie)
+      },
+
+      getWorldCupMovie5(context){
+        context.commit('GET_WORLD_CUP_MOVIE_5')
+      },
+      SelectMovie5(context, movie){
+        context.commit('SELECT_MOVIE5',movie)
+      },
+
+      getWorldCupMovie6(context){
+        context.commit('GET_WORLD_CUP_MOVIE_6')
+      },
+
     },
 }
 

@@ -145,7 +145,7 @@ def popular_movies(request):
         popular_movie_list.add(movie)
         
     popular_movie_list = list(popular_movie_list)
-    popular_movies = sorted(popular_movie_list, key= lambda x : x.vote_count, reverse = True)[:10]
+    popular_movies = sorted(popular_movie_list, key= lambda x : x.vote_count, reverse = True)[:64]
 
     serializer = MovieListSerializer(popular_movies, many=True)
     return Response(serializer.data)

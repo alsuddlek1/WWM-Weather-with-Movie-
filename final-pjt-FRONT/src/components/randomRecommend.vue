@@ -37,9 +37,7 @@ export default {
       }
     },
     created() {
-      if (this.$store.state.Movie.movieList === null) {
-        this.getMovieList()
-      }     
+      this.getMovieList()     
     }
 }
 </script>
