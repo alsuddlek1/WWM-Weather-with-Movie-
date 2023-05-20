@@ -39,15 +39,5 @@ export default {
 </script>
 
 <style>
-  .mouse{
-    cursor: pointer;
-  }
-
-  @font-face {
-    font-family: 'Gowun Dodum';
-    src: url('@/assets/GowunDodum-Regular.ttf');
-  }
-  .font {
-      font-family: 'Gowun Dodum'
-  }
+ 
 </style>

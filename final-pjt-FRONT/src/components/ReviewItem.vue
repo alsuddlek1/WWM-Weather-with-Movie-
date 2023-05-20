@@ -1,12 +1,16 @@
 <template>
   <div class="fontcolor font">
-    <p> 내용 : {{content}}</p>
+    <br>
+    <br>
+
+    <h5> 내용 : {{content}}</h5>
+    <button v-if="userConfig" @click="deleteReview" class="button_mg">리뷰 삭제</button>
+    <button v-if="userConfig" @click="goUpdateReview" class="button_mg">리뷰 수정</button>
     <hr>
     <CommentItem v-for="comment in Comments" :key="comment.id" :comment="comment"/>
-    <br>
-    <button @click="GoComment" class="fontcolor font">댓글 작성</button>
-    <button v-if="userConfig" @click="deleteReview" class="fontcolor font">리뷰 삭제</button>
-    <button v-if="userConfig" @click="goUpdateReview" class="fontcolor font">리뷰 수정</button>
+
+
+    <button @click="GoComment" class="button_mg">댓글 작성</button>
   </div>
 </template>
 
@@ -96,17 +100,5 @@ export default {
 </script>
 
 <style>
-.fontcolor{
-    color: white;
-    text-decoration: none;
-  }
-  
-@font-face {
-  font-family: 'Gowun Dodum';
-  src: url('@/assets/GowunDodum-Regular.ttf');
-}
-.font {
-    font-family: 'Gowun Dodum'
-  }
-  
+
 </style>
