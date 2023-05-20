@@ -1,5 +1,5 @@
 <template>
-  <div id="header">
+  <div id="header" class="fontcolor font">
     <div class="logo">
       <router-link :to="{name : 'MovieMainView'}">
         <!-- 메인 페이지로 이동 -->
@@ -73,5 +73,101 @@ export default {
     color: white;
   }
 
+.fontcolor{
+    color: white;
+    text-decoration: none;
+  }
 
+.hover {
+  
+  /* background-color: gray; */
+  color: white;
+  transition: 0.5s;
+}
+
+.hover:hover{
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+
+/* button 에서 대문자, 가운데 정렬 없는 style */
+.sign {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  box-shadow: inset 0 0 0 1px #ffffff;
+  color: #ffffff !important;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 300;
+  height: 2.75rem;
+  letter-spacing: 0.2rem;
+  line-height: 2.75rem;
+  outline: 0;
+  padding: 0 1.25rem 0 1.35rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+@font-face {
+  font-family: 'Gowun Dodum';
+  src: url('@/assets/GowunDodum-Regular.ttf');
+  }
+
+.font {
+    font-family: 'Gowun Dodum';
+  }
+
+/* mouse 올렸을 때 커서 생김 */
+.mouse{
+    cursor: pointer;
+  }
+
+/* 자동 적용돼서 지우면 안됨 !  */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  box-shadow: inset 0 0 0 1px #ffffff;
+  color: #ffffff !important;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 300;
+  height: 2.75rem;
+  letter-spacing: 0.2rem;
+  line-height: 2.75rem;
+  outline: 0;
+  padding: 0 1.25rem 0 1.35rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.button_mg {
+  margin : 10px;
+}
 </style>

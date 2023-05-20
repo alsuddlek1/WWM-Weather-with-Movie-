@@ -1,20 +1,26 @@
 <template>
-<div class="row row-cols-1 row-cols-sm-3 g-2">
-<div class="container">
-  <div class="row">
-  <div class="card mouse bg-body bg-opacity-10" @click="goDetail(movies)">
-    <img :src="url" class="card-img-top">
-      <div class="card-body">
-      <h5 class="card-title fontcolor font">{{movies.title}}</h5>
-      <div class="card-text fontcolor font" style="text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;">{{movies.overview}}</div>
-      <div class="card-text fontcolor font">{{movies.vote_average}}</div>
-      <div class="card-text fontcolor font">{{movies.release_date}}</div>
-    </div>  
+<div>
+  <br>
+  <h3>오늘의 추천 영화 ☺</h3>
+  <br>
+  <div class="row row-cols-1 row-cols-sm-3 g-2">
+  <div class="container">
+    <div class="row">
+    <div class="card mouse bg-body bg-opacity-10" @click="goDetail(movies)">
+      <img :src="url" class="card-img-top">
+        <div class="card-body">
+        <h5 class="card-title fontcolor font">{{movies.title}}</h5>
+        <br>
+        <div class="card-text fontcolor font" style="text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;">{{movies.overview}}</div>
+        <br>
+        <div class="card-text fontcolor font"> 평점 : {{movies.vote_average}}</div>
+        <div class="card-text fontcolor font">개봉 일자 : {{movies.release_date}}</div>
+      </div>  
+    </div>
+    </div>    
   </div>
-  </div>    
-</div>
-</div>
-
+  </div>
+  </div>
 </template>
 
 <script>
@@ -45,7 +51,5 @@ export default {
 </script>
 
 <style>
-.mouse{
-    cursor: pointer;
-  }
+
 </style>

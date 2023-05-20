@@ -1,14 +1,14 @@
 <template>
   <div>
-    <h1>LOGIN PAGE</h1>
+    <h1  class="fontcolor font">LOGIN PAGE</h1>
         <form @submit.prevent="login">
-            <label for="username">username : </label>
-            <input type="text" id="username" v-model="username">
+            <label for="username"  class="fontcolor font">username : </label>
+            <input type="text" id="username" v-model="username" class="sign font">
             
-            <label for="password1">password : </label>
-            <input type="password" id="password" v-model="password">
+            <label for="password1" class="fontcolor font mt-3">password : </label>
+            <input type="password" id="password" v-model="password" class="sign font">
         
-            <input type="submit" value="login">
+            <input type="submit" value="login" class="mt-4">
         </form>
   </div>
 </template>

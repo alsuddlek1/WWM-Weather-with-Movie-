@@ -32,7 +32,5 @@ export default {
 </script>
 
 <style>
-  .mouse{
-    cursor: pointer;
-  }
+  
 </style>

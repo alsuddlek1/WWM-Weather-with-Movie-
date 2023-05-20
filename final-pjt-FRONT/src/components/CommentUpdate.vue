@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="fontcolor font">
     <h1>댓글 수정</h1>
     <form @submit.prevent="updateComment">
-      <label for="content">내용 : </label>
-      <textarea id="content" cols="30" rows="10" v-model="content" class="fontcolor font"></textarea><br>
-      <input type="submit" id="submit">
+      <label for="content"> 👇수정할 내용을 입력하세요👇 </label> <br>
+      <input id="content" v-model="content" class="sign" size="100"><br>
+      <input type="submit" id="submit" class="mt-3">
     </form>
   </div>
 </template>

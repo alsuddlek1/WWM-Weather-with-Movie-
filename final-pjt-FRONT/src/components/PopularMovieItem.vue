@@ -32,9 +32,6 @@ export default {
 </script>
 
 <style>
-.mouse{
-    cursor: pointer;
-  }
 .padding {
   padding: 0px 500px 50px;
 }

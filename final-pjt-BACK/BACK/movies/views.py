@@ -151,6 +151,6 @@ def popular_movies(request):
     return Response(serializer.data)
 
 # 날씨에 따른 영화 추천
-@api_view(['GET'])
-def weather(request):
-    thundersorm = []
+# @api_view(['GET'])
+# def weather(request):
+#     thundersorm = []

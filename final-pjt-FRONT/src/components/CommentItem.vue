@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <div class="fontcolor font button_mg button_size">
     <p>댓글 : {{comment.content}}</p>
-    <button v-if="userConfig" @click="onClick(comment.id)" class="fontcolor font">댓글 수정</button>
-    <button v-if="userConfig" @click="deleteComment">댓글 삭제</button>
+    <button v-if="userConfig" @click="onClick(comment.id)" class="button_mg">댓글 수정</button>
+    <button v-if="userConfig" @click="deleteComment" class="button_mg">댓글 삭제</button>
+
   </div>
 </template>
 
@@ -48,16 +49,4 @@ export default {
 </script>
 
 <style>
-.fontcolor{
-    color: white;
-    text-decoration: none;
-  }
-  
-@font-face {
-  font-family: 'Gowun Dodum';
-  src: url('@/assets/GowunDodum-Regular.ttf');
-}
-.font {
-    font-family: 'Gowun Dodum';
-  }
 </style>
