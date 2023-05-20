@@ -17,7 +17,7 @@ export default {
     },
     computed: {
         movies() {
-            return this.$store.state.Movie.popularMovie
+            return this.$store.getters.popularMovie
         } 
     },
     methods: {

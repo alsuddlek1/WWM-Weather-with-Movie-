@@ -18,12 +18,11 @@
 </template>
 
 <script>
-import _ from 'lodash'
 export default {
     name: 'randomRecommend',
     computed: {
       movies() {
-        return _.sample(this.$store.state.Movie.movieList)
+        return this.$store.getters.random
       },
       url() {
       return `https://image.tmdb.org/t/p/original/${this.movies.poster_path}`
@@ -38,7 +37,9 @@ export default {
       }
     },
     created() {
-      this.getMovieList()
+      if (this.$store.state.Movie.movieList === null) {
+        this.getMovieList()
+      }     
     }
 }
 </script>

@@ -11,6 +11,8 @@ import CommentUpdate from '@/components/CommentUpdate.vue'
 import LikeMovie from '@/components/LikeMovie.vue'
 import PopularMovie from '@/components/PopularMovie.vue'
 import randomRecommend from '@/components/randomRecommend.vue'
+import WorldCup64 from '@/components/WorldCup64.vue'
+import weatherMovie from '@/components/weatherMovie.vue'
 import signUpView from '../views/signUpView.vue'
 import LoginView from '../views/LoginView.vue'
 import NotFound from '@/components/NotFound.vue'
@@ -78,6 +80,11 @@ const routes = [
     name: 'randomRecommend',
     component: randomRecommend
   },
+  {
+    path: '/worldcup64',
+    name: 'WorldCup64',
+    component: WorldCup64
+  },
   
   {
     path: '/signup',
@@ -88,6 +95,11 @@ const routes = [
     path: '/login',
     name: 'LoginView',
     component: LoginView
+  },
+  {
+    path: '/weather',
+    name: 'weatherMovie',
+    component: weatherMovie
   },
   {
     path: '*',
