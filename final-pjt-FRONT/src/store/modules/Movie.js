@@ -1,5 +1,6 @@
 import router from "@/router"
 import axios from "axios"
+import _ from 'lodash'
 const API_URL = 'http://127.0.0.1:8000'
 
 const Movie = {
@@ -15,9 +16,15 @@ const Movie = {
         Review : null,
         CommentList : null,
         Comment: null,
+
     },
     getters: {
-        
+        popularMovie(state) {
+            return _.take(state.popularMovie,10)
+        },
+        random(state) {
+            return _.sample(state.movieList)
+        }
     },
     mutations: {
         MOVIE_LIST_PLUS_NULL(state){
@@ -103,9 +110,7 @@ const Movie = {
 
         GET_POPULAR_MOVIE(state,payload) {
             state.popularMovie = payload
-        }
-    
-
+        },
     },
     actions: {
         getMovies(context, cnt) {
@@ -229,10 +234,7 @@ const Movie = {
 
         getPopularMovie(context, payload) {
             context.commit('GET_POPULAR_MOVIE', payload)
-        }
-
-
-
+        },
     }
 }
 
