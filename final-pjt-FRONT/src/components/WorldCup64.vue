@@ -34,7 +34,10 @@ export default {
     },
     url() {
       return `https://image.tmdb.org/t/p/original`
-    }
+    },
+    isLogin() {
+        return this.$store.getters.isLogin
+      }
   },
   methods: {
     getWorldCupMovie() {
@@ -54,7 +57,12 @@ export default {
   },
   created(){
     this.count = 2
-    this.getWorldCupMovie()
+    if (this.isLogin) {
+      this.getWorldCupMovie()
+    } else {
+      alert('로그인이 필요한 서비스 입니다')
+      this.$router.push({name:'LoginView'})
+    }
   }
 }
 </script>

@@ -23,6 +23,9 @@ export default {
   computed: {
     TwoMovie() {
       return this.$store.state.WorldCup.worldTwoMovie
+    },
+    isLogin() {
+    return this.$store.getters.isLogin
     }
   },
     data() {
@@ -39,9 +42,14 @@ export default {
       this.$store.dispatch('SelectMovie4', movie)
     }  
   },
-  created() {
+  created(){
     this.count = 2
-    this.getWorldCupMovie()
+    if (this.isLogin) {
+      this.getWorldCupMovie()
+    } else {
+      alert('로그인이 필요한 서비스 입니다')
+      this.$router.push({name:'LoginView'})
+    }
   }
 }
 </script>
