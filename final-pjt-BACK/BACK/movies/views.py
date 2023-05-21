@@ -150,7 +150,93 @@ def popular_movies(request):
     serializer = MovieListSerializer(popular_movies, many=True)
     return Response(serializer.data)
 
+
+# Clouds = [액션, 코미디....]
+# for clouds:
+#     for 영화:
+#         if 액션 in 영화장르:
+#             ??.append(영화)
+
+
 # 날씨에 따른 영화 추천
 # @api_view(['GET'])
 # def weather(request):
-#     thundersorm = []
+#     movies = get_list_or_404(Movie)
+
+#     thundersorm = [27, 9648, 53]
+#     drizzle = [12, 16, 99]
+#     rain = [80, 10752]
+#     snow = [18, 10751]
+#     atmosphere = [28, 14, 35]
+#     clear = [10749, 10770]
+#     clouds = [37, 36, 10402, 878]
+
+#     res = []
+#     if weather == thundersorm:
+#         for thun in thundersorm:
+#             for movie in movies:
+#                 if thun in movie[2][10]:
+#                     res.append(movie)
+    
+#     if weather == drizzle:
+#         for dri in drizzle:
+#             for movie in movies:
+#                 if dri in movie[2][10]:
+#                     res.append(movie)
+    
+#     if weather == rain:
+#         for ra in rain:
+#             for movie in movies:
+#                 if ra in movie[2][10]:
+#                     res.append(movie)
+                    
+#     if weather == snow:
+#         for sn in snow:
+#             for movie in movies:
+#                 if sn in movie[2][10]:
+#                     res.append(movie)
+
+#     if weather == atmosphere:
+#         for atmo in atmosphere:
+#             for movie in movies:
+#                 if atmo in movie[2][10]:
+#                     res.append(movie)
+    
+#     if weather == clear:
+#         for cle in clear:
+#             for movie in movies:
+#                 if cle in movie[2][10]:
+#                     res.append(movie)
+                    
+#     if weather == clouds:
+#         for clo in clouds:
+#             for movie in movies:
+#                 if clo in movie[2][10]:
+#                     res.append(movie)
+
+#     # print(res)
+#     return Response(res)
+#  오빠가 이거 이야기 하는게 맞나 ,, ?
+
+@api_view(['GET'])
+def weather(request):
+    #  미리 장르 추천 딕셔너리 만들어놓고
+    genre_recommend = { 
+        'thundersorm' : (27, 9648, 53), 
+        'drizzle' : (12, 16, 99),
+        'rain' : (80, 10752),
+        'snow' : (18, 10751),
+        'atmosphere' : (28, 14, 35),
+        'clear' : (10749, 10770),
+        'clouds' : (37, 36, 10402, 878)
+    }
+
+    #  받아온 weather로 장르 추천받아서 그걸로 필터받기
+    #  긍데 코드 틀릴지도 ㅠㅠ 한번 봐주삼 !
+    genre_rec = genre_recommend[weather]
+    movies = Movie.objects.filter(genres=genre_rec).order_by("popularity")[:10]
+    # 몇개를 무슨 기준으로 ?
+
+    serializer = MovieListSerializer(movies, many=True)
+
+    return Response(serializer.data)

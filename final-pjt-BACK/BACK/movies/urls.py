@@ -22,5 +22,5 @@ urlpatterns = [
     # recommend
     path('recommend/popular/', views.popular_movies),
     path('recommend/<int:user_pk>/like/', views.user_like),
-    # path('recommend/weather/', views.weather),
+    path('recommend/weather/', views.weather),
 ]
