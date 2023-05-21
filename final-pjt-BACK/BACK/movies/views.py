@@ -232,10 +232,9 @@ def weather(request):
     }
 
     #  받아온 weather로 장르 추천받아서 그걸로 필터받기
-    #  긍데 코드 틀릴지도 ㅠㅠ 한번 봐주삼 !
+    #  긍데 코드 안됨 ㅠㅠ 한번 봐주삼 !
     genre_rec = genre_recommend[weather]
-    movies = Movie.objects.filter(genres=genre_rec).order_by("popularity")[:10]
-    # 몇개를 무슨 기준으로 ?
+    movies = Movie.objects.all().filter(genres=genre_rec)
 
     serializer = MovieListSerializer(movies, many=True)
 
