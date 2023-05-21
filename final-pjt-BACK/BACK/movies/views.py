@@ -218,22 +218,28 @@ def popular_movies(request):
 #     return Response(res)
 #  오빠가 이거 이야기 하는게 맞나 ,, ?
 
+
+
 @api_view(['GET'])
 def weather(request):
     #  미리 장르 추천 딕셔너리 만들어놓고
     genre_recommend = { 
-        'thundersorm' : (27, 9648, 53), 
-        'drizzle' : (12, 16, 99),
-        'rain' : (80, 10752),
-        'snow' : (18, 10751),
-        'atmosphere' : (28, 14, 35),
-        'clear' : (10749, 10770),
-        'clouds' : (37, 36, 10402, 878)
+        'thundersorm' : [27, 9648, 53], 
+        'drizzle' : [12, 16, 99],
+        'rain' : [80, 10752],
+        'snow' : [18, 10751],
+        'atmosphere' : [28, 14, 35],
+        'clear' : [10749, 10770],
+        'clouds' : [37, 36, 10402, 878],
     }
 
+
     #  받아온 weather로 장르 추천받아서 그걸로 필터받기
-    #  긍데 코드 안됨 ㅠㅠ 한번 봐주삼 !
-    genre_rec = genre_recommend[weather]
+    # 근데 안돼 ㅠ
+    re_weather = genre_recommend[weather]
+    for genre_rec in re_weather:
+        return genre_rec
+    
     movies = Movie.objects.all().filter(genres=genre_rec)
 
     serializer = MovieListSerializer(movies, many=True)
