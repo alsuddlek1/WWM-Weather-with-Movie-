@@ -111,20 +111,9 @@ const Movie = {
             state.popularMovie = payload
         },
 
-        // LIKE(state,data) {
-        //     const movie = state.movieListPlus.filter(element => {
-               
-        //         return element.id === Number(data) 
-        //     })
-        //     console.log(movie[0])
-        //     console.log(this.state.accounts.userpk)
-        //     if (movie[0].like_users.includes(this.state.accounts.userpk)){
-        //         state.LikeTorF = true
-        //     } else {
-        //         state.LikeTorF = false
-        //     }
-        //     console.log(state.LikeTorF)
-        // }
+        LIKE(state,data) {
+            state.LikeCount = data.movie.like_users.length
+        }
     },
     actions: {
         getMovies(context, cnt) {
@@ -262,8 +251,9 @@ const Movie = {
                     Authorization: `Token ${this.state.accounts.token}`
                   }
                 })
-              .then(() => {
-                // context.commit('LIKE', payload.movieId)
+              .then((res) => {
+                console.log(res.data)
+                context.commit('LIKE', res.data)
               })
               .catch(err => console.log(err))
         }
