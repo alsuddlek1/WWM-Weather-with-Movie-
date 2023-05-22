@@ -42,7 +42,10 @@ export default {
       this.$store.dispatch('SelectMovie4', movie)
     }  
   },
-  created(){
+  created(){ 
+    if (this.$store.state.WorldCup.worldcup8.length !== 8) {
+      this.$router.push({name:'NotFound'})
+    }
     this.count = 2
     if (this.isLogin) {
       this.getWorldCupMovie()

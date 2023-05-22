@@ -44,6 +44,12 @@ export default {
   },
   created(){
     this.count = 2
+
+    if (this.$store.state.WorldCup.worldcup32.length !== 32) {
+      this.$router.push({name:'NotFound'})
+    }
+
+
     if (this.isLogin) {
       this.getWorldCupMovie()
     } else {
