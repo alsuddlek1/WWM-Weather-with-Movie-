@@ -16,7 +16,8 @@ const Movie = {
         Review : null,
         CommentList : null,
         Comment: null,
-        LikeCount : null
+        LikeCount : null,
+        LikeTorF : null
 
     },
     getters: {
@@ -110,16 +111,19 @@ const Movie = {
             state.popularMovie = payload
         },
 
-        // LIKE(state,payload) {
+        // LIKE(state,data) {
         //     const movie = state.movieListPlus.filter(element => {
-        //         return element.id === payload
+               
+        //         return element.id === Number(data) 
         //     })
         //     console.log(movie[0])
-        //     console.log(payload)
-        //     state.LikeCount = movie[0].like_users.length
-        //     // console.log(state.movieDetail)
-        //     // state.LikeCount = state.movieDetail.like_users.length
-        //     // console.log(state.LikeCount)
+        //     console.log(this.state.accounts.userpk)
+        //     if (movie[0].like_users.includes(this.state.accounts.userpk)){
+        //         state.LikeTorF = true
+        //     } else {
+        //         state.LikeTorF = false
+        //     }
+        //     console.log(state.LikeTorF)
         // }
     },
     actions: {
@@ -246,23 +250,23 @@ const Movie = {
             context.commit('GET_POPULAR_MOVIE', payload)
         },
 
-        // Like(context, payload) {
-        //     axios({
-        //         method: 'post',
-        //         url: `${API_URL}/movies/${payload.userpk}/${payload.movieId}/like/`,
-        //         data: {
-        //           user : payload.userpk,
-        //           movie : payload.movieId
-        //         },
-        //         headers: {
-        //             Authorization: `Token ${this.state.accounts.token}`
-        //           }
-        //         })
-        //       .then(() => {
-        //         context.commit('LIKE', payload.movieId)
-        //       })
-        //       .catch(err => console.log(err))
-        // }
+        Like(context, payload) {
+            axios({
+                method: 'post',
+                url: `${API_URL}/movies/${payload.userpk}/${payload.movieId}/like/`,
+                data: {
+                  user : payload.userpk,
+                  movie : payload.movieId
+                },
+                headers: {
+                    Authorization: `Token ${this.state.accounts.token}`
+                  }
+                })
+              .then(() => {
+                // context.commit('LIKE', payload.movieId)
+              })
+              .catch(err => console.log(err))
+        }
     }
 }
 

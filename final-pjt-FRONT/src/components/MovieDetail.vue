@@ -12,7 +12,7 @@
           <div class="card-text fontcolor font"> 개봉일자 : {{movie.release_date}}</div>
         </div> 
       <br>
-      <button @click="Like">좋아요❤</button> {{LikeCount}}
+      <button @click="Like">좋아요❤</button>
     </div>
   </div>
   <br>
@@ -25,8 +25,6 @@
 </template>
 
 <script>
-import axios from 'axios'
-const API_URL = 'http://127.0.0.1:8000'
 import ReviewDetail from './ReviewDetail.vue'
 export default {
     name: 'MovieDetail',
@@ -66,18 +64,11 @@ export default {
       Like() {
         const userpk = this.$store.state.accounts.userpk
         const movieId = this.movie_id
-        axios({
-                method: 'post',
-                url: `${API_URL}/movies/${userpk}/${movieId}/like/`,
-                headers: {
-                    Authorization: `Token ${this.$store.state.accounts.token}`
-                  }
-                })
-              .then(() => {})
-              .catch(err => console.log(err))
+        const data = {
+          userpk, movieId
+        }
 
-
-        // this.$store.dispatch('Like',data)
+        this.$store.dispatch('Like',data)
       },
       onClick() {
         this.$router.push({name:'ReviewCreate', params:{reviewId : this.movie.id}})
