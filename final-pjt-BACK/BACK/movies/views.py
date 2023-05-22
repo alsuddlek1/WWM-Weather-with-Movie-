@@ -219,12 +219,12 @@ def popular_movies(request):
 
 #     # print(res)
 #     return Response(res)
-#  오빠가 이거 이야기 하는게 맞나 ,, ?
+
 
 
 
 @api_view(['GET'])
-def weather(request):
+def weather(request, weather2):
     #  미리 장르 추천 딕셔너리 만들어놓고
     URL = 'http://api.openweathermap.org/data/2.5/weather'
     params = {'q' : 'Busan,kor', 'APPID' : '16508fa5d3e2477a89d27d1416030db4'}
@@ -243,14 +243,13 @@ def weather(request):
     }
 
 
-    #  받아온 weather로 장르 추천받아서 그걸로 필터받기
+    # 받아온 weather로 장르 추천받아서 그걸로 필터받기
     # 근데 안돼 ㅠ
-    re_weather = genre_recommend[weather]
+    re_weather = genre_recommend[weather2]
     for genre_rec in re_weather:
         return genre_rec
     
     movies = Movie.objects.all().filter(genres=genre_rec)
-
     serializer = MovieListSerializer(movies, many=True)
 
     return Response(serializer.data)
