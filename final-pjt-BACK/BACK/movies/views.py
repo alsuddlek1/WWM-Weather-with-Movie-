@@ -154,102 +154,39 @@ def popular_movies(request):
     return Response(serializer.data)
 
 
-# Clouds = [액션, 코미디....]
-# for clouds:
-#     for 영화:
-#         if 액션 in 영화장르:
-#             ??.append(영화)
-
-
-# 날씨에 따른 영화 추천
-# @api_view(['GET'])
-# def weather(request):
-#     movies = get_list_or_404(Movie)
-
-#     thundersorm = [27, 9648, 53]
-#     drizzle = [12, 16, 99]
-#     rain = [80, 10752]
-#     snow = [18, 10751]
-#     atmosphere = [28, 14, 35]
-#     clear = [10749, 10770]
-#     clouds = [37, 36, 10402, 878]
-
-#     res = []
-#     if weather == thundersorm:
-#         for thun in thundersorm:
-#             for movie in movies:
-#                 if thun in movie[2]["genres"]:
-#                     res.append(movie)
-    
-#     if weather == drizzle:
-#         for dri in drizzle:
-#             for movie in movies:
-#                 if dri in movie[2][10]:
-#                     res.append(movie)
-    
-#     if weather == rain:
-#         for ra in rain:
-#             for movie in movies:
-#                 if ra in movie[2][10]:
-#                     res.append(movie)
-                    
-#     if weather == snow:
-#         for sn in snow:
-#             for movie in movies:
-#                 if sn in movie[2][10]:
-#                     res.append(movie)
-
-#     if weather == atmosphere:
-#         for atmo in atmosphere:
-#             for movie in movies:
-#                 if atmo in movie[2][10]:
-#                     res.append(movie)
-    
-#     if weather == clear:
-#         for cle in clear:
-#             for movie in movies:
-#                 if cle in movie[2][10]:
-#                     res.append(movie)
-                    
-#     if weather == clouds:
-#         for clo in clouds:
-#             for movie in movies:
-#                 if clo in movie[2][10]:
-#                     res.append(movie)
-
-#     # print(res)
-#     return Response(res)
-
-
-
-
 @api_view(['GET'])
-def weather(request, weather2):
-    #  미리 장르 추천 딕셔너리 만들어놓고
+def weather(request):
+    # 날씨 api 
     URL = 'http://api.openweathermap.org/data/2.5/weather'
     params = {'q' : 'Busan,kor', 'APPID' : '16508fa5d3e2477a89d27d1416030db4'}
     weather = requests.get(URL,params=params).json()
-    print(weather['weather'][0]['main'])
+    print('===============================')
+    request_weather = weather['weather'][0]['main'] # 오늘 요청받은 날씨
+    print(request_weather)
+    print('===============================')
 
-
+    # 날씨별 장르 추천
     genre_recommend = { 
-        'thundersorm' : [27, 9648, 53], 
-        'drizzle' : [12, 16, 99],
-        'rain' : [80, 10752],
-        'snow' : [18, 10751],
-        'atmosphere' : [28, 14, 35],
-        'clear' : [10749, 10770],
-        'clouds' : [37, 36, 10402, 878],
+        'Thundersorm' : [27, 9648, 53], 
+        'Drizzle' : [12, 16, 99],
+        'Rain' : [80, 10752],
+        'Snow' : [18, 10751],
+        'Atmosphere' : [28, 14, 35],
+        'Clear' : [10749, 10770],
+        'Clouds' : [37, 36, 10402, 878],
     }
-
-
-    # 받아온 weather로 장르 추천받아서 그걸로 필터받기
-    # 근데 안돼 ㅠ
-    re_weather = genre_recommend[weather2]
-    for genre_rec in re_weather:
-        return genre_rec
     
-    movies = Movie.objects.all().filter(genres=genre_rec)
-    serializer = MovieListSerializer(movies, many=True)
+    genre_re = genre_recommend[request_weather] 
+    # print('===============================')
+    # print(genre_re)
+    # print('===============================')
 
-    return Response(serializer.data)
+    result = []
+    for genre_rec in genre_re:
+        print(genre_rec)
+        movies = Movie.objects.all().filter(genres=genre_rec).order_by('popularity')[:5]
+        serializer = MovieListSerializer(movies, many=True)
+        for serial in serializer.data:
+            result.append(serial)
+    
+    return Response(result)
