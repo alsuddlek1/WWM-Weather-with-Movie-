@@ -3,7 +3,7 @@
     <br>
     <h3>🏆세계인에게 사랑받은 영화 top10!🏆</h3>
     <br>
-    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
+    <div class="row row-cols-5 row-cols-sm-3 row-cols-md-1 g-2">
     <PopularMovieItem v-for="movie in movies" :key="movie.id" :movie="movie"/>
     </div>
   </div>

@@ -73,19 +73,19 @@ export default {
     this.getMovieWeather()
 
     if (this.weathers === 'Clouds') {
-      this.weather = '흐린 날'
+      this.weather = '흐림 ☁'
     } else if (this.weathers === 'Rain') {
-      this.weather = '비 오는 날'
+      this.weather = '비 🌧'
     } else if (this.weathers === 'Thunderstorm') {
-      this.weather = '번개치는 날'
+      this.weather = '번개 ⚡'
     } else if (this.weathers === 'Drizzle') {
-      this.weather = '이슬비 내리는 날'
+      this.weather = '이슬비 🌂'
     } else if (this.weathers === 'Snow') {
-      this.weather = '눈 오는 날'
+      this.weather = '눈 ☃'
     } else if (this.weathers === 'Atmosphere') {
-      this.weather = '안개 낀 날'
+      this.weather = '안개 🌫'
     } else if (this.weathers === 'Clear') {
-      this.weather = '맑은 날'
+      this.weather = '맑음 🌞'
     } 
   }
   

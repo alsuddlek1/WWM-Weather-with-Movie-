@@ -1,9 +1,11 @@
 <template>
   <div>
-    <h1>{{weather}} 영화 추천~~</h1>
-    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
+    <br>
+    <h1>{{weather}} 이런 영화는 어때요?</h1>
+    <br>
+    <div class="row row-cols-1 row-cols-sm-3 row-cols-md-5 g-2">
     <weatherMovieItem v-for="movie in movies" :key="movie.id" :movie="movie"/>
-  </div>
+    </div>
   </div>
 </template>
 
@@ -37,19 +39,19 @@ export default {
     this.getMovieWeather()
 
     if (this.weathers === 'Clouds') {
-      this.weather = '흐린 날'
+      this.weather = '흐린 날🤔'
     } else if (this.weathers === 'Rain') {
-      this.weather = '비 오는 날'
+      this.weather = '비☔ 오는 날'
     } else if (this.weathers === 'Thunderstorm') {
-      this.weather = '번개치는 날'
+      this.weather = '천둥번개⚡치는 날'
     } else if (this.weathers === 'Drizzle') {
-      this.weather = '이슬비 내리는 날'
+      this.weather = '이슬비💦 내리는 날'
     } else if (this.weathers === 'Snow') {
-      this.weather = '눈 오는 날'
+      this.weather = '눈⛄ 오는 날'
     } else if (this.weathers === 'Atmosphere') {
-      this.weather = '안개 낀 날'
+      this.weather = '안개 낀 날🧐'
     } else if (this.weathers === 'Clear') {
-      this.weather = '맑은 날'
+      this.weather = '맑은 날🌞'
     } 
   }
 }
