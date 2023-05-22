@@ -49,6 +49,12 @@ const Movie = {
 
         GET_MOVIE_DETAIL(state, payload) {
             state.movieDetail = payload
+            state.LikeCount = payload.like_users.length
+            if (payload.like_users.includes(this.state.accounts.userpk)) {
+                state.LikeTorF = true
+            } else {
+                state.LikeTorF = false
+            } 
         },
 
         GET_REVIEW(state, payload) {
@@ -74,7 +80,6 @@ const Movie = {
                     const userId = review.user
                     const rev = {title, content, reviewId, userId}
                     state.Review = rev
-                    // console.log(state.ReviewOfmovie)
                     return
                 }        
             }
@@ -113,6 +118,14 @@ const Movie = {
 
         LIKE(state,data) {
             state.LikeCount = data.movie.like_users.length
+            state.LikeTorF = data.is_liked
+
+            if (data.movie.like_users.includes(this.state.accounts.userpk)) {
+                state.LikeTorF = true
+            } else {
+                state.LikeTorF = false
+            } 
+            
         }
     },
     actions: {
@@ -252,7 +265,6 @@ const Movie = {
                   }
                 })
               .then((res) => {
-                console.log(res.data)
                 context.commit('LIKE', res.data)
               })
               .catch(err => console.log(err))

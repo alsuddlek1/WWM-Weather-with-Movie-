@@ -12,7 +12,7 @@
           <div class="card-text fontcolor font"> 개봉일자 : {{movie.release_date}}</div>
         </div> 
       <br>
-      <button @click="Like">좋아요❤</button> {{LikeCount}}
+      <button @click="Like" :class="{'buttonColor':is_liked}">좋아요❤</button> {{LikeCount}}
     </div>
   </div>
   <br>
@@ -51,6 +51,9 @@ export default {
       },
       LikeCount() {
         return this.$store.state.Movie.LikeCount
+      },
+      is_liked() {
+        return this.$store.state.Movie.LikeTorF
       }
     },
     methods: {
@@ -67,23 +70,6 @@ export default {
         const data = {
           userpk, movieId
         }
-        // axios({
-        //         method: 'post',
-        //         url: `${API_URL}/movies/${this.$store.state.accounts.userpk}/${this.movie_id}/like/`,
-        //         data: {
-        //           user : this.$store.state.accounts.userpk,
-        //           movie : this.movie_id
-        //         },
-        //         headers: {
-        //             Authorization: `Token ${this.$store.state.accounts.token}`
-        //           }
-        //         })
-        //       .then((res) => {
-        //         console.log(res.data.like_users)
-        //         this.LikeCount = res.data.movie.like_users.length
-        //         // context.commit('LIKE', payload.movieId)
-        //       })
-        //       .catch(err => console.log(err))
         this.$store.dispatch('Like',data)
       },
       onClick() {
@@ -99,5 +85,7 @@ export default {
 </script>
 
 <style>
-  
+  .buttonColor{
+    background-color: red;
+  }
 </style>
