@@ -160,10 +160,8 @@ def weather(request):
     URL = 'http://api.openweathermap.org/data/2.5/weather'
     params = {'q' : 'Busan,kor', 'APPID' : '16508fa5d3e2477a89d27d1416030db4'}
     weather = requests.get(URL,params=params).json()
-    print('===============================')
     request_weather = weather['weather'][0]['main'] # 오늘 요청받은 날씨
-    print(request_weather)
-    print('===============================')
+  
 
     # 날씨별 장르 추천
     genre_recommend = { 
@@ -176,16 +174,10 @@ def weather(request):
         'Clouds' : [37, 36, 10402, 878],
     }
 
-    
-    # genre_re = genre_recommend['Atmosphere'] 
     genre_re = genre_recommend[request_weather] 
-    # print('===============================')
-    # print(genre_re)
-    # print('===============================')
 
     result = []
     for genre_rec in genre_re:
-        # print(genre_rec)
         movies = Movie.objects.all().filter(genres=genre_rec)[:5]
         serializer = MovieListSerializer(movies, many=True)
         for serial in serializer.data:
@@ -196,6 +188,4 @@ def weather(request):
         'weather' : request_weather,
         'result' : result
     }
-    
-    # print(len(result))
     return Response(today_weather)
