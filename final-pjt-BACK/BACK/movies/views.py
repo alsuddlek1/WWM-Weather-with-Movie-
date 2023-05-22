@@ -113,6 +113,7 @@ def comment_detail(request,review_pk, comment_pk):
 def movie_like(request, user_pk, movie_pk):
     movie = get_object_or_404(Movie, pk=movie_pk)
     user = get_object_or_404(get_user_model(), pk=user_pk)
+    serializer = MovieListSerializer(movie)
     
     if movie.like_users.filter(pk=user.pk).exists():
         movie.like_users.remove(user)
@@ -120,7 +121,12 @@ def movie_like(request, user_pk, movie_pk):
     else:
         movie.like_users.add(user)
         is_liked = True
-    return Response(is_liked)
+    
+    data = {
+        'movie' : serializer.data,
+        'is_liked' : is_liked
+    }
+    return Response(data)
 
 
 # 좋아요한 영화

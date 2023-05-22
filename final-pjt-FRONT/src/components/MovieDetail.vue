@@ -12,7 +12,7 @@
           <div class="card-text fontcolor font"> 개봉일자 : {{movie.release_date}}</div>
         </div> 
       <br>
-      <button @click="Like">좋아요❤</button>
+      <button @click="Like">좋아요❤</button> {{LikeCount}}
     </div>
   </div>
   <br>
@@ -26,13 +26,13 @@
 
 <script>
 import ReviewDetail from './ReviewDetail.vue'
+// import axios from "axios"
+// const API_URL = 'http://127.0.0.1:8000'
 export default {
     name: 'MovieDetail',
     data() {
       return {
         movie_id : this.$route.params.movie_id,
-        // movie : this.$store.state.Movie.movieDetail
-        LikeCount : null
       }
     },
     components: {
@@ -49,9 +49,9 @@ export default {
       reviews() {
         return this.$store.state.Movie.reviewList
       },
-      // LikeCount() {
-      //   return this.$store.state.Movie.LikeCount
-      // }
+      LikeCount() {
+        return this.$store.state.Movie.LikeCount
+      }
     },
     methods: {
       getMovieDetail() {
@@ -67,7 +67,23 @@ export default {
         const data = {
           userpk, movieId
         }
-
+        // axios({
+        //         method: 'post',
+        //         url: `${API_URL}/movies/${this.$store.state.accounts.userpk}/${this.movie_id}/like/`,
+        //         data: {
+        //           user : this.$store.state.accounts.userpk,
+        //           movie : this.movie_id
+        //         },
+        //         headers: {
+        //             Authorization: `Token ${this.$store.state.accounts.token}`
+        //           }
+        //         })
+        //       .then((res) => {
+        //         console.log(res.data.like_users)
+        //         this.LikeCount = res.data.movie.like_users.length
+        //         // context.commit('LIKE', payload.movieId)
+        //       })
+        //       .catch(err => console.log(err))
         this.$store.dispatch('Like',data)
       },
       onClick() {
@@ -77,6 +93,7 @@ export default {
     created() {
       this.getMovieDetail()
       this.getReview()
+      // this.LikeCount = this.movie.like_users.length
     }
 } 
 </script>
