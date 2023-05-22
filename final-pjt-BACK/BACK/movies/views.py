@@ -154,6 +154,7 @@ def popular_movies(request):
 
 @api_view(['GET'])
 def weather(request):
+
     # 날씨 api 
     URL = 'http://api.openweathermap.org/data/2.5/weather'
     params = {'q' : 'Busan,kor', 'APPID' : '16508fa5d3e2477a89d27d1416030db4'}
