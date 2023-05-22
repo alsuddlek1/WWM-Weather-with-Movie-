@@ -12,7 +12,7 @@
           <div class="card-text fontcolor font"> 개봉일자 : {{movie.release_date}}</div>
         </div> 
       <br>
-      <button @click="Like">좋아요❤</button>   
+      <button @click="Like">좋아요❤</button> {{likeCount}}
     </div>
   </div>
   <br>
@@ -49,7 +49,10 @@ export default {
       },
       reviews() {
             return this.$store.state.Movie.reviewList
-        }
+      },
+      likeCount() {
+        return this.$store.state.Movie.movieDetail.like_users.length
+      }
     },
     methods: {
       getMovieDetail() {

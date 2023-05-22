@@ -24,11 +24,12 @@
 </template>
 
 <script>
+import _ from 'lodash'
 export default {
     name: 'randomRecommend',
     computed: {
       movies() {
-        return this.$store.getters.random
+        return _.sample(this.$store.state.Movie.movieList)
       },
       url() {
       return `https://image.tmdb.org/t/p/original/${this.movies.poster_path}`
