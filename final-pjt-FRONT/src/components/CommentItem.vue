@@ -1,6 +1,7 @@
 <template>
   <div class="fontcolor font button_mg button_size">
     <p>댓글 : {{comment.content}}</p>
+    {{comment}}
     <button v-if="userConfig" @click="onClick(comment.id)" class="button_mg">댓글 수정</button>
     <button v-if="userConfig" @click="deleteComment" class="button_mg">댓글 삭제</button>
 

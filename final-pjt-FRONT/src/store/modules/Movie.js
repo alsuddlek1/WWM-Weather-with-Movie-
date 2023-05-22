@@ -100,7 +100,7 @@ const Movie = {
             const comment = state.CommentList.filter(comments => {
                 return comments.id === payload
             })
-            const idx = state.CommentList.indexOf(comment)
+            const idx = state.CommentList.indexOf(comment[0])
             state.CommentList.splice(idx,1)
         },
 
