@@ -6,7 +6,7 @@
   <div class="row row-cols-1 row-cols-sm-3 g-2">
   <div class="container">
     <div class="row">
-    <div class="card mouse bg-body bg-opacity-10" @click="goDetail(movies)">
+    <div class="card mouse bg-body bg-opacity-10 p-3" @click="goDetail(movies)">
       <img v-if="movies" :src="url" class="card-img-top">
         <div class="card-body">
         <h5 v-if="movies" class="card-title fontcolor font">{{movies.title}}</h5>

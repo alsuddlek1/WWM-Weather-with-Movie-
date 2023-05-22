@@ -1,7 +1,7 @@
 <template>
 <div class="container padding">
   <div class="row">
-    <div class="card mouse bg-body bg-opacity-10" @click="goDetail(movie)">
+    <div class="card mouse bg-body bg-opacity-10 p-3" @click="goDetail(movie)">
       <img :src="url" class="card-img-top">
         <div class="card-body">
           <h3 class="card-title font">{{movie.title}}</h3>

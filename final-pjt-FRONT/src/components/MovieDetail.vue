@@ -1,7 +1,7 @@
 <template>
 <div class="container">
   <div class="row">
-    <div class="card bg-body bg-opacity-10">
+    <div class="card bg-body bg-opacity-10 p-3">
       <img :src="url" class="card-img-top">
         <div class="card-body">
           <h5 class="card-title fontcolor font">{{movie.title}}</h5>
