@@ -1,6 +1,9 @@
 <template>
   <div>
+    <h1>{{weather}}한 날 영화 추천~~</h1>
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
     <weatherMovieItem v-for="movie in movies" :key="movie.id" :movie="movie"/>
+  </div>
   </div>
 </template>
 

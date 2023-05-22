@@ -18,11 +18,9 @@ const weather = {
         axios({
           method : 'get',
           url: `${API_URL}/movies/recommend/weather/`,
-          data: {
-            weather : 'clouds'
-          }
         })
         .then((res) => {
+          console.log(res.data)
           context.commit('GET_MOVIE_WEATHER', res.data)
         })
         .catch(err => console.log(err))

@@ -5,7 +5,6 @@
       <img :src="url" class="card-img-top">
         <div class="card-body">
           <h3 class="card-title font">{{movie.title}}</h3>
-
         </div>  
     </div>
   </div>    

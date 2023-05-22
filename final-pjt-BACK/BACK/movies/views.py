@@ -193,7 +193,7 @@ def weather(request):
                 result.append(serial)
 
     today_weather = {
-        'weatehr' : request_weather,
+        'weather' : request_weather,
         'result' : result
     }
     
