@@ -25,7 +25,6 @@ const WorldCup = {
         state.worldTwoMovie.forEach(element => {
           const idx = state.worldcup64.indexOf(element)          
           state.worldcup64.splice(idx,1)
-          console.log(state.worldcup64)
         });
 
       },
@@ -42,14 +41,11 @@ const WorldCup = {
         state.worldTwoMovie.forEach(element => {
           const idx = state.worldcup64.indexOf(element)          
           state.worldcup64.splice(idx,1)
-          console.log('64강',state.worldcup64)
-          console.log('32강',state.worldcup32)
         });
     
       },
 
       GET_WORLD_CUP_MOVIE_2(state){
-        console.log(state.worldcup32)
         state.worldTwoMovie = _.sampleSize(state.worldcup32,2)
         state.worldTwoMovie.forEach(element => {
           const idx = state.worldcup32.indexOf(element)          
@@ -69,13 +65,10 @@ const WorldCup = {
         state.worldTwoMovie.forEach(element => {
           const idx = state.worldcup32.indexOf(element)          
           state.worldcup32.splice(idx,1)
-          console.log('32강',state.worldcup32)
-          console.log('16강',state.worldcup16)
         });
       },
 
       GET_WORLD_CUP_MOVIE_3(state){
-        console.log(state.worldcup16)
         state.worldTwoMovie = _.sampleSize(state.worldcup16,2)
         state.worldTwoMovie.forEach(element => {
           const idx = state.worldcup16.indexOf(element)          
@@ -95,13 +88,10 @@ const WorldCup = {
         state.worldTwoMovie.forEach(element => {
           const idx = state.worldcup16.indexOf(element)          
           state.worldcup16.splice(idx,1)
-          console.log('16강',state.worldcup16)
-          console.log('8강',state.worldcup8)
         });
       },
 
       GET_WORLD_CUP_MOVIE_4(state){
-        console.log(state.worldcup16)
         state.worldTwoMovie = _.sampleSize(state.worldcup8,2)
         state.worldTwoMovie.forEach(element => {
           const idx = state.worldcup8.indexOf(element)          
@@ -121,13 +111,10 @@ const WorldCup = {
         state.worldTwoMovie.forEach(element => {
           const idx = state.worldcup8.indexOf(element)          
           state.worldcup8.splice(idx,1)
-          console.log('8강',state.worldcup8)
-          console.log('4강',state.worldcup4)
         });
       },
 
       GET_WORLD_CUP_MOVIE_5(state){
-        console.log(state.worldcup8)
         state.worldTwoMovie = _.sampleSize(state.worldcup4,2)
         state.worldTwoMovie.forEach(element => {
           const idx = state.worldcup4.indexOf(element)          
@@ -147,13 +134,10 @@ const WorldCup = {
         state.worldTwoMovie.forEach(element => {
           const idx = state.worldcup4.indexOf(element)          
           state.worldcup4.splice(idx,1)
-          console.log('4강',state.worldcup4)
-          console.log('2강',state.worldcup2)
         });
       },
 
       GET_WORLD_CUP_MOVIE_6(state){
-        console.log(state.worldcup4)
         state.worldTwoMovie = _.sampleSize(state.worldcup2,2)
       }
     
