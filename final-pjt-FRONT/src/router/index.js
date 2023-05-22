@@ -2,15 +2,18 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import MovieMainView from '../views/MovieMainView.vue'
 import MovieListVIew from '../views/MovieListVIew.vue'
+import LikeMovieView from '../views/LikeMovieView.vue'
+import PopularMovieView from '../views/PopularMovieView.vue'
+import randomRecommendView from '../views/randomRecommendView.vue'
+import weatherMovieView from '../views/weatherMovieView.vue'
+import signUpView from '../views/signUpView.vue'
+import LoginView from '../views/LoginView.vue'
 import MovieDetail from '@/components/MovieDetail.vue'
 import ReviewItem from '@/components/ReviewItem.vue'
 import ReviewCreate from '@/components/ReviewCreate.vue'
 import ReviewUpdata from '@/components/ReviewUpdata.vue'
 import CommentCreate from '@/components/CommentCreate.vue'
 import CommentUpdate from '@/components/CommentUpdate.vue'
-import LikeMovie from '@/components/LikeMovie.vue'
-import PopularMovie from '@/components/PopularMovie.vue'
-import randomRecommend from '@/components/randomRecommend.vue'
 import WorldCup64 from '@/components/WorldCup64.vue'
 import WorldCup32 from '@/components/WorldCup32.vue'
 import WorldCup16 from '@/components/WorldCup16.vue'
@@ -18,9 +21,6 @@ import WorldCup8 from '@/components/WorldCup8.vue'
 import WorldCup4 from '@/components/WorldCup4.vue'
 import WorldCup2 from '@/components/WorldCup2.vue'
 import WorldCupFinal from '@/components/WorldCupFinal.vue'
-import weatherMovie from '@/components/weatherMovie.vue'
-import signUpView from '../views/signUpView.vue'
-import LoginView from '../views/LoginView.vue'
 import NotFound from '@/components/NotFound.vue'
 
 Vue.use(VueRouter)
@@ -73,18 +73,18 @@ const routes = [
   },
   {
     path: '/movie/like/:user',
-    name: 'LikeMovie',
-    component: LikeMovie
+    name: 'LikeMovieView',
+    component: LikeMovieView
   },
   {
     path: '/popular',
-    name: 'PopularMovie',
-    component: PopularMovie
+    name: 'PopularMovieView',
+    component: PopularMovieView
   },
   {
     path: '/random',
-    name: 'randomRecommend',
-    component: randomRecommend
+    name: 'randomRecommendView',
+    component: randomRecommendView
   },
   {
     path: '/worldcup64',
@@ -134,8 +134,8 @@ const routes = [
   },
   {
     path: '/weather',
-    name: 'weatherMovie',
-    component: weatherMovie
+    name: 'weatherMovieView',
+    component: weatherMovieView
   },
   {
     path: '*',

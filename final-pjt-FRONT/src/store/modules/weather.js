@@ -2,12 +2,16 @@ import axios from "axios"
 const API_URL = 'http://127.0.0.1:8000'
 const weather = {
     state: {
-
+      weather: null,
+      movies: null
     },
     getters: {
     },
     mutations: {
-
+      GET_MOVIE_WEATHER(state, payload) {
+        state.weather = payload.weather
+        state.movies = payload.result 
+      }
     },
     actions: {
       getMovieWeather(context) {
@@ -19,8 +23,7 @@ const weather = {
           }
         })
         .then((res) => {
-          console.log(context)
-          console.log(res)
+          context.commit('GET_MOVIE_WEATHER', res.data)
         })
         .catch(err => console.log(err))
       }
