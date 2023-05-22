@@ -22,9 +22,6 @@ const Movie = {
         popularMovie(state) {
             return _.take(state.popularMovie,10)
         },
-        random(state) {
-            return _.sample(state.movieList)
-        }
     },
     mutations: {
         MOVIE_LIST_PLUS_NULL(state){
