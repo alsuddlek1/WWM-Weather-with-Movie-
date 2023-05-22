@@ -22,6 +22,7 @@
         <p v-if="isLogin !== false">
           <router-link class="line" :to="{name : 'MovieMainView'}" @click.native="logOut">logOut</router-link>
         </p>
+        {{weather}}
       </div>
     </div>
     <nav v-if="isLogin !== false">
@@ -47,13 +48,23 @@ export default {
   computed: {
     isLogin() {
       return this.$store.getters.isLogin
+    },
+    weather() {
+      return this.$store.state.weather.weather
     }
   },
   methods: {
     logOut() {
       this.$store.dispatch('logOut')
     },
+    getMovieWeather() {
+      this.$store.dispatch('getMovieWeather')
+    }
   },
+
+  created() {
+    this.getMovieWeather()
+  }
   
 }
 </script>
