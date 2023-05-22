@@ -16,6 +16,7 @@ const Movie = {
         Review : null,
         CommentList : null,
         Comment: null,
+        LikeCount : null
 
     },
     getters: {
@@ -108,6 +109,18 @@ const Movie = {
         GET_POPULAR_MOVIE(state,payload) {
             state.popularMovie = payload
         },
+
+        // LIKE(state,payload) {
+        //     const movie = state.movieListPlus.filter(element => {
+        //         return element.id === payload
+        //     })
+        //     console.log(movie[0])
+        //     console.log(payload)
+        //     state.LikeCount = movie[0].like_users.length
+        //     // console.log(state.movieDetail)
+        //     // state.LikeCount = state.movieDetail.like_users.length
+        //     // console.log(state.LikeCount)
+        // }
     },
     actions: {
         getMovies(context, cnt) {
@@ -232,6 +245,24 @@ const Movie = {
         getPopularMovie(context, payload) {
             context.commit('GET_POPULAR_MOVIE', payload)
         },
+
+        // Like(context, payload) {
+        //     axios({
+        //         method: 'post',
+        //         url: `${API_URL}/movies/${payload.userpk}/${payload.movieId}/like/`,
+        //         data: {
+        //           user : payload.userpk,
+        //           movie : payload.movieId
+        //         },
+        //         headers: {
+        //             Authorization: `Token ${this.state.accounts.token}`
+        //           }
+        //         })
+        //       .then(() => {
+        //         context.commit('LIKE', payload.movieId)
+        //       })
+        //       .catch(err => console.log(err))
+        // }
     }
 }
 

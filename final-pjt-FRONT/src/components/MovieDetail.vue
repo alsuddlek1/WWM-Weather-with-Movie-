@@ -12,28 +12,29 @@
           <div class="card-text fontcolor font"> 개봉일자 : {{movie.release_date}}</div>
         </div> 
       <br>
-      <button @click="Like">좋아요❤</button> {{likeCount}}
+      <button @click="Like">좋아요❤</button> {{LikeCount}}
     </div>
   </div>
   <br>
   <p class="fontcolor font"> ▶ 리 뷰 목 록 ◀ </p>
   <ReviewDetail v-for="review in reviews" :key="review.id" :review-item="review" />
   <br>
-  <button @click="onClick" class="fontcolor font">리뷰 생성</button>
+  <button @click="onClick" class="fontcolor font">리뷰 생성</button> 
 </div>
 
 </template>
 
 <script>
 import axios from 'axios'
-import ReviewDetail from './ReviewDetail.vue'
 const API_URL = 'http://127.0.0.1:8000'
+import ReviewDetail from './ReviewDetail.vue'
 export default {
     name: 'MovieDetail',
     data() {
       return {
         movie_id : this.$route.params.movie_id,
         // movie : this.$store.state.Movie.movieDetail
+        LikeCount : null
       }
     },
     components: {
@@ -48,11 +49,11 @@ export default {
         return `https://image.tmdb.org/t/p/original/${this.$store.state.Movie.movieDetail.backdrop_path}`
       },
       reviews() {
-            return this.$store.state.Movie.reviewList
+        return this.$store.state.Movie.reviewList
       },
-      likeCount() {
-        return this.$store.state.Movie.movieDetail.like_users.length
-      }
+      // LikeCount() {
+      //   return this.$store.state.Movie.LikeCount
+      // }
     },
     methods: {
       getMovieDetail() {
@@ -63,21 +64,20 @@ export default {
         },
 
       Like() {
+        const userpk = this.$store.state.accounts.userpk
+        const movieId = this.movie_id
         axios({
-          method: 'post',
-          url: `${API_URL}/movies/${this.$store.state.accounts.userpk}/${this.movie_id}/like/`,
-          data: {
-            user : this.$store.state.accounts.userpk,
-            movie : this.movie_id
-          },
-          headers: {
-              Authorization: `Token ${this.$store.state.accounts.token}`
-            }
-          })
-        .then(res => {
-          console.log(res)
-        })
-        .catch(err => console.log(err))
+                method: 'post',
+                url: `${API_URL}/movies/${userpk}/${movieId}/like/`,
+                headers: {
+                    Authorization: `Token ${this.$store.state.accounts.token}`
+                  }
+                })
+              .then(() => {})
+              .catch(err => console.log(err))
+
+
+        // this.$store.dispatch('Like',data)
       },
       onClick() {
         this.$router.push({name:'ReviewCreate', params:{reviewId : this.movie.id}})
