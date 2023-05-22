@@ -167,7 +167,7 @@ def weather(request):
 
     # 날씨별 장르 추천
     genre_recommend = { 
-        'Thundersorm' : [27, 9648, 53], 
+        'Thunderstorm' : [27, 9648, 53], 
         'Drizzle' : [12, 16, 99],
         'Rain' : [80, 10752],
         'Snow' : [18, 10751],
