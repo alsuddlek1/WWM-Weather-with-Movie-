@@ -15,13 +15,14 @@ const weather = {
           method : 'get',
           url: `${API_URL}/movies/recommend/weather/`,
           data: {
-            weather : 'Clouds'
+            weather : 'clouds'
           }
         })
         .then((res) => {
           console.log(context)
           console.log(res)
         })
+        .catch(err => console.log(err))
       }
     },
 }

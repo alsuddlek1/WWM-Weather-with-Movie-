@@ -12,6 +12,9 @@ from .serializers import MovieSerializer,MovieListSerializer, GenreSerializer, R
 # Create your views here.
 # movie_list
 from rest_framework.pagination import PageNumberPagination
+import requests
+
+
 class CustomPagination(PageNumberPagination):
     page_size = 20  # 페이지당 항목 수
     page_query_param = 'page'  # 페이지 번호를 전달하는 GET 매개변수 이름
@@ -175,7 +178,7 @@ def popular_movies(request):
 #     if weather == thundersorm:
 #         for thun in thundersorm:
 #             for movie in movies:
-#                 if thun in movie[2][10]:
+#                 if thun in movie[2]["genres"]:
 #                     res.append(movie)
     
 #     if weather == drizzle:
@@ -223,6 +226,12 @@ def popular_movies(request):
 @api_view(['GET'])
 def weather(request):
     #  미리 장르 추천 딕셔너리 만들어놓고
+    URL = 'http://api.openweathermap.org/data/2.5/weather'
+    params = {'q' : 'Busan,kor', 'APPID' : '16508fa5d3e2477a89d27d1416030db4'}
+    weather = requests.get(URL,params=params).json()
+    print(weather['weather'][0]['main'])
+
+
     genre_recommend = { 
         'thundersorm' : [27, 9648, 53], 
         'drizzle' : [12, 16, 99],
