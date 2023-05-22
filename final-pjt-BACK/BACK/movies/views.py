@@ -175,6 +175,7 @@ def weather(request):
         'Clear' : [10749, 10770],
         'Clouds' : [37, 36, 10402, 878],
     }
+
     
     genre_re = genre_recommend[request_weather] 
     # print('===============================')
@@ -188,5 +189,10 @@ def weather(request):
         serializer = MovieListSerializer(movies, many=True)
         for serial in serializer.data:
             result.append(serial)
+
+    today_weather = {
+        'weatehr' : request_weather,
+        'result' : result
+    }
     
-    return Response(result)
+    return Response(today_weather)
