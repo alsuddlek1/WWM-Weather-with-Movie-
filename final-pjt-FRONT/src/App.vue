@@ -34,7 +34,6 @@
         <li><router-link class="line" :to="{name : 'PopularMovieView'}">POPULAR MOVIE</router-link></li>
         <li><router-link class="line" :to="{name : 'LikeMovieView', params: {user: this.$store.state.accounts.userpk} }">LIKED MOVIE</router-link></li>
         <li><router-link class="line" :to="{name : 'weatherMovieView'}">날씨</router-link></li>
-
       </ul>
   
     </nav>
