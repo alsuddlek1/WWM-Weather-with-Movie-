@@ -7,14 +7,14 @@
   <div class="container">
     <div class="row">
     <div class="card mouse bg-body bg-opacity-10" @click="goDetail(movies)">
-      <img :src="url" class="card-img-top">
+      <img v-if="movies" :src="url" class="card-img-top">
         <div class="card-body">
-        <h5 class="card-title fontcolor font">{{movies.title}}</h5>
+        <h5 v-if="movies" class="card-title fontcolor font">{{movies.title}}</h5>
         <br>
-        <div class="card-text fontcolor font" style="text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;">{{movies.overview}}</div>
+        <div v-if="movies" class="card-text fontcolor font" style="text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;">{{movies.overview}}</div>
         <br>
-        <div class="card-text fontcolor font"> 평점 : {{movies.vote_average}}</div>
-        <div class="card-text fontcolor font">개봉 일자 : {{movies.release_date}}</div>
+        <div v-if="movies" class="card-text fontcolor font"> 평점 : {{movies.vote_average}}</div>
+        <div v-if="movies" class="card-text fontcolor font">개봉 일자 : {{movies.release_date}}</div>
       </div>  
     </div>
     </div>    
@@ -43,7 +43,9 @@ export default {
       }
     },
     created() {
-      this.getMovieList()     
+      if (!this.$store.state.Movie.movieList) {
+        this.getMovieList()     
+      }
     }
 }
 </script>
