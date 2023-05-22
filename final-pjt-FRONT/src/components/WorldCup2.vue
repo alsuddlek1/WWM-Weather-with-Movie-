@@ -44,6 +44,9 @@ export default {
     }  
   },
   created(){
+    if (this.$store.state.WorldCup.worldcup2.length !== 2) {
+      this.$router.push({name:'NotFound'})
+    }
     this.count = 2
     if (this.isLogin) {
       this.getWorldCupMovie()
