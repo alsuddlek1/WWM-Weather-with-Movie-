@@ -27,10 +27,10 @@
     <nav v-if="isLogin !== false">
       <ul>
         <li><a href="#intro" class="line">INTRO</a></li>
-        <li><router-link class="line" :to="{name : 'randomRecommend'}">TODAY MOVIE</router-link></li>
+        <li><router-link class="line" :to="{name : 'randomRecommendView'}">TODAY MOVIE</router-link></li>
         <li><router-link class="line" :to="{name : 'movies'}">MOVIE LIST</router-link></li>
-        <li><router-link class="line" :to="{name : 'PopularMovie'}">POPULAR MOVIE</router-link></li>
-        <li><router-link class="line" :to="{name : 'LikeMovie', params: {user: this.$store.state.accounts.userpk} }">LIKED MOVIE</router-link></li>
+        <li><router-link class="line" :to="{name : 'PopularMovieView'}">POPULAR MOVIE</router-link></li>
+        <li><router-link class="line" :to="{name : 'LikeMovieView', params: {user: this.$store.state.accounts.userpk} }">LIKED MOVIE</router-link></li>
 
       </ul>
   

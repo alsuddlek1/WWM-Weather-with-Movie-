@@ -11,10 +11,10 @@
 
 <script>
 import axios from 'axios'
-import PopularMovieItem from './PopularMovieItem.vue'
+import PopularMovieItem from '../components/PopularMovieItem.vue'
 const API_URL = 'http://127.0.0.1:8000'
 export default {
-    name: 'PopularMovie',
+    name: 'PopularMovieView',
     components: {
         PopularMovieItem
     },

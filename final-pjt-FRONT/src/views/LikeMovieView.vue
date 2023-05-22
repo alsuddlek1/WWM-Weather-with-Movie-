@@ -11,10 +11,10 @@
 
 <script>
 import axios from 'axios'
-import LikeMovieItem from './LikeMovieItem.vue'
+import LikeMovieItem from '../components/LikeMovieItem.vue'
 const API_URL = 'http://127.0.0.1:8000'
 export default {
-    name: 'LikeMovie',
+    name: 'LikeMovieView',
     components: {
         LikeMovieItem
     },
