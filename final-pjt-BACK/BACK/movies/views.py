@@ -177,6 +177,7 @@ def weather(request):
     }
 
     
+    # genre_re = genre_recommend['Atmosphere'] 
     genre_re = genre_recommend[request_weather] 
     # print('===============================')
     # print(genre_re)
@@ -184,15 +185,17 @@ def weather(request):
 
     result = []
     for genre_rec in genre_re:
-        print(genre_rec)
-        movies = Movie.objects.all().filter(genres=genre_rec).order_by('popularity')[:5]
+        # print(genre_rec)
+        movies = Movie.objects.all().filter(genres=genre_rec)[:5]
         serializer = MovieListSerializer(movies, many=True)
         for serial in serializer.data:
-            result.append(serial)
+            if serial not in result:
+                result.append(serial)
 
     today_weather = {
         'weatehr' : request_weather,
         'result' : result
     }
     
+    # print(len(result))
     return Response(today_weather)
