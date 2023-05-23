@@ -45,7 +45,19 @@ const accounts = {
             .then(res => {
                 context.commit('SAVE_TOKEN', res.data.key)
             })
-            .catch(err => console.log(err))
+            .catch(err => {
+                console.log(err.response.data)
+                if (err.response.data.username) {
+                    alert(err.response.data.username)
+                }
+                if (err.response.data.username) {
+                    alert(err.response.data.password1)
+                }
+                if (err.response.data.non_field_errors) {
+                    alert(err.response.data.non_field_errors)
+                }
+                
+            })
         },
 
         login(context ,payload) {
@@ -62,7 +74,11 @@ const accounts = {
             .then(res => {
                 context.commit('SAVE_TOKEN', res.data.key)
             })
-            .catch(err => console.log(err))
+            .catch(err => {
+                if (err.response.data.non_field_errors) {
+                    alert(err.response.data.non_field_errors)
+                }
+            })
         },
 
         logOut(context) {
