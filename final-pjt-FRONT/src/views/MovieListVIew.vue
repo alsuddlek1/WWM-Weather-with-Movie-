@@ -1,7 +1,8 @@
 <template>
     <div>
         <br>
-        <h3>하 뭐라고 적지</h3>
+        <h3>ALL MOVIE LIST</h3>
+        <h5>보고싶은 영화를 찾아보세요</h5>
         <br>
         <div class="container">
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">

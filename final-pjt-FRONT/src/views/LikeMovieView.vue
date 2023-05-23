@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div class="container">
     <br>
-    <h3> 좋아요한 영화</h3>
+    <h3>LIKED MOVIE</h3>
+    <h5>당신이 좋아요한 영화를 확인해보세요</h5>
     <br>
     <div class="container">
     <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">

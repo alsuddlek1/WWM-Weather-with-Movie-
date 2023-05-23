@@ -1,4 +1,9 @@
 <template>
+<div>
+    <br>
+    <h3>SEARCH</h3>
+    <h5>보고 싶은 영화를 직접 검색해보세요</h5>
+    <br>
   <div class="searchsize">
     <div class="inputsize">
     <input placeholder="리 띄우고 신 안해도 됨" type="text" @input="changedata" @keyup="detectMovie" m-3>
@@ -9,6 +14,7 @@
             </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>

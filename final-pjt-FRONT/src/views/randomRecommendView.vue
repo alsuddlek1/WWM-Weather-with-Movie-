@@ -1,7 +1,8 @@
 <template>
 <div>
   <br>
-  <h3>오늘의 추천 영화 ☺</h3>
+  <h3>TODAY MOVIE</h3>
+  <h5>오늘의 추천 영화 ☺</h5>
   <br>
   <div class="row row-cols-1 row-cols-sm-3 g-2">
   <div class="container">
