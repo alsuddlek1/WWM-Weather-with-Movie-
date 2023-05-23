@@ -4,7 +4,7 @@
     <form @submit.prevent="createComment">
       <label for="content"> 👇댓글을 입력하세요👇 </label> <br>
       <input id="content" v-model="content" class="sign" size="100">
-      <input type="submit" id="submit" class="mt-3">
+      <input type="submit" id="submit" class="ms-3">
     </form>
   </div>
 </template>
