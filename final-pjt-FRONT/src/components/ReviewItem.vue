@@ -8,9 +8,8 @@
     <button v-if="userConfig" @click="goUpdateReview" class="button_mg">리뷰 수정</button>
     <hr>
     <CommentItem v-for="comment in Comments" :key="comment.id" :comment="comment"/>
-
-
     <button @click="GoComment" class="button_mg">댓글 작성</button>
+    <button @click="goList">뒤로 가기</button>
   </div>
 </template>
 
@@ -87,6 +86,10 @@ export default {
       
       goUpdateReview() {
         this.$router.push({name: 'ReviewUpdata', params: {reviewId : this.ReviewId}})
+      },
+
+      goList() {
+        this.$router.push({name:'MovieDetail', params: {'ReviewItem' : this.ReviewId}})
       }
 
     },

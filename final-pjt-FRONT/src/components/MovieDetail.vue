@@ -22,7 +22,8 @@
   <p class="fontcolor font"> ▶ 리 뷰 목 록 ◀ </p>
   <ReviewDetail v-for="review in reviews" :key="review.id" :review-item="review" />
   <br>
-  <button @click="onClick" class="fontcolor font">리뷰 생성</button> 
+  <button @click="onClick" >리뷰 생성</button>
+  <button @click="goList">목록보기</button>
 </div>
 
 </template>
@@ -77,6 +78,9 @@ export default {
       },
       onClick() {
         this.$router.push({name:'ReviewCreate', params:{reviewId : this.movie.id}})
+      },
+      goList() {
+        this.$router.push({name:'movies'})
       }
     },
     created() {

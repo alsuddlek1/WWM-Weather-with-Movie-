@@ -2,7 +2,7 @@
   <div class="col">
     <div class="card mouse bg-body bg-opacity-10 cardSize" @click="goDetail(movieItem)">
       <img :src="url" class="card-img-top imgSize">
-      <div class="card-body cardBodySize">
+      <div class="card-body cardBodySize cardTitle">
       <p class="card-title font" style="text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;">{{movieItem.title}}</p>
       </div>
     </div>
@@ -41,16 +41,16 @@ export default {
 <style>
   .cardSize {
     width: auto;
-    height: 450px;
+    height: auto;
   }
   .imgSize {
     height: 450px;
     width: auto;
   }
   .cardBodySize {
-    height: 50px;
+    height: 40px;
   }
   .cardTitle {
-    margin-bottom: 10px;
+    padding: 10px;
   }
 </style>

@@ -4,7 +4,7 @@
         <h3>당신의 취향을 찾아보세요!</h3>
         <br>
         <div class="container">
-        <div class="row row-cols-1 row-cols-sm-3 row-cols-md-5 g-4">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
         <MovieCard v-for="movie in movies" :key="movie.id" :movie-item="movie"/>
         </div>
         </div>
