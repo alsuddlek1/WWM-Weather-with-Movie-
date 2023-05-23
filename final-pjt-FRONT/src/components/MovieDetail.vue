@@ -12,7 +12,10 @@
           <div class="card-text fontcolor font"> 개봉일자 : {{movie.release_date}}</div>
         </div> 
       <br>
-      <button @click="Like" :class="{'buttonColor':is_liked}">좋아요❤</button> {{LikeCount}}
+      <!-- <p @click="Like" :class="{'buttonColor':is_liked}">♥</p> {{LikeCount}} -->
+      <div class="buttonsize ">
+      <button @click="Like" :class="{'buttonColor':is_liked}">♥ {{LikeCount}}</button> 
+      </div>
     </div>
   </div>
   <br>
@@ -88,4 +91,14 @@ export default {
   .buttonColor{
     background-color: red;
   }
+  .buttonsize {
+    width: 100px;
+  }
+  .flex {
+    display: flex;
+  }
+  .buttonRight {
+    justify-content: flex-end;
+  }
+  
 </style>

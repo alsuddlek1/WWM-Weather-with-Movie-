@@ -43,6 +43,10 @@
 
 
 <script>
+import Vue from 'vue'
+import VueGeolocationApi from 'vue-geolocation-api'
+
+Vue.use(VueGeolocationApi)
 export default {
   name: 'App',
   data() {
@@ -64,7 +68,12 @@ export default {
       this.$store.dispatch('logOut')
     },
     getMovieWeather() {
-      this.$store.dispatch('getMovieWeather')
+      navigator.geolocation.getCurrentPosition((position) => {
+        const lat = position.coords.latitude
+        const lon = position.coords.longitude
+        const data = {lat, lon}
+        this.$store.dispatch('getMovieWeather', data)
+      })
     }
   },
 
