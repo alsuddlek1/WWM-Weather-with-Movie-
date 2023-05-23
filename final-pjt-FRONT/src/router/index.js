@@ -9,6 +9,7 @@ import weatherMovieView from '../views/weatherMovieView.vue'
 import signUpView from '../views/signUpView.vue'
 import LoginView from '../views/LoginView.vue'
 import searchView from '../views/searchView.vue'
+import StartWorldCupView from '../views/StartWorldCupView.vue'
 import MovieDetail from '@/components/MovieDetail.vue'
 import ReviewItem from '@/components/ReviewItem.vue'
 import ReviewCreate from '@/components/ReviewCreate.vue'
@@ -86,6 +87,11 @@ const routes = [
     path: '/random',
     name: 'randomRecommendView',
     component: randomRecommendView
+  },
+  {
+    path: '/startWorldCup',
+    name: 'StartWorldCupView',
+    component: StartWorldCupView
   },
   {
     path: '/worldcup64',

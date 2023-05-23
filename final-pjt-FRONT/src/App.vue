@@ -28,20 +28,19 @@
       </div>
     </div>
     <nav v-if="isLogin !== false">
-      <ul>
+      <ul class="ultag">
         <li><a href="#intro" class="line">INTRO</a></li>
         <li><router-link class="line" :to="{name : 'randomRecommendView'}">TODAY</router-link></li>
         <li><router-link class="line" :to="{name : 'movies'}">LIST</router-link></li>
         <li><router-link class="line" :to="{name : 'PopularMovieView'}">POPULAR</router-link></li>
         <li><router-link class="line" :to="{name : 'LikeMovieView', params: {user: this.$store.state.accounts.userpk} }">LIKED</router-link></li>
         <li><router-link class="line" :to="{name : 'weatherMovieView'}">WEATHER</router-link></li>
-        <li><router-link class="line" :to="{name : 'WorldCup64'}">FAVORITE</router-link></li>
+        <li><router-link class="line" :to="{name : 'StartWorldCupView'}">FAVORITE</router-link></li>
         <li><router-link class="line" :to="{name : 'searchView'}">Search</router-link></li>
       </ul>
-  
     </nav>
     <router-view/>
-  </div>
+</div>
 </template>
 
 
@@ -107,6 +106,9 @@ export default {
 </script>
 
 <style>
+  .ultag{
+    margin-left: 7px;
+  }
   .line {
     text-decoration: none;
     color: white;
