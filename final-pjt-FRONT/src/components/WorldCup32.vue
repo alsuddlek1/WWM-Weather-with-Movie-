@@ -6,9 +6,9 @@
   <div class="row row-cols-2 row-cols-md-2">
     <div class="col" v-for="movie in TwoMovie" :key="movie.id"  @click="SelectMovie(movie)">
       <div class="card fontcolor mouse bg-body bg-opacity-10">
-        <img :src="`https://image.tmdb.org/t/p/original/${movie.poster_path}`" class="card-img-top">
+        <img :src="`https://image.tmdb.org/t/p/original/${movie.poster_path}`" class="card-img-top worldcupImgsize" >
         <div class="card-body">
-        <h5 class="card-title">{{movie.title}}</h5>     
+        <h5 class="card-title font">{{movie.title}}</h5>     
         </div>
       </div>
     </div>

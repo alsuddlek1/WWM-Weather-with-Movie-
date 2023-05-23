@@ -173,7 +173,7 @@ export default {
 
 .font {
     font-family: 'Gowun Dodum';
-    font-size: 15px;
+    font-size: 14px;
   }
 
 /* mouse 올렸을 때 커서 생김 */

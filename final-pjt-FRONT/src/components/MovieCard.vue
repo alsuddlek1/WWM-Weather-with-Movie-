@@ -3,7 +3,7 @@
     <div class="card mouse bg-body bg-opacity-10 cardSize" @click="goDetail(movieItem)">
       <img :src="url" class="card-img-top imgSize">
       <div class="card-body cardBodySize">
-      <p class="card-title font"><small>{{movieItem.title}}</small></p>
+      <p class="card-title font" style="text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;">{{movieItem.title}}</p>
       </div>
     </div>
    </div>
