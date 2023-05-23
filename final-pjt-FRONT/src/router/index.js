@@ -8,6 +8,7 @@ import randomRecommendView from '../views/randomRecommendView.vue'
 import weatherMovieView from '../views/weatherMovieView.vue'
 import signUpView from '../views/signUpView.vue'
 import LoginView from '../views/LoginView.vue'
+import searchView from '../views/searchView.vue'
 import MovieDetail from '@/components/MovieDetail.vue'
 import ReviewItem from '@/components/ReviewItem.vue'
 import ReviewCreate from '@/components/ReviewCreate.vue'
@@ -120,6 +121,11 @@ const routes = [
     path: '/worldCupFinal/:movie',
     name: 'WorldCupFinal',
     component: WorldCupFinal
+  },  
+  {
+    path: '/searchView',
+    name: 'searchView',
+    component: searchView
   },
   
   {

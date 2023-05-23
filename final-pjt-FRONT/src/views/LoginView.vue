@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1  class="fontcolor font">LOGIN PAGE</h1>
+    <h1>LOGIN PAGE</h1>
         <form @submit.prevent="login">
             <label for="username"  class="fontcolor font">username : </label>
             <input type="text" id="username" v-model="username" class="sign font">
@@ -37,5 +37,7 @@ export default {
 </script>
 
 <style>
-
+/* input{
+    width:500px;
+} */
 </style>
