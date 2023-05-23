@@ -160,14 +160,10 @@ def popular_movies(request):
 
 @api_view(['GET'])
 def weather(request, lat, lon):
-    print('==================================')
-    print(request)
-    print('==================================')
     # 날씨 api 
     URL = 'http://api.openweathermap.org/data/2.5/weather'
     params = {'lat' : lat, 'lon' : lon, 'APPID' : '16508fa5d3e2477a89d27d1416030db4'}
     weather = requests.get(URL,params=params).json()
-    print(weather)
     request_weather = weather['weather'][0]['main'] # 오늘 요청받은 날씨
     local_name = weather['name']
 

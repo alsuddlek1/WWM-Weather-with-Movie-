@@ -5,14 +5,16 @@ const API_URL = 'http://127.0.0.1:8000'
 const weather = {
     state: {
       weather: null,
-      movies: null
+      movies: null,
+      local : null
     },
     getters: {
     },
     mutations: {
       GET_MOVIE_WEATHER(state, payload) {
         state.weather = payload.weather
-        state.movies = payload.result 
+        state.movies = payload.result
+        state.local = payload.local_name
       }
     },
     actions: {

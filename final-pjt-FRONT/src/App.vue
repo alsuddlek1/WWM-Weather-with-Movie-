@@ -24,6 +24,7 @@
         </p>
         <br>
         <h4 v-if="isLogin !== false" class="logoline">현재 위치📍 날씨 : {{weather}}</h4>
+        <h5>{{local}}</h5>
       </div>
     </div>
     <nav v-if="isLogin !== false">
@@ -61,6 +62,9 @@ export default {
     },
     weathers() {
       return this.$store.state.weather.weather
+    },
+    local() {
+      return this.$store.state.weather.local
     }
   },
   methods: {
