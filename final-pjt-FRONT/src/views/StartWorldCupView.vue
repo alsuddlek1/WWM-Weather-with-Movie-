@@ -1,8 +1,11 @@
 <template>
   <div>
-    <h1>월드컵ㄱㄱ</h1>
-    <button @click="goWorldCup">응</button>
-    <button @click="goMain">싫어</button>
+    <br>
+    <h3>월드컵 뭐라고하징</h3>
+    <br>
+    <h5 @click="goWorldCup" class="mouse border-bottom"><small class="line">▶ 영화 월드컵 64강</small></h5>
+    <br>
+    <h5 @click="goMain" class="mouse border-bottom"><small class="line">▶ 메인으로 돌아가기</small></h5>
   </div>
 </template>
 

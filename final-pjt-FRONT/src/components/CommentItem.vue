@@ -1,8 +1,11 @@
 <template>
   <div class="fontcolor font button_mg button_size">
-    <p>댓글 : {{comment.content}}</p>
-    <button v-if="userConfig" @click="onClick(comment.id)" class="button_mg">댓글 수정</button>
-    <button v-if="userConfig" @click="deleteComment" class="button_mg">댓글 삭제</button>
+    <span>
+      
+    <p class="border-bottom comment_size" style="display:inline">▶ {{comment.content}}</p>
+    <p v-if="userConfig" @click="onClick(comment.id)" class="mouse button_mg" style="display:inline">수정</p>
+    <p v-if="userConfig" @click="deleteComment" class="mouse button_mg" style="display:inline">삭제</p>
+    </span>
 
   </div>
 </template>
@@ -49,4 +52,7 @@ export default {
 </script>
 
 <style>
+.comment_size{
+  width: auto;
+}
 </style>

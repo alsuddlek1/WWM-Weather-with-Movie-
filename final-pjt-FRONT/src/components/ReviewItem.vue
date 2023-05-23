@@ -2,14 +2,25 @@
   <div class="fontcolor font">
     <br>
     <br>
+    <div class="border border-2 rounded border_size">
 
-    <h5> 내용 : {{content}}</h5>
+    <h5> 내용 </h5>
+    <hr>
+     <h5> {{content}}</h5>
     <button v-if="userConfig" @click="deleteReview" class="button_mg">리뷰 삭제</button>
     <button v-if="userConfig" @click="goUpdateReview" class="button_mg">리뷰 수정</button>
+    <br>
+    <br>
+    
+    <div class="border border-1 rounded border_size2">
+    <h5>댓글</h5>
     <hr>
     <CommentItem v-for="comment in Comments" :key="comment.id" :comment="comment"/>
     <button @click="GoComment" class="button_mg">댓글 작성</button>
-    <button @click="goList">뒤로 가기</button>
+    </div>
+    </div>
+    <br>
+    <p @click="goList" class="mouse hover">뒤로 가기</p>
   </div>
 </template>
 
@@ -103,5 +114,14 @@ export default {
 </script>
 
 <style>
+.border_size{
+  width: 800px;
+  height: auto;
+  padding: 20px;
+}
 
+.border_size2{
+  width: 750px;
+  padding: 10px;
+}
 </style>

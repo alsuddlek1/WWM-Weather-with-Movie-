@@ -93,8 +93,6 @@ export default {
 
 <style>
   .buttonColor{
-    color: rgb(190, 9, 9) !important;
-    border-color : rgb(190, 9, 9) !important;
     background-color: rgba(255, 255, 255, 0.274);
     transition: 0.5s;
     margin-left: auto;
