@@ -75,7 +75,16 @@ export default {
   height: 500px;
   width: auto;
  }
+
  .worldcupcardTitle{
   margin: 0px;
  }
+ .worldcupImgsize:empty{
+  background-image: url('@/assets/cat.png');
+  background-repeat : no-repeat;
+  background-size : auto 100%;
+
+ }
+
+ 
 </style>
