@@ -3,8 +3,10 @@
         <br>
         <h3>당신의 취향을 찾아보세요!</h3>
         <br>
-        <div class="row row-cols-1 row-cols-sm-3 row-cols-md-5 g-2">
+        <div class="container">
+        <div class="row row-cols-1 row-cols-sm-3 row-cols-md-5 g-4">
         <MovieCard v-for="movie in movies" :key="movie.id" :movie-item="movie"/>
+        </div>
         </div>
         <button class="mouse fontcolor font m-5" @click="getMovies">더보기</button>
     </div>
@@ -52,5 +54,6 @@ export default {
 </script>
 
 <style>
+
 
 </style>

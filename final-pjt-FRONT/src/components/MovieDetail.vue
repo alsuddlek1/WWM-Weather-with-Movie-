@@ -89,10 +89,12 @@ export default {
 
 <style>
   .buttonColor{
-    background-color: red;
+    color: red !important;
+    margin-left: auto;
+    border-color: red !important;
   }
   .buttonsize {
-    width: 100px;
+    width: 100%;
   }
   .flex {
     display: flex;

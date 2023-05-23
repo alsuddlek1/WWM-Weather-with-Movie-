@@ -1,9 +1,9 @@
 <template>
   <div class="col">
-    <div class="card mouse bg-body bg-opacity-10" @click="goDetail(movieItem)">
-      <img :src="url" class="card-img-top">
-      <div class="card-body">
-      <h5 class="card-title font">{{movieItem.title}}</h5>
+    <div class="card mouse bg-body bg-opacity-10 cardSize" @click="goDetail(movieItem)">
+      <img :src="url" class="card-img-top imgSize">
+      <div class="card-body cardBodySize">
+      <p class="card-title font"><small>{{movieItem.title}}</small></p>
       </div>
     </div>
    </div>
@@ -39,5 +39,15 @@ export default {
 </script>
 
 <style>
- 
+  .cardSize {
+    width: auto;
+    height: 450px;
+  }
+  .imgSize {
+    height: 450px;
+    width: auto;
+  }
+  .cardBodySize {
+    height: 50px;
+  }
 </style>
