@@ -17,7 +17,8 @@ const Movie = {
         CommentList : null,
         Comment: null,
         LikeCount : null,
-        LikeTorF : null
+        LikeTorF : null,
+        searchMovie : null
 
     },
     getters: {
@@ -126,6 +127,26 @@ const Movie = {
                 state.LikeTorF = false
             } 
             
+        },
+
+        DETECT_MOVIE(state, payload) {
+            state.searchMovie = []
+            if (payload === "") {
+                state.searchMovie = []
+            } else {
+                const word = payload.split(' ').join('')
+            state.movieList.forEach(element => {
+                const title = element.title.split(' ').join('')
+                if (title.includes(word)) {
+                    state.searchMovie.push(element)
+                }
+            });
+            }
+            
+        },
+
+        MOVIES_NULL(state) {
+            state.searchMovie = null
         }
     },
     actions: {
@@ -268,7 +289,17 @@ const Movie = {
                 context.commit('LIKE', res.data)
               })
               .catch(err => console.log(err))
+        },
+
+        detectMovie(context, payload) {
+            context.commit('DETECT_MOVIE', payload)
+        },
+
+        moviesnull(context) {
+            context.commit('MOVIES_NULL')
         }
+
+
     }
 }
 

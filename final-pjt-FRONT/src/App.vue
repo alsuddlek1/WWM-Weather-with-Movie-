@@ -36,6 +36,7 @@
         <li><router-link class="line" :to="{name : 'LikeMovieView', params: {user: this.$store.state.accounts.userpk} }">LIKED</router-link></li>
         <li><router-link class="line" :to="{name : 'weatherMovieView'}">WEATHER</router-link></li>
         <li><router-link class="line" :to="{name : 'WorldCup64'}">FAVORITE</router-link></li>
+        <li><router-link class="line" :to="{name : 'searchView'}">Search</router-link></li>
       </ul>
   
     </nav>
