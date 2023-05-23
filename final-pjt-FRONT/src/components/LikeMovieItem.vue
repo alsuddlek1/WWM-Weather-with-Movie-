@@ -1,13 +1,13 @@
 <template>
-<div class="container padding">
-  <div class="row">
-    <div class="card mouse bg-body bg-opacity-10 p-3" @click="goDetail(movie)">
-      <img :src="url" class="card-img-top">
-        <div class="card-body">
-          <h3 class="card-title font">{{movie.title}}</h3>
-        </div>  
-    </div>
-  </div>    
+<div class="col">
+  <div class="container_size">
+    <div class="card mouse popular_card" @click="goDetail(movie)">
+      <img :src="url" class="card-img">
+      <div class="card-img-overlay">
+        <h3 class="card-titlepadding"><small>{{movie.title}}</small></h3>
+      </div>
+      </div>
+  </div>
 </div>
 </template>
 
@@ -31,5 +31,5 @@ export default {
 </script>
 
 <style>
-  
+
 </style>

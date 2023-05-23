@@ -14,16 +14,16 @@
       <br>
       <!-- <p @click="Like" :class="{'buttonColor':is_liked}">♥</p> {{LikeCount}} -->
       <div class="buttonsize ">
-      <button @click="Like" :class="{'buttonColor':is_liked}">♥ {{LikeCount}}</button> 
+      <h5 @click="Like" :class="{'buttonColor':is_liked}" class="mouse notclikck border rounded"><small>♥ {{LikeCount}}</small></h5> 
       </div>
     </div>
   </div>
   <br>
-  <p class="fontcolor font"> ▶ 리 뷰 목 록 ◀ </p>
+  <p class="fontcolor font">▶ 리 뷰 목 록 ◀</p>
   <ReviewDetail v-for="review in reviews" :key="review.id" :review-item="review" />
   <br>
-  <button @click="onClick" >리뷰 생성</button>
-  <button @click="goList">목록보기</button>
+  <button @click="onClick" class="m-2">리뷰 생성</button>
+  <button @click="goList" class="m-2">목록보기</button>
 </div>
 
 </template>
@@ -93,9 +93,20 @@ export default {
 
 <style>
   .buttonColor{
-    color: red !important;
+    color: rgb(190, 9, 9) !important;
+    border-color : rgb(190, 9, 9) !important;
+    background-color: rgba(255, 255, 255, 0.274);
+    transition: 0.5s;
     margin-left: auto;
-    border-color: red !important;
+    /* height: 50px; */
+    width: 100px;
+  }
+
+  .notclikck{
+    margin-left: auto;
+    transition: 0.5s;
+    /* height: 28px; */
+    width: 80px;
   }
   .buttonsize {
     width: 100%;

@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h1>저리가</h1>
+    <br>
+    <img src="../assets/cat.png" class="catsize">
+
+    
   </div>
 </template>
 
@@ -11,5 +14,8 @@ export default {
 </script>
 
 <style>
-
+.catsize{
+  width: 800px;
+  height: auto;
+}
 </style>

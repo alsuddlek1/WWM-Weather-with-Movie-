@@ -1,14 +1,14 @@
 <template>
 <div>
   <h1>64강</h1>
-  <h3>{{count}}/64</h3>
+  <h3>{{count}}/32</h3>
   <div class="container worldcupsize">
   <div class="row row-cols-2 row-cols-md-2">
     <div class="col" v-for="movie in TwoMovie" :key="movie.id"  @click="SelectMovie(movie)">
       <div class="card fontcolor mouse bg-body bg-opacity-10">
         <img :src="`https://image.tmdb.org/t/p/original/${movie.poster_path}`" class="card-img-top worldcupImgsize" >
-        <div class="card-body">
-        <h5 class="card-title font">{{movie.title}}</h5>     
+        <div class="card-body cardTitle">
+        <p class="worldcupcardTitle font " style="text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;">{{movie.title}}</p>     
         </div>
       </div>
     </div>
@@ -25,7 +25,7 @@ export default {
   name : 'WorldCup64',
   data() {
     return {
-      count : 2
+      count : 1
     }
   },
   computed: {
@@ -51,12 +51,12 @@ export default {
         .catch(err => console.log(err))
     },
     SelectMovie(movie) {
-      this.count += 2
+      this.count += 1
       this.$store.dispatch('SelectMovie', movie)
     }   
   },
   created(){
-    this.count = 2
+    this.count = 1
     if (this.isLogin) {
       this.getWorldCupMovie()
     } else {
@@ -74,5 +74,8 @@ export default {
  .worldcupImgsize{
   height: 500px;
   width: auto;
+ }
+ .worldcupcardTitle{
+  margin: 0px;
  }
 </style>

@@ -6,7 +6,7 @@
       <div class="card fontcolor mouse bg-body bg-opacity-10" @click="Godetail(movie)">
         <img :src="`https://image.tmdb.org/t/p/original/${movie.poster_path}`" class="card-img-top">
         <div class="card-body">
-        <h5 class="card-title">{{movie.title}}</h5>     
+        <p class="worldcupcardTitle font " style="text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;">{{movie.title}}</p>   
         </div>
       </div>
     </div>

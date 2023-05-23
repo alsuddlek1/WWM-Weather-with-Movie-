@@ -1,20 +1,8 @@
 <template>
-  <!-- <div class="container padding">
-    <div class="row">
-      <div class="card mouse bg-body bg-opacity-10" @click="goDetail(movie)">
-        <img :src="url" class="card-img-top p-3">
-          <div class="card-body">
-            <h3 class="card-title font">{{movie.title}}</h3>
-            <h5 class="card-title font">{{movie.vote_average}}</h5>
-          </div>  
-      </div>
-    </div>
-  </div> -->
-  <div class="col">
-
+<div class="col">
   <div class="container_size">
     <div class="card mouse text-bg-dark bg-opacity-10 popular_card" @click="goDetail(movie)">
-      <img :src="url" class="card-img padding popular_imgSize">
+      <img :src="url" class="card-img">
       <div class="card-img-overlay">
         <h3 class="card-titlepadding"><small class="text-bg-dark">{{movie.title}}</small></h3>
         <p class="cord-text"><small class="text-bg-dark">{{movie.release_date}}</small></p>
@@ -44,23 +32,10 @@ export default {
 </script>
 
 <style>
-/* .container_size{
-  margin: 8px;
-  height: auto;
-  width: 830px;
-} */
 
 .popular_card{
   padding: 1px;
   margin: 20px;
-  /* height: auto; */
-  /* width: 800px; */
 }
-
-/* .popular_imgSize {
-  height: auto;
-  width: 800px;
-} */
-
 
 </style>

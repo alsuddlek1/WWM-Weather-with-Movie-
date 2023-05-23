@@ -24,17 +24,18 @@
         </p>
         <br>
         <p v-if="isLogin !== false" class="logoline">현재 위치 날씨 : {{weather}}</p>
-        <p><small>Current Location : {{local}}</small></p>
+        <p><small>Current Location City : {{local}}</small></p>
       </div>
     </div>
     <nav v-if="isLogin !== false">
       <ul>
         <li><a href="#intro" class="line">INTRO</a></li>
-        <li><router-link class="line" :to="{name : 'randomRecommendView'}">TODAY MOVIE</router-link></li>
-        <li><router-link class="line" :to="{name : 'movies'}">MOVIE LIST</router-link></li>
-        <li><router-link class="line" :to="{name : 'PopularMovieView'}">POPULAR MOVIE</router-link></li>
-        <li><router-link class="line" :to="{name : 'LikeMovieView', params: {user: this.$store.state.accounts.userpk} }">LIKED MOVIE</router-link></li>
-        <li><router-link class="line" :to="{name : 'weatherMovieView'}">날씨</router-link></li>
+        <li><router-link class="line" :to="{name : 'randomRecommendView'}">TODAY</router-link></li>
+        <li><router-link class="line" :to="{name : 'movies'}">LIST</router-link></li>
+        <li><router-link class="line" :to="{name : 'PopularMovieView'}">POPULAR</router-link></li>
+        <li><router-link class="line" :to="{name : 'LikeMovieView', params: {user: this.$store.state.accounts.userpk} }">LIKED</router-link></li>
+        <li><router-link class="line" :to="{name : 'weatherMovieView'}">WEATHER</router-link></li>
+        <li><router-link class="line" :to="{name : 'WorldCup64'}">FAVORITE</router-link></li>
       </ul>
   
     </nav>
@@ -89,15 +90,15 @@ export default {
     } else if (this.weathers === 'Rain') {
       this.weather = '비 🌧'
     } else if (this.weathers === 'Thunderstorm') {
-      this.weather = '번개 ⚡'
+      this.weather = '번개 🌩'
     } else if (this.weathers === 'Drizzle') {
-      this.weather = '이슬비 🌂'
+      this.weather = '이슬비 ☂'
     } else if (this.weathers === 'Snow') {
       this.weather = '눈 ☃'
     } else if (this.weathers === 'Atmosphere') {
       this.weather = '안개 🌫'
     } else if (this.weathers === 'Clear') {
-      this.weather = '맑음 🌞'
+      this.weather = '맑음 ☀'
     } 
   }
   

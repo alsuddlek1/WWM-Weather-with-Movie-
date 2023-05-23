@@ -1,10 +1,12 @@
 <template>
   <div>
     <br>
-    <h3> ❤좋아요❤ 한 영화</h3>
+    <h3> 좋아요한 영화</h3>
     <br>
+    <div class="container">
     <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
     <LikeMovieItem v-for="movie in movies" :key="movie.id" :movie="movie"/>
+    </div>
     </div>
   </div>
 </template>
