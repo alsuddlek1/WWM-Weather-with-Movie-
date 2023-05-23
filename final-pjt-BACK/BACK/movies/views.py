@@ -169,7 +169,7 @@ def weather(request, lat, lon):
     weather = requests.get(URL,params=params).json()
     print(weather)
     request_weather = weather['weather'][0]['main'] # 오늘 요청받은 날씨
-  
+    local_name = weather['name']
 
     # 날씨별 장르 추천
     genre_recommend = { 
@@ -184,6 +184,7 @@ def weather(request, lat, lon):
 
     genre_re = genre_recommend[request_weather] 
 
+
     result = []
     for genre_rec in genre_re:
         movies = Movie.objects.all().filter(genres=genre_rec)[:5]
@@ -194,6 +195,7 @@ def weather(request, lat, lon):
 
     today_weather = {
         'weather' : request_weather,
-        'result' : result
+        'result' : result,
+        'local_name' : local_name
     }
     return Response(today_weather)

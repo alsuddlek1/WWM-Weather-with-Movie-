@@ -23,7 +23,7 @@
           <router-link class="line" :to="{name : 'MovieMainView'}" @click.native="logOut">logOut</router-link>
         </p>
         <br>
-        <h4 v-if="isLogin !== false" class="logoline">오늘의 부산🏖️ 날씨 : {{weather}}</h4>
+        <h4 v-if="isLogin !== false" class="logoline">현재 위치📍 날씨 : {{weather}}</h4>
       </div>
     </div>
     <nav v-if="isLogin !== false">
