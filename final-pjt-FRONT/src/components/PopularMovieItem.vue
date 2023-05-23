@@ -10,15 +10,18 @@
       </div>
     </div>
   </div> -->
-  <div class="card text-bg-dark bg-opacity-10">
-  <img :src="url" class="card-img padding">
-  <div class="card-img-overlay">
-    <h5 class="card-title padding">{{movie.title}}</h5>
-    <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
-    <p class="card-text"><small>{{movie.release_date}}</small></p>
+  <div class="col">
+
+  <div class="container_size">
+    <div class="card mouse text-bg-dark bg-opacity-10 popular_card" @click="goDetail(movie)">
+      <img :src="url" class="card-img padding popular_imgSize">
+      <div class="card-img-overlay">
+        <h5 class="card-title padding">{{movie.title}}</h5>
+        <p class="card-text"><small>{{movie.release_date}}</small></p>
+  </div>
+      </div>
   </div>
 </div>
-
 </template>
 
 <script>
@@ -41,8 +44,22 @@ export default {
 </script>
 
 <style>
-.padding {
-  padding: 10px 10px 10px;
+/* .container_size{
+  margin: 8px;
+  height: auto;
+  width: 830px;
+} */
+
+.popular_card{
+  padding: 1px;
+  margin: 20px;
+  /* height: auto; */
+  /* width: 800px; */
 }
+
+/* .popular_imgSize {
+  height: auto;
+  width: 800px;
+} */
 
 </style>

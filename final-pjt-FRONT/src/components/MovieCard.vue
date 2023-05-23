@@ -50,4 +50,7 @@ export default {
   .cardBodySize {
     height: 50px;
   }
+  .cardTitle {
+    margin-bottom: 10px;
+  }
 </style>
