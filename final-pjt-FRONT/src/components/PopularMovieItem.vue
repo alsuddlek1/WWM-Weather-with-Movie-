@@ -16,9 +16,9 @@
     <div class="card mouse text-bg-dark bg-opacity-10 popular_card" @click="goDetail(movie)">
       <img :src="url" class="card-img padding popular_imgSize">
       <div class="card-img-overlay">
-        <h5 class="card-title padding">{{movie.title}}</h5>
-        <p class="card-text"><small>{{movie.release_date}}</small></p>
-  </div>
+        <h3 class="card-titlepadding"><small class="text-bg-dark">{{movie.title}}</small></h3>
+        <p class="cord-text"><small class="text-bg-dark">{{movie.release_date}}</small></p>
+      </div>
       </div>
   </div>
 </div>
@@ -61,5 +61,6 @@ export default {
   height: auto;
   width: 800px;
 } */
+
 
 </style>
