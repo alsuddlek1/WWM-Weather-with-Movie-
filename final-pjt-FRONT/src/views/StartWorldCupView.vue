@@ -1,11 +1,13 @@
 <template>
   <div>
     <br>
-    <h3>월드컵 뭐라고하징</h3>
+    <h3>FAVORITE MOVIE</h3>
     <br>
-    <h5 @click="goWorldCup" class="mouse border-bottom"><small class="line">▶ 영화 월드컵 64강</small></h5>
+    <h5 @click="goWorldCup64" class="mouse border-bottom"><small class="line">▶ 64강 시작하기</small></h5>
+ 
     <br>
-    <h5 @click="goMain" class="mouse border-bottom"><small class="line">▶ 메인으로 돌아가기</small></h5>
+    <br>
+    <p @click="goMain" class="mouse"><small class="line">메인으로 돌아가기</small></p>
   </div>
 </template>
 
@@ -13,8 +15,11 @@
 export default {
     naem: 'StartWorldCupView',
     methods: {
-        goWorldCup() {
+        goWorldCup64() {
             this.$router.push({name:'WorldCup64'})
+        },
+        goWorldCup32() {
+            this.$router.push({name:'WorldCup32'})
         },
         goMain() {
             this.$router.push({name:'MovieMainView'})

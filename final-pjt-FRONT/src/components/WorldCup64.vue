@@ -4,9 +4,9 @@
   <h3>{{count}}/32</h3>
   <div class="container worldcupsize">
   <div class="row row-cols-2 row-cols-md-2">
-    <div class="col" v-for="movie in TwoMovie" :key="movie.id"  @click="SelectMovie(movie)">
-      <div class="card fontcolor mouse bg-body bg-opacity-10">
-        <img :src="`https://image.tmdb.org/t/p/original/${movie.poster_path}`" class="card-img-top worldcupImgsize" >
+    <div class="col " v-for="movie in TwoMovie" :key="movie.id"  @click="SelectMovie(movie)">
+      <div class="card fontcolor mouse bg-body bg-opacity-10 worldcup">
+        <img :src="`https://image.tmdb.org/t/p/original/${movie.poster_path}`" class="card-img-top worldcupImgsize worldcup_box" >
         <div class="card-body cardTitle">
         <p class="worldcupcardTitle font " style="text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;">{{movie.title}}</p>     
         </div>
@@ -68,14 +68,22 @@ export default {
 </script>
 
 <style>
+.worldcup{
+  overflow: hidden;
+}
  .worldcupsize{
   width: 700px;
  }
  .worldcupImgsize{
   height: 500px;
   width: auto;
+  overflow: hidden;
  }
  .worldcupcardTitle{
-  margin: 0px;
+   margin: 0px;
+ }
+
+ .worldcupImgsize:hover{
+   transform: scale(1.1);
  }
 </style>

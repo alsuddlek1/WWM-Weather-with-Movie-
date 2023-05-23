@@ -19,11 +19,17 @@
     </div>
   </div>
   <br>
-  <p class="fontcolor font">▶ 리 뷰 목 록 ◀</p>
+  <div class="border border-2 rounded p-3">
+    
+  <h5 class="fontcolor font">▶ 리 뷰 목 록 ◀</h5>
+  <br>
   <ReviewDetail v-for="review in reviews" :key="review.id" :review-item="review" />
+  <br>
+  <hr>
   <br>
   <button @click="onClick" class="m-2">리뷰 생성</button>
   <button @click="goList" class="m-2">목록보기</button>
+  </div>
 </div>
 
 </template>

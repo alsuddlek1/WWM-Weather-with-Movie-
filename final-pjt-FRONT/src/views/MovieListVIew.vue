@@ -2,7 +2,8 @@
     <div>
         <br>
         <h3>ALL MOVIE LIST</h3>
-        <h5>보고싶은 영화를 찾아보세요</h5>
+        <h5><small>보고싶은 영화의 상세정보를 확인해보세요</small></h5>
+        <p>a 태그 점선이 죽어도 안없어진다 없애주라</p>
         <br>
         <div class="container">
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">

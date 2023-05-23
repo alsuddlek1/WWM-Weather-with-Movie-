@@ -1,11 +1,13 @@
 <template>
   <div class="fontcolor font">
-    <h1>리뷰 작성</h1>
+    <br>
+    <h3>리뷰 작성</h3>
+    <br>
     <form @submit.prevent="createReview">
       <label for="title">제목 : </label>
-      <input type="text" id="title" v-model.trim="title"><br>
+      <input type="text" id="title" v-model.trim="title" class="review_size"><br>
       <label for="content">내용 : </label>
-      <textarea id="content" cols="30" rows="10" v-model="content" ></textarea><br>
+      <textarea id="content" cols="30" rows="10" v-model="content" class="review_size"></textarea><br>
       <input type="submit" id="submit">
     </form>
   </div>
@@ -66,5 +68,7 @@ export default {
 </script>
 
 <style>
-
+.review_size{
+    width: 800px;
+}
 </style>

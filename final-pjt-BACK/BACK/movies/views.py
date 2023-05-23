@@ -191,7 +191,7 @@ def weather(request, lat, lon):
 
     today_weather = {
         'weather' : request_weather,
-        'result' : result,
+        'result' : result[:8],
         'local_name' : local_name
     }
     return Response(today_weather)

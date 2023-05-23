@@ -1,13 +1,15 @@
 <template>
-  <!-- <div class="container padding"> -->
-  <div class="col">
-    <div @click="goDetail(movie)">
-      <img :src="`https://image.tmdb.org/t/p/original/${movie.poster_path}`" class="card-img-top">
-        <div class="card-body">
-        </div>  
+  <!-- <div class="a">
+    <div @click="goDetail(movie)" class="card mouse bg-body bg-opacity-10 cardSize">
+      <img :src="`https://image.tmdb.org/t/p/original/${movie.poster_path}`" class="imgSize">
+        
     </div>
-  </div>    
-<!-- </div> -->
+  </div>     -->
+  <div class="col a">
+    <div class="card mouse bg-body bg-opacity-10 cardSize" @click="goDetail(movie)">
+      <img :src="`https://image.tmdb.org/t/p/original/${movie.poster_path}`" class="card-img-top imgSize">
+    </div>
+   </div>
 </template>
 
 <script>
@@ -26,5 +28,13 @@ export default {
 </script>
 
 <style>
-
+.weather_size {
+  padding: 1px;
+}
+.a img {
+  transition: all 0.2s linear;
+}
+.a:hover img{
+  transform: scale(1.1);
+}
 </style>

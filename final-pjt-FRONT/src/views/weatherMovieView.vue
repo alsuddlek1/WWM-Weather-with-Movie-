@@ -4,8 +4,10 @@
     <h3>{{weather}} 이런 영화는 어때요?</h3>
     <h5>날씨에 어울리는 영화를 추천해드립니다</h5>
     <br>
-    <div class="row row-cols-1 row-cols-sm-3 row-cols-md-5 g-2">
+    <div class="container">
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
     <weatherMovieItem v-for="movie in movies" :key="movie.id" :movie="movie"/>
+    </div>
     </div>
   </div>
 </template>
