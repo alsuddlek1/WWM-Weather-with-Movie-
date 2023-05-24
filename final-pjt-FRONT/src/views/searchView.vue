@@ -7,6 +7,7 @@
   <div class="searchsize">
     <div class="inputsize">
     <input placeholder="리 띄우고 신 안해도 됨" type="text" @input="changedata" @keyup="detectMovie" m-3>
+    <button>검색하기</button>
     </div>
     <div v-for="movie in movies" :key="movie.id">
             <div class="m-3 mouse" @click="goDetail(movie)">
