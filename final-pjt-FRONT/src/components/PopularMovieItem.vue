@@ -1,7 +1,7 @@
 <template>
 <div class="col">
   <div class="container_size">
-    <div class="mouse text-bg-dark bg-opacity-10" @click="goDetail(movie)">
+    <div class="mouse text-bg-dark bg-opacity-10"  @click="goDetail(movie)">
       <figure class="snip1384">
       <img :src="url" class="card-img">
       <figcaption>
@@ -41,13 +41,8 @@ export default {
   margin: 20px;
 }
 
-.popular{
-  overflow: hidden;
-}
 
 figure.snip1384 {
-  /* font-family: 'Raleway', Arial, sans-serif; */
-  /* 폰트 뭐가 더 나아? */
   position: relative;
   overflow: hidden;
   color: #ffffff;
@@ -66,7 +61,17 @@ figure.snip1384 * {
 
 figure.snip1384:after,
 figure.snip1384 figcaption {
+  content: ''; 
+  display: block;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  border: 1px solid #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
   position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  margin: auto; 
+  opacity: 0;
   top: 0;
   bottom: 0;
   left: 0;
@@ -87,8 +92,7 @@ figure.snip1384 figcaption {
   padding: 40px;
 }
 
-figure.snip1384 h3,
-figure.snip1384 h5
+figure.snip1384 h3
  {
   width: 100%;
   margin: 5px 0;
@@ -135,22 +139,12 @@ figure.snip1384:hover:after {
   right: 10px;
 }
 
-/* 상자 있는게 더 나아 없는게 나아? */
-figure.snip1384 figcaption:hover:after{
-  content: ''; 
-  display: block;
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
-  border: 1px solid #fff;
-  box-sizing: border-box;
-  position: absolute;
-  left: 0; right: 0; top: 0; bottom: 0;
-  margin: auto; 
-}
-
 figure.snip1384:hover h3,
 figure.snip1384:hover h5,
-figure.snip1384:hover p {
+figure.snip1384:hover p,
+figure.snip1384:hover figure,
+figure.snip1384:hover figcaption
+{
   -webkit-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
   opacity: 1;
