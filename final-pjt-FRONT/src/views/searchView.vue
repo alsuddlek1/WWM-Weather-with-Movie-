@@ -2,7 +2,7 @@
 <div>
     <br>
     <h3>SEARCH</h3>
-    <h5>보고 싶은 영화를 직접 검색해보세요</h5>
+    <h5>👇검색어를 입력하세요👇</h5>
     <br>
   <div class="searchsize">
     <div class="inputsize">
