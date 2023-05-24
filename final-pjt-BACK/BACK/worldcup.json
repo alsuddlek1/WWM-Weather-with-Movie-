@@ -1,6 +1,6 @@
 [
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 14,
 		"fields": {
 			"movie_id": 76600,
@@ -21,7 +21,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 2,
 		"fields": {
 			"movie_id": 385687,
@@ -41,7 +41,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 210,
 		"fields": {
 			"movie_id": 245891,
@@ -61,7 +61,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 51,
 		"fields": {
 			"movie_id": 283995,
@@ -83,7 +83,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 118,
 		"fields": {
 			"movie_id": 635302,
@@ -106,7 +106,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 525,
 		"fields": {
 			"movie_id": 27205,
@@ -127,7 +127,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 211,
 		"fields": {
 			"movie_id": 157336,
@@ -148,7 +148,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 603,
 		"fields": {
 			"movie_id": 1726,
@@ -169,7 +169,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 305,
 		"fields": {
 			"movie_id": 24428,
@@ -190,7 +190,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 588,
 		"fields": {
 			"movie_id": 271110,
@@ -211,7 +211,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 490,
 		"fields": {
 			"movie_id": 10195,
@@ -232,7 +232,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 581,
 		"fields": {
 			"movie_id": 603,
@@ -252,7 +252,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 626,
 		"fields": {
 			"movie_id": 900667,
@@ -274,7 +274,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 459,
 		"fields": {
 			"movie_id": 22,
@@ -295,7 +295,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 542,
 		"fields": {
 			"movie_id": 120,
@@ -316,7 +316,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 351,
 		"fields": {
 			"movie_id": 12444,
@@ -336,7 +336,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 526,
 		"fields": {
 			"movie_id": 155,
@@ -358,7 +358,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 539,
 		"fields": {
 			"movie_id": 150540,
@@ -381,7 +381,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 412,
 		"fields": {
 			"movie_id": 315635,
@@ -403,7 +403,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 832,
 		"fields": {
 			"movie_id": 10681,
@@ -424,7 +424,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 820,
 		"fields": {
 			"movie_id": 105,
@@ -445,7 +445,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 613,
 		"fields": {
 			"movie_id": 408,
@@ -466,7 +466,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 831,
 		"fields": {
 			"movie_id": 140607,
@@ -487,7 +487,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 327,
 		"fields": {
 			"movie_id": 597,
@@ -507,7 +507,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 372,
 		"fields": {
 			"movie_id": 278,
@@ -527,7 +527,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 904,
 		"fields": {
 			"movie_id": 263115,
@@ -548,7 +548,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 652,
 		"fields": {
 			"movie_id": 260346,
@@ -568,7 +568,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 528,
 		"fields": {
 			"movie_id": 284052,
@@ -589,7 +589,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 870,
 		"fields": {
 			"movie_id": 76341,
@@ -610,7 +610,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 337,
 		"fields": {
 			"movie_id": 585,
@@ -631,7 +631,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 462,
 		"fields": {
 			"movie_id": 109445,
@@ -653,7 +653,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 1247,
 		"fields": {
 			"movie_id": 1771,
@@ -674,7 +674,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 625,
 		"fields": {
 			"movie_id": 135397,
@@ -696,7 +696,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 532,
 		"fields": {
 			"movie_id": 335983,
@@ -716,7 +716,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 325,
 		"fields": {
 			"movie_id": 138843,
@@ -736,7 +736,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 779,
 		"fields": {
 			"movie_id": 489,
@@ -755,7 +755,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 757,
 		"fields": {
 			"movie_id": 218,
@@ -776,7 +776,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 868,
 		"fields": {
 			"movie_id": 857,
@@ -797,7 +797,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 576,
 		"fields": {
 			"movie_id": 297802,
@@ -818,7 +818,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 595,
 		"fields": {
 			"movie_id": 496243,
@@ -839,7 +839,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 672,
 		"fields": {
 			"movie_id": 13,
@@ -860,7 +860,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 706,
 		"fields": {
 			"movie_id": 420817,
@@ -882,7 +882,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 723,
 		"fields": {
 			"movie_id": 396535,
@@ -904,7 +904,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 974,
 		"fields": {
 			"movie_id": 954,
@@ -925,7 +925,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 857,
 		"fields": {
 			"movie_id": 8392,
@@ -946,7 +946,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 616,
 		"fields": {
 			"movie_id": 9502,
@@ -969,7 +969,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 1785,
 		"fields": {
 			"movie_id": 122906,
@@ -990,7 +990,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 5635,
 		"fields": {
 			"movie_id": 198277,
@@ -1012,7 +1012,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 1409,
 		"fields": {
 			"movie_id": 637,
@@ -1032,7 +1032,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 1518,
 		"fields": {
 			"movie_id": 257211,
@@ -1051,7 +1051,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 3245,
 		"fields": {
 			"movie_id": 509,
@@ -1071,7 +1071,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 4975,
 		"fields": {
 			"movie_id": 2832,
@@ -1091,7 +1091,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 6547,
 		"fields": {
 			"movie_id": 85350,
@@ -1110,7 +1110,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 1122,
 		"fields": {
 			"movie_id": 102651,
@@ -1133,7 +1133,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 375,
 		"fields": {
 			"movie_id": 705996,
@@ -1156,7 +1156,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 7074,
 		"fields": {
 			"movie_id": 295693,
@@ -1177,7 +1177,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 484,
 		"fields": {
 			"movie_id": 129,
@@ -1198,7 +1198,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 801,
 		"fields": {
 			"movie_id": 783675,
@@ -1219,7 +1219,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 533,
 		"fields": {
 			"movie_id": 4935,
@@ -1240,7 +1240,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 284,
 		"fields": {
 			"movie_id": 497698,
@@ -1261,7 +1261,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 143,
 		"fields": {
 			"movie_id": 411,
@@ -1282,7 +1282,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 1032,
 		"fields": {
 			"movie_id": 14574,
@@ -1303,7 +1303,7 @@
 		}
 	},
     {
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 2068,
 		"fields": {
 			"movie_id": 152601,
@@ -1324,7 +1324,7 @@
 		}
 	},
 	{
-		"model": "movies.movie",
+		"model": "movies.worldcup",
 		"pk": 354,
 		"fields": {
 			"movie_id": 354912,

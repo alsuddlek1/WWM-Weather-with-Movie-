@@ -41,6 +41,7 @@ class Comment(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
 class Worldcup(models.Model):
+    genres = models.ManyToManyField(Genre)
     movie_id = models.TextField()
     title = models.TextField()
     original_title = models.TextField()
@@ -49,6 +50,7 @@ class Worldcup(models.Model):
     vote_average = models.FloatField()
     vote_count = models.IntegerField()
     release_date = models.TextField()
+    # runtime = models.IntegerField()
     popularity = models.FloatField()
     adult = models.BooleanField()
     backdrop_path = models.CharField(max_length=500)
