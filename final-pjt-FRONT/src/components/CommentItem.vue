@@ -2,9 +2,9 @@
   <div class="fontcolor font button_mg button_size">
     <span>
       
-    <p class="border-bottom comment_size" style="display:inline">▶ {{comment.content}}</p>
-    <p v-if="userConfig" @click="onClick(comment.id)" class="mouse button_mg" style="display:inline">수정</p>
-    <p v-if="userConfig" @click="deleteComment" class="mouse button_mg" style="display:inline">삭제</p>
+    <p class="comment_size" style="display:inline">▶ {{comment.content}}</p>
+    <p v-if="userConfig" @click="onClick(comment.id)" class="mouse ms-3 me-2 " style="display:inline">수정</p>
+    <p v-if="userConfig" @click="deleteComment" class="mouse" style="display:inline">삭제</p>
     </span>
 
   </div>

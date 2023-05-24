@@ -7,8 +7,6 @@
     <h5> 내용 </h5>
     <hr>
      <h5> {{content}}</h5>
-    <button v-if="userConfig" @click="deleteReview" class="button_mg">리뷰 삭제</button>
-    <button v-if="userConfig" @click="goUpdateReview" class="button_mg">리뷰 수정</button>
     <br>
     <br>
     
@@ -19,6 +17,10 @@
     <button @click="GoComment" class="button_mg">댓글 작성</button>
     </div>
     </div>
+    <br>
+    <button v-if="userConfig" @click="goUpdateReview" class="button_mg">리뷰 수정</button>
+    <button v-if="userConfig" @click="deleteReview" class="button_mg">리뷰 삭제</button>
+    <br>
     <br>
     <p @click="Back" class="mouse hover">뒤로 가기</p>
   </div>

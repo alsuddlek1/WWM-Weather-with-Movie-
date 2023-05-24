@@ -3,10 +3,11 @@
     <h1 class="fontcolor font">리뷰 수정</h1>
     <form @submit.prevent="updateReview">
         <label for="title" class="fontcolor font">제목 : </label>
-        <input type="text" id="title" v-model.trim="title"><br>
+        <input type="text" id="title" v-model.trim="title" class="review_size"><br>
         <label for="content" class="fontcolor font">내용 : </label>
-        <textarea id="content" cols="30" rows="10" v-model="content" class="fontcolor font"></textarea><br>
+        <textarea id="content" cols="30" rows="10" v-model="content" class="fontcolor font review_size"></textarea><br>
         <input type="submit" id="submit">
+        <p @click="Back" class="mouse hover mt-3">뒤로 가기</p>
     </form>
   </div>
 </template>
@@ -60,6 +61,9 @@ export default {
             })
             .catch(err => console.log(err))
         },
+        Back() {
+        this.$router.push({name:'ReviewItem', params: {'reviewId' : this.$route.params.reviewId}})
+        }
     },
     created() {
         this.searchMovieId()   

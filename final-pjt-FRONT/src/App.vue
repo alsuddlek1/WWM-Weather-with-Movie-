@@ -8,7 +8,7 @@
     </div>
     <div class="content">
       <div class="inner">
-        <h1>Dimension</h1>
+        <h1>WWM</h1>
         <p v-if="isLogin === false" class="logoline">
         ---의 서비스를 이용할 준비가 되셨나요? 그렇다면
         <router-link class="line" :to="{name : 'LoginView'}">로그인</router-link>을 하세요 !
@@ -41,7 +41,7 @@
       </ul>
     </nav>
     <router-view/>
-    <button @click="goTop">TOP</button>
+    
 </div>
 </template>
 
@@ -82,9 +82,7 @@ export default {
         this.$store.dispatch('getMovieWeather', data)
       })
     },
-    goTop() {
-      window.scrollTo(0,0)
-    }
+    
   },
 
   created() {
