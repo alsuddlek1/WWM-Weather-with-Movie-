@@ -82,11 +82,15 @@ export default {
         this.$store.dispatch('getMovieWeather', data)
       })
     },
+    getMovieList() {
+        this.$store.dispatch('getMovieList')
+      },
     
   },
 
   created() {
     this.getMovieWeather()
+    this.getMovieList()      
 
     if (this.weathers === 'Clouds') {
       this.weather = '흐림 ☁'

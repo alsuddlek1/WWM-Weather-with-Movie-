@@ -37,18 +37,11 @@ export default {
     },
     },
     methods: {
-      getMovieList() {
-        this.$store.dispatch('getMovieList')
-      },
       goDetail(movies) {
         this.$router.push({name:'MovieDetail', params: {movie_id: movies.id}})
       }
     },
-    created() {
-      if (!this.$store.state.Movie.movieList) {
-        this.getMovieList()     
-      }
-    }
+    
 }
 </script>
 

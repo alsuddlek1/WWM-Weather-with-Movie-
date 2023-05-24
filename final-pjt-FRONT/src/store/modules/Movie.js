@@ -45,6 +45,7 @@ const Movie = {
         },
 
         GET_MOVIE_LIST(state,payload) {
+            state.movieList = null
             state.movieList = payload
         },
 
@@ -130,9 +131,10 @@ const Movie = {
         },
 
         DETECT_MOVIE(state, payload) {
+            state.searchMovie = null
             state.searchMovie = []
             if (payload === "") {
-                state.searchMovie = []
+                state.searchMovie = null
             } else {
                 const word = payload.split(' ').join('')
             state.movieList.forEach(element => {
