@@ -1,4 +1,5 @@
 <template>
+<div>
     <div>
         <br>
         <h3>ALL MOVIE LIST</h3>
@@ -10,8 +11,9 @@
         </div>
         </div>
         <button class="mouse fontcolor font m-5" @click="getMovies">더보기</button>
-        <button @click="goTop">TOP</button>
     </div>
+        <button @click="goTop">TOP</button>
+</div>
 </template>
 
 <script>
