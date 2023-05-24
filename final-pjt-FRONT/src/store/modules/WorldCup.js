@@ -8,6 +8,7 @@ const WorldCup = {
       worldcup8 : null,
       worldcup4 : null,
       worldcup2 : null,
+      worldcupFinal : null,
       worldTwoMovie : null,
     },
     getters: {
@@ -19,6 +20,7 @@ const WorldCup = {
         state.worldcup8 = null
         state.worldcup4 = null
         state.worldcup2 = null
+        state.worldcupFinal = null
 
         state.worldTwoMovie = _.sampleSize(state.worldcup32,2)
         state.worldTwoMovie.forEach(element => {
@@ -33,6 +35,7 @@ const WorldCup = {
         state.worldcup8 = null
         state.worldcup4 = null
         state.worldcup2 = null
+        state.worldcupFinal = null
 
         state.worldTwoMovie = _.sampleSize(state.worldcup64,2)
         state.worldTwoMovie.forEach(element => {
@@ -152,7 +155,19 @@ const WorldCup = {
 
       GET_WORLD_CUP_MOVIE_6(state){
         state.worldTwoMovie = _.sampleSize(state.worldcup2,2)
-      }
+        state.worldTwoMovie.forEach(element => {
+          const idx = state.worldcup2.indexOf(element)          
+          state.worldcup2.splice(idx,1)
+        });
+      },
+
+      SELECT_MOVIE6(state,movie){
+        if (state.worldcup2.length === 0) {
+          router.push({name:'WorldCupFinal'})
+        }
+        state.worldcupFinal= movie
+      },
+
     
     },
     actions: {
@@ -193,6 +208,10 @@ const WorldCup = {
 
       getWorldCupMovie6(context){
         context.commit('GET_WORLD_CUP_MOVIE_6')
+      },
+
+      SelectMovie6(context, movie) {
+        context.commit('SELECT_MOVIE6',movie)
       },
 
       getWorldCupMovie32(context,data) {

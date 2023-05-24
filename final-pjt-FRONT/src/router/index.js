@@ -130,7 +130,7 @@ const routes = [
     component: WorldCup2
   },
   {
-    path: '/worldCupFinal/:movie',
+    path: '/worldCupFinal/',
     name: 'WorldCupFinal',
     component: WorldCupFinal
   },  
