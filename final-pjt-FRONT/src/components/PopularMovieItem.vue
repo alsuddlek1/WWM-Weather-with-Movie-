@@ -1,7 +1,7 @@
 <template>
 <div class="col">
   <div class="container_size">
-    <div class="card mouse text-bg-dark bg-opacity-10 popular" @click="goDetail(movie)">
+    <div class="mouse text-bg-dark bg-opacity-10" @click="goDetail(movie)">
       <figure class="snip1384">
       <img :src="url" class="card-img">
       <figcaption>

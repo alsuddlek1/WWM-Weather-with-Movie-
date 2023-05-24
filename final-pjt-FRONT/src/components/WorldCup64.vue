@@ -87,12 +87,12 @@ export default {
  .worldcupImgsize:hover{
    transform: scale(1.1);
  }
- .worldcupImgsize:empty{
+ /* .worldcupImgsize:empty{
   background-image: url('@/assets/cat.png');
   background-repeat : no-repeat;
   background-size : auto 100%;
 
- }
+ } */
 
  
 </style>
