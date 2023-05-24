@@ -41,6 +41,8 @@ class Comment(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
 class Worldcup(models.Model):
+    genres = models.ManyToManyField(Genre)
+
     movie_id = models.TextField()
     title = models.TextField()
     original_title = models.TextField()
