@@ -24,7 +24,7 @@ const weather = {
           url: `${API_URL}/movies/recommend/weather/${data.lat}/${data.lon}/`,
         })
         .then((res) => {
-          console.log(res)
+          // console.log(res)
           // console.log(res.data)
           context.commit('GET_MOVIE_WEATHER', res.data)
         })

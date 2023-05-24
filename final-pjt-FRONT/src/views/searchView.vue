@@ -7,9 +7,9 @@
     <p class="m-3">👇검색어를 입력하세요👇</p>
   <div class="searchsize">
     <span class="inputsize">
-    <input placeholder="리 띄우고 신 안해도 됨" type="text" @input="changedata" @keyup="detectMovie" m-3>
+    <input placeholder="리 띄우고 신 안해도 됨" type="text" @input="changedata" @keyup="detectMovie">
     </span>
-    <button class="ms-3">검색</button>
+
   </div>
     <div v-for="movie in movies" :key="movie.id">
         <div class="m-3 mouse" @click="goDetail(movie)">
