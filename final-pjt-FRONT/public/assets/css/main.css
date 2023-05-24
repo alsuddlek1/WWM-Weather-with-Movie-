@@ -1272,7 +1272,8 @@ input, select, textarea {
 			margin-top: 3.5rem;
 		}
 
-			#header > *:before {
+		/* 킹받는 중앙선 */
+			/* #header > *:before {
 				content: '';
 				display: block;
 				position: absolute;
@@ -1281,7 +1282,7 @@ input, select, textarea {
 				width: 1px;
 				height: calc(3.5rem + 1px);
 				background: #ffffff;
-			}
+			} */
 
 		#header > :first-child {
 			margin-top: 0;
@@ -1320,8 +1321,8 @@ input, select, textarea {
 				-webkit-transition-delay: 0.25s;
 				-ms-transition-delay: 0.25s;
 				transition-delay: 0.25s;
-				padding: 3rem 2rem;
-				max-height: 40rem;
+				padding: 2rem 7rem;
+				max-height: 25rem;
 				overflow: hidden;
 			}
 
