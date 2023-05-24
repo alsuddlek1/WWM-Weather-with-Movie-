@@ -30,7 +30,7 @@
     </div>
     <nav v-if="isLogin !== false">
       <ul class="ultag">
-        <li><a href="#intro" class="line">INTRO</a></li>
+        <li><a href="/#intro" class="line">INTRO</a></li>
         <li><router-link class="line" :to="{name : 'randomRecommendView'}">TODAY</router-link></li>
         <li><router-link class="line" :to="{name : 'movies'}">LIST</router-link></li>
         <li><router-link class="line" :to="{name : 'PopularMovieView'}">POPULAR</router-link></li>

@@ -1392,7 +1392,7 @@ input, select, textarea {
 			border-left: 0;
 		}
 
-		body.is-article-visible #header {
+		/* body.is-article-visible #header {
 			-moz-transform: scale(0.95);
 			-webkit-transform: scale(0.95);
 			-ms-transform: scale(0.95);
@@ -1402,7 +1402,7 @@ input, select, textarea {
 			-ms-filter: blur(0.1rem);
 			filter: blur(0.1rem);
 			opacity: 0;
-		}
+		} */
 
 		body.is-preload #header {
 			-moz-filter: blur(0.125rem);
