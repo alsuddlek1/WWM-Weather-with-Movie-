@@ -42,7 +42,7 @@ export default {
         getWorldCupMovie32() {
             axios({
                 method: 'get',
-                url: `${API_URL}/movies/recommend/popular/`
+                url: `${API_URL}/movies/recommend/worldcup/`
                 })
                 .then(res => {
                     this.$store.dispatch('getWorldCupMovie32',res.data)
