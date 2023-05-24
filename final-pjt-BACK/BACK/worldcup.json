@@ -1,22 +1,44 @@
 [
-    {
-		"model": "movies.worldcup",
-		"pk": 14,
+	{
+		"model": "movies.movie",
+		"pk": 144,
 		"fields": {
-			"movie_id": 76600,
-			"title": "아바타: 물의 길",
+			"movie_id": 19995,
+			"title": "아바타",
 			"adult": false,
-			"popularity": 1487.089,
-			"poster_path": "/z56bVX93oRG6uDeMACR7cXCnAbh.jpg",
-			"backdrop_path": "/8rpDcsfLJypbO6vREc0547VKqEv.jpg",
-			"release_date": "2022-12-14",
-			"vote_average": 7.7,
-			"vote_count": 8017,
-			"overview": "판도라 행성에서 제이크 설리와 네이티리가 이룬 가족이 겪게 되는 무자비한 위협과 살아남기 위해 떠나야 하는 긴 여정과 전투, 그리고 견뎌내야 할 상처에 대한 이야기를 그렸다. 살아남기 위해 설리 가족이 숲에서 바다로 터전을 옮기면서 겪게 되는 화합의 과정, 그리고 곳곳에서 도사리는 새로운 위협까지 역경 속에서 더 아름답게 펼쳐진다.",
+			"popularity": 183.476,
+			"poster_path": "/zygmx5abXeDpr3fWYX4jlXFZ1wh.jpg",
+			"backdrop_path": "/chauy3iJaZtrMbTr72rgNmOZwo3.jpg",
+			"release_date": "2009-12-15",
+			"vote_average": 7.6,
+			"vote_count": 29100,
+			"overview": "가까운 미래, 지구는 에너지 고갈 문제를 해결하기 위해 머나먼 행성 판도라에서 대체 자원을 채굴하기 시작한다. 하지만 판도라의 독성을 지닌 대기로 인해 자원 획득에 어려움을 겪게 된 인류는 판도라의 토착민 나비의 외형에 인간의 의식을 주입, 원격 조종이 가능한 새로운 생명체를 탄생시키는 프로그램을 개발한다. 한편 하반신이 마비된 전직 해병대원 제이크 설리는 아바타 프로그램에 참가할 것을 제안받는다. 그 곳에서 자신의 아바타를 통해 자유롭게 걸을 수 있게 된 제이크는 자원 채굴을 막으려는 나비의 무리에 침투하라는 임무를 부여받는데...",
 			"genres": [
-				878,
+				28,
 				12,
-				28
+				14,
+				878
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"pk": 483,
+		"fields": {
+			"movie_id": 550,
+			"title": "파이트 클럽",
+			"adult": false,
+			"popularity": 84.959,
+			"poster_path": "/eKZ07Ted7VHxQjbuZrRBFOamcKJ.jpg",
+			"backdrop_path": "/hZkgoQYus5vegHoetLkCJzb17zJ.jpg",
+			"release_date": "1999-10-15",
+			"vote_average": 8.4,
+			"vote_count": 26438,
+			"overview": "자동차 회사의 리콜 심사관으로 일하는 주인공(에드워드 노튼)은 일상의 무료함과 공허함 속에서 늘 새로운 탈출을 꿈꾼다. 그는 비행기에서 자신을 비누 제조업자라고 소개하는 타일러 더든(브래드 피트)을 만난다. 집에 돌아온 주인공은 아파트가 누군가에 의해 폭파되었음을 발견하고, 타일러에게 도움을 청해 함께 생활하게 된다. 어느 날 밤 타일러는 주인공에게 자신을 때려달라고 부탁한다. 사람은 싸워봐야 진정한 자신을 알 수 있다는 것이다. 결국 이들은 매주 토요일 밤 술집 지하에서 맨주먹으로 격투를 벌이는 파이트 클럽을 결성하기에 이르는데...",
+			"genres": [
+				18,
+				53,
+				35
 			]
 		}
 	},
@@ -1152,27 +1174,6 @@
 				9648,
 				18,
 				10749
-			]
-		}
-	},
-    {
-		"model": "movies.worldcup",
-		"pk": 7074,
-		"fields": {
-			"movie_id": 295693,
-			"title": "보스 베이비",
-			"adult": false,
-			"popularity": 19.333,
-			"poster_path": "/oh9s6RxoeX1Tr4wL1gQFbeH5X1r.jpg",
-			"backdrop_path": "/l4t6QYcDEIXep6C5Vmjna8Fl5Vy.jpg",
-			"release_date": "2017-03-23",
-			"vote_average": 6.5,
-			"vote_count": 6551,
-			"overview": "어느 날 굴러들어온 아기 동생에게 엄빠의 사랑을 모두 빼앗겨 버린 ‘팀’  평소엔 앙증맞은 베이비, 알고 보니 ‘베이비 주식회사’의 카리스마 보스  ‘보스 베이비’는 비밀 임무를 수행하기 위해 파견근무 중!  팀은 엄빠의 사랑을 되찾기 위해  보스 베이비는 라이벌 ‘퍼피 주식회사’를 무찌르기 위해  원치 않는 공조를 시작한다  7살 빅 브라더 vs 7개월 베이비 브라더  그들의 살벌한 팀플이 시작된다!",
-			"genres": [
-				16,
-				35,
-				10751
 			]
 		}
 	},

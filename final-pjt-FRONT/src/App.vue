@@ -23,7 +23,7 @@
           <router-link class="line" :to="{name : 'MovieMainView'}" @click.native="logOut">logOut</router-link>
         </p>
         <br>
-        <p v-if="isLogin !== false" class="logoline">현재 위치 날씨 : {{weather}}</p>
+        <p v-if="isLogin !== false" class="logoline">현재 위치 날씨 : {{weathers}}</p>
         <p><small>Current Location City : {{local}}</small></p>
         <!-- <p><small>Current Location City : seolman</small></p> -->
       </div>
@@ -53,12 +53,6 @@ import VueGeolocationApi from 'vue-geolocation-api'
 Vue.use(VueGeolocationApi)
 export default {
   name: 'App',
-  data() {
-    return {
-      weather : null,
-
-    }
-  },
   computed: {
     isLogin() {
       return this.$store.getters.isLogin
