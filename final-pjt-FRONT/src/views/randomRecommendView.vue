@@ -7,8 +7,8 @@
   <div class="row row-cols-1 row-cols-sm-3 g-2">
   <div class="container">
     <div class="row">
-    <div class="card mouse bg-body bg-opacity-10 p-3" @click="goDetail(movies)">
-      <img v-if="movies" :src="url" class="card-img-top">
+    <div class="card mouse bg-body bg-opacity-10 p-3 randomCard" @click="goDetail(movies)">
+      <img v-if="movies" :src="url" class="card-img-top randomImg">
         <div class="card-body">
         <h5 v-if="movies" class="card-title fontcolor font">{{movies.title}}</h5>
         <br>
@@ -53,5 +53,9 @@ export default {
 </script>
 
 <style>
-
+  img:empty{
+    background-image: url('@/assets/gkdka.png');
+    background-repeat : no-repeat;
+    background-size : 100%;
+  }
 </style>

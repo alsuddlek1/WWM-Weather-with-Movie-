@@ -4,7 +4,7 @@
   <h3>{{count}}/32</h3>
   <div class="container worldcupsize">
   <div class="row row-cols-2 row-cols-md-2">
-    <div class="col " v-for="movie in TwoMovie" :key="movie.id"  @click="SelectMovie(movie)">
+    <div class="col" v-for="movie in TwoMovie" :key="movie.id"  @click="SelectMovie(movie)">
       <div class="card fontcolor mouse bg-body bg-opacity-10 worldcup">
         <img :src="`https://image.tmdb.org/t/p/original/${movie.poster_path}`" class="card-img-top worldcupImgsize worldcup_box" >
         <div class="card-body cardTitle">
@@ -85,7 +85,7 @@ export default {
  }
 
  .worldcupImgsize:hover{
-   transform: scale(1.1);
+   transform: scale(1.2);
  }
  /* .worldcupImgsize:empty{
   background-image: url('@/assets/cat.png');
