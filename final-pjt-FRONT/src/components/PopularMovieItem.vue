@@ -8,7 +8,7 @@
         <h3>{{movie.title}}</h3>
         <p>{{movie.release_date}}</p>
       </figcaption>
-      <a href=""></a>
+      <!-- <a href=""></a> -->
       </figure>
     </div>
   </div>
