@@ -5,6 +5,7 @@
       <label for="content"> 👇댓글을 입력하세요👇 </label> <br>
       <input id="content" v-model="content" class="sign" size="100" placeholder="50글자 이내로 작성해 주세요.">
       <input type="submit" id="submit" class="ms-3">
+      <p @click="Back" class="mouse hover mt-3">뒤로 가기</p>
     </form>
   </div>
 </template>
@@ -50,6 +51,10 @@ export default {
                 this.content = null
             }) 
 
+        },
+
+        Back() {
+        this.$router.push({name:'ReviewItem', params: {'reviewId' : this.$route.params.reviewId}})
         }
     }
 }

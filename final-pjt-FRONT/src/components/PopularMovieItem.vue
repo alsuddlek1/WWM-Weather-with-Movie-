@@ -46,7 +46,7 @@ export default {
 }
 
 figure.snip1384 {
-  font-family: 'Raleway', Arial, sans-serif;
+  /* font-family: 'Raleway', Arial, sans-serif; */
   /* 폰트 뭐가 더 나아? */
   position: relative;
   overflow: hidden;
@@ -136,8 +136,8 @@ figure.snip1384:hover:after {
 }
 
 /* 상자 있는게 더 나아 없는게 나아? */
-.snip1384 figcaption:after{
-  content: ''; /* 비워둠 */
+figure.snip1384 figcaption:hover:after{
+  content: ''; 
   display: block;
   width: calc(100% - 40px);
   height: calc(100% - 40px);
@@ -145,7 +145,7 @@ figure.snip1384:hover:after {
   box-sizing: border-box;
   position: absolute;
   left: 0; right: 0; top: 0; bottom: 0;
-  margin: auto; /* 기준에서 정가운데 오도록 처리 */
+  margin: auto; 
 }
 
 figure.snip1384:hover h3,

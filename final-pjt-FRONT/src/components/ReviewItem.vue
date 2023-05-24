@@ -20,7 +20,7 @@
     </div>
     </div>
     <br>
-    <p @click="goList" class="mouse hover">뒤로 가기</p>
+    <p @click="Back" class="mouse hover">뒤로 가기</p>
   </div>
 </template>
 
@@ -99,8 +99,8 @@ export default {
         this.$router.push({name: 'ReviewUpdata', params: {reviewId : this.ReviewId}})
       },
 
-      goList() {
-        this.$router.push({name:'MovieDetail', params: {'ReviewItem' : this.ReviewId}})
+      Back() {
+        this.$router.push({name:'MovieDetail', params: {'movie_id' : this.movieId}})
       }
 
     },

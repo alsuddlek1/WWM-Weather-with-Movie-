@@ -18,9 +18,6 @@ export default {
         goWorldCup64() {
             this.$router.push({name:'WorldCup64'})
         },
-        goWorldCup32() {
-            this.$router.push({name:'WorldCup32'})
-        },
         goMain() {
             this.$router.push({name:'MovieMainView'})
         }

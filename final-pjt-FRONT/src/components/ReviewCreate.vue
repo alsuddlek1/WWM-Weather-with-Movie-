@@ -9,6 +9,7 @@
       <label for="content">내용 : </label>
       <textarea id="content" cols="30" rows="10" v-model="content" class="review_size"></textarea><br>
       <input type="submit" id="submit">
+      <p @click="Back" class="mouse hover mt-3">뒤로 가기</p>
     </form>
   </div>
 </template>
@@ -54,6 +55,11 @@ export default {
                 this.$router.push({name:'MovieDetail', params: {movie_id : this.$route.params.reviewId}})
             })
             .catch(err => console.log(err))         
+        },
+
+
+        Back() {
+        this.$router.push({name:'MovieDetail', params: {'movie_id' : this.$route.params.reviewId}})
         }
     },
     created() {
