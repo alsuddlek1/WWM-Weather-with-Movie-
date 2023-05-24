@@ -5,7 +5,7 @@
     <h5>당신이 좋아요한 영화를 확인해보세요</h5>
     <br>
     <div class="container">
-    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
+    <div class="row row-cols-lg-2 row-cols-md-1 row-cols-sm-1 row-cols-1">
     <LikeMovieItem v-for="movie in movies" :key="movie.id" :movie="movie"/>
     </div>
     </div>

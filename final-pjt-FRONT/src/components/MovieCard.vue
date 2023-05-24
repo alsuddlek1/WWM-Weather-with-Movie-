@@ -89,7 +89,7 @@ export default {
 
 /* 상자 만들기 */
 .detail figcaption:after{
-  content: ''; /* 비워둠 */
+  content: ''; 
   display: block;
   width: calc(100% - 40px);
   height: calc(100% - 40px);
@@ -97,7 +97,7 @@ export default {
   box-sizing: border-box;
   position: absolute;
   left: 0; right: 0; top: 0; bottom: 0;
-  margin: auto; /* 기준에서 정가운데 오도록 처리 */
+  margin: auto; 
 }
 
 .detail a:hover figcaption, .detail a:focus figcaption{
