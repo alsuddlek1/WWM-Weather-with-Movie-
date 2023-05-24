@@ -66,7 +66,7 @@ figure.snip1384 figcaption {
   width: calc(100% - 40px);
   height: calc(100% - 40px);
   border: 1px solid #fff;
-  border-radius: 10px;
+  border-radius: 5px;
   box-sizing: border-box;
   position: absolute;
   left: 0; right: 0; top: 0; bottom: 0;

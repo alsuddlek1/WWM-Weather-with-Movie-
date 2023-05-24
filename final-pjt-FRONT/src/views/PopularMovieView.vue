@@ -2,7 +2,7 @@
   <div>
     <br>
     <h3>POPULAR MOVIE</h3>
-    <h5>🏆세계인에게 사랑받은 영화 top10🏆</h5>
+    <h5><small>🏆세계인에게 사랑받은 영화 top10🏆</small></h5>
     <br>
     <div class="container">
     <div class="row row-cols-lg-2 row-cols-md-1 row-cols-sm-1 row-cols-1">

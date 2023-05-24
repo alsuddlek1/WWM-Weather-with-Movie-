@@ -2,19 +2,20 @@
 <div>
     <br>
     <h3>SEARCH</h3>
-    <h5>👇검색어를 입력하세요👇</h5>
+    <h5><small>원하는 영화 제목을 검색해보세요</small></h5>
     <br>
+    <p class="m-3">👇검색어를 입력하세요👇</p>
   <div class="searchsize">
-    <div class="inputsize">
+    <span class="inputsize">
     <input placeholder="리 띄우고 신 안해도 됨" type="text" @input="changedata" @keyup="detectMovie" m-3>
-    <button>검색하기</button>
-    </div>
-    <div v-for="movie in movies" :key="movie.id">
-            <div class="m-3 mouse" @click="goDetail(movie)">
-            <p class="card-title font">{{movie.title}}</p>
-            </div>
-    </div>
+    </span>
+    <button class="ms-3">검색</button>
   </div>
+    <div v-for="movie in movies" :key="movie.id">
+        <div class="m-3 mouse" @click="goDetail(movie)">
+        <p class="card-title font">{{movie.title}}</p>
+        </div>
+    </div>
 </div>
 </template>
 
@@ -58,12 +59,13 @@ export default {
 <style>
     .searchsize {
         width: 1000px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
     .inputsize{
         width: 300px;
-        margin-left: auto;
-        margin-right: auto;
     }
 
 </style>
