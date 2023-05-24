@@ -17,6 +17,7 @@ import ReviewUpdata from '@/components/ReviewUpdata.vue'
 import CommentCreate from '@/components/CommentCreate.vue'
 import CommentUpdate from '@/components/CommentUpdate.vue'
 import WorldCup64 from '@/components/WorldCup64.vue'
+import WorldCup32New from '@/components/WorldCup32New.vue'
 import WorldCup32 from '@/components/WorldCup32.vue'
 import WorldCup16 from '@/components/WorldCup16.vue'
 import WorldCup8 from '@/components/WorldCup8.vue'
@@ -92,6 +93,11 @@ const routes = [
     path: '/startWorldCup',
     name: 'StartWorldCupView',
     component: StartWorldCupView
+  },
+  {
+    path: '/worldCup32New',
+    name: 'WorldCup32New',
+    component: WorldCup32New
   },
   {
     path: '/worldcup64',

@@ -13,6 +13,19 @@ const WorldCup = {
     getters: {
     },
     mutations: {
+      GET_WORLD_CUP_MOVIE_32(state, payload) {
+        state.worldcup32 = _.take(payload,32)
+        state.worldcup16 = null
+        state.worldcup8 = null
+        state.worldcup4 = null
+        state.worldcup2 = null
+
+        state.worldTwoMovie = _.sampleSize(state.worldcup32,2)
+        state.worldTwoMovie.forEach(element => {
+          const idx = state.worldcup32.indexOf(element)          
+          state.worldcup32.splice(idx,1)
+        });
+      },
       GET_WORLD_CUP_MOVIE(state,payload) {
         state.worldcup64 = payload
         state.worldcup32 = null
@@ -182,6 +195,9 @@ const WorldCup = {
         context.commit('GET_WORLD_CUP_MOVIE_6')
       },
 
+      getWorldCupMovie32(context,data) {
+        context.commit('GET_WORLD_CUP_MOVIE_32', data)
+      }
     },
 }
 

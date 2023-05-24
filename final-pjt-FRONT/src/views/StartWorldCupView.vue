@@ -4,6 +4,7 @@
     <h3>FAVORITE MOVIE</h3>
     <br>
     <h5 @click="goWorldCup" class="mouse border-bottom"><small class="line">▶ 64강 시작하기</small></h5>
+    <h5 @click="goWorldCup32" class="mouse border-bottom"><small class="line">▶ 32강 시작하기</small></h5>
  
     <br>
     <br>
@@ -17,6 +18,9 @@ export default {
     methods: {
         goWorldCup() {
             this.$router.push({name:'WorldCup64'})
+        },
+        goWorldCup32() {
+            this.$router.push({name:'WorldCup32New'})
         },
         goMain() {
             this.$router.push({name:'MovieMainView'})
