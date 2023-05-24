@@ -23,4 +23,5 @@ urlpatterns = [
     path('recommend/popular/', views.popular_movies),
     path('recommend/<int:user_pk>/like/', views.user_like),
     path('recommend/weather/<lat>/<lon>/', views.weather),
+    path('recommed/worldcup/', views.worldcup),
 ]

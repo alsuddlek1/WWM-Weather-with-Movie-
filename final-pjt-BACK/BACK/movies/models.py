@@ -40,3 +40,15 @@ class Comment(models.Model):
     create_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+class Worldcup(models.Model):
+    movie_id = models.TextField()
+    title = models.TextField()
+    original_title = models.TextField()
+    overview = models.TextField()
+    poster_path = models.TextField()
+    vote_average = models.FloatField()
+    vote_count = models.IntegerField()
+    release_date = models.TextField()
+    popularity = models.FloatField()
+    adult = models.BooleanField()
+    backdrop_path = models.CharField(max_length=500)

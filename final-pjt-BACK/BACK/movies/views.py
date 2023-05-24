@@ -5,8 +5,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
 
-from .models import Movie, Genre, Review, Comment
-from .serializers import MovieSerializer,MovieListSerializer, GenreSerializer, ReviewListSerializer, CommentListSerializer
+from .models import Movie, Genre, Review, Comment, Worldcup
+from .serializers import MovieSerializer,MovieListSerializer, GenreSerializer, ReviewListSerializer, CommentListSerializer, WorldcupSerializer
 # from .pagination import MovieNumberPagination
 
 # Create your views here.
@@ -195,3 +195,10 @@ def weather(request, lat, lon):
         'local_name' : local_name
     }
     return Response(today_weather)
+
+# 월드컵
+@api_view(['GET'])
+def worldcup(request):
+    worldcups = get_list_or_404(Worldcup)
+    serializer = WorldcupSerializer(worldcups, many=True)
+    return Response(serializer.data)

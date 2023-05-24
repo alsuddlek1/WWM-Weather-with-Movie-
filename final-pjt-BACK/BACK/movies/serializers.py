@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Movie, Genre, Review, Comment
+from .models import Movie, Genre, Review, Comment, Worldcup
 
 # 장르
 class GenreSerializer(serializers.ModelSerializer):
@@ -44,3 +44,9 @@ class CommentListSerializer(serializers.ModelSerializer):
         model = Comment
         fields = '__all__'
         read_only_fields = ['review', 'user',]
+
+# 영화 월드컵
+class WorldcupSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Worldcup
+        fields = '__all__'
