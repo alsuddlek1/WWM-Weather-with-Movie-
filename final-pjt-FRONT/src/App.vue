@@ -41,6 +41,7 @@
       </ul>
     </nav>
     <router-view/>
+    <button @click="goTop">TOP</button>
 </div>
 </template>
 
@@ -80,6 +81,9 @@ export default {
         const data = {lat, lon}
         this.$store.dispatch('getMovieWeather', data)
       })
+    },
+    goTop() {
+      window.scrollTo(0,0)
     }
   },
 
