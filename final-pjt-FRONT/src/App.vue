@@ -24,7 +24,8 @@
         </p>
         <br>
         <p v-if="isLogin !== false" class="logoline">현재 위치 날씨 : {{weather}}</p>
-        <p><small>Current Location City : {{local}}</small></p>
+        <!-- <p><small>Current Location City : {{local}}</small></p> -->
+        <p><small>Current Location City : seolman</small></p>
       </div>
     </div>
     <nav v-if="isLogin !== false">
@@ -33,9 +34,9 @@
         <li><router-link class="line" :to="{name : 'randomRecommendView'}">TODAY</router-link></li>
         <li><router-link class="line" :to="{name : 'movies'}">LIST</router-link></li>
         <li><router-link class="line" :to="{name : 'PopularMovieView'}">POPULAR</router-link></li>
-        <li><router-link class="line" :to="{name : 'LikeMovieView', params: {user: this.$store.state.accounts.userpk} }">LIKED</router-link></li>
         <li><router-link class="line" :to="{name : 'weatherMovieView'}">WEATHER</router-link></li>
         <li><router-link class="line" :to="{name : 'StartWorldCupView'}">FAVORITE</router-link></li>
+        <li><router-link class="line" :to="{name : 'LikeMovieView', params: {user: this.$store.state.accounts.userpk} }">LIKED</router-link></li>
         <li><router-link class="line" :to="{name : 'searchView'}">Search</router-link></li>
       </ul>
     </nav>
