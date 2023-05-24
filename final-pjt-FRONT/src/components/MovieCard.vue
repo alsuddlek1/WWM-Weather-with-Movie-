@@ -63,12 +63,12 @@ export default {
   }
 
   .detail a{
-  display: block; /* 영역적용위해 사용 */
-  height: 450px;
-  width: 300px;
-  overflow: hidden;
-  position: relative; /* absolute의 기본기준은 body로 처리 - 현재 요소로 기준변경 */
-  text-decoration : none !important;
+    display: block; /* 영역적용위해 사용 */
+    height: 450px;
+    width: 300px;
+    overflow: hidden;
+    position: relative; /* absolute의 기본기준은 body로 처리 - 현재 요소로 기준변경 */
+    text-decoration-line : none !important;
 }
 
   .detail figure{
