@@ -40,7 +40,7 @@ export default {
       this.$store.dispatch('getWorldCupMovie6')
     },
     SelectMovie(movie) {
-      this.$router.push({name:'WorldCupFinal', params: {movie:movie}})
+      this.$store.dispatch('SelectMovie6',movie)
     }  
   },
   created(){
