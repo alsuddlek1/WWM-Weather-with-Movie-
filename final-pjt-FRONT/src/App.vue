@@ -78,7 +78,10 @@ export default {
         this.$store.dispatch('getMovieList')
       },
     goMain() {
-      this.$router.push({name : 'MovieMainView'})
+      if(this.$route.name !== 'MovieMainView') {
+
+        this.$router.push({name : 'MovieMainView'})
+      } 
     }
     
   },
@@ -108,6 +111,9 @@ export default {
 </script>
 
 <style>
+.scroll::-webkit-scrollbar {
+  display: none;
+}
   .ultag{
     margin-left: 7px;
   }
