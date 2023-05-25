@@ -4,7 +4,7 @@
   <h3>TODAY MOVIE</h3>
   <h5>오늘의 추천 영화 ☺</h5>
   <br>
-    <div class="card bg-body bg-opacity-10 mb-3" style="max-width: 800px;">
+    <div class="card bg-body bg-opacity-10 mb-3 mouse" style="max-width: 800px;" @click="goDetail(movies)">
       <div class="row g-0">
         <div class="col-md-4">
           <img v-if="movies" :src="url" class="img-fluid rounded-start randomImg">
