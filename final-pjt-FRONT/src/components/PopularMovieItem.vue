@@ -6,6 +6,8 @@
       <img :src="url" class="card-img">
       <figcaption>
         <h3>{{movie.title}}</h3>
+        <br>
+        <p>{{movie.overview}}</p>
         <p>{{movie.release_date}}</p>
       </figcaption>
       <!-- <a href=""></a> -->

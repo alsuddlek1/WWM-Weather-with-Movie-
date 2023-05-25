@@ -1,9 +1,27 @@
 <template>
-<div>
+<div class="fontcolor font">
   <br>
   <h3>TODAY MOVIE</h3>
   <h5>오늘의 추천 영화 ☺</h5>
   <br>
+    <div class="card bg-body bg-opacity-10 mb-3" style="max-width: 800px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img v-if="movies" :src="url" class="img-fluid rounded-start">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body m-5">
+            <br>
+            <h5 class="card-title">{{movies.title}}</h5>
+            <br>
+            <p class="card-text" style="text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;">{{movies.overview}}</p>
+            <p class="card-text">{{movies.vote_average}}</p>
+            <p class="card-text">{{movies.release_date}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- 
   <div class="row row-cols-1 row-cols-sm-3 g-2">
   <div class="container">
     <div class="row">
@@ -20,7 +38,7 @@
     </div>
     </div>    
   </div>
-  </div>
+  </div> -->
   </div>
 </template>
 

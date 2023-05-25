@@ -25,7 +25,7 @@
         <br>
         <p v-if="isLogin !== false" class="logoline">현재 위치 날씨 : {{weathers}}</p>
         <p><small>Current Location City : {{local}}</small></p>
-        <!-- <p><small>Current Location City : seolman</small></p> -->
+        <!-- <p><small>Current Location City : busan</small></p> -->
       </div>
     </div>
     <nav v-if="isLogin !== false">
