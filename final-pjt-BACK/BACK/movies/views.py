@@ -201,4 +201,5 @@ def weather(request, lat, lon):
 def worldcup(request):
     worldcups = get_list_or_404(Worldcup)
     serializer = WorldcupSerializer(worldcups, many=True)
+    print(len(serializer.data))
     return Response(serializer.data)
