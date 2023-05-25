@@ -57,8 +57,14 @@ export default {
     methods: {
       goDetail(movies) {
         this.$router.push({name:'MovieDetail', params: {movie_id: movies.id}})
+      },
+      Down() {
+        window.scrollTo(0,500)
       }
     },
+    created() {
+      this.Down()
+    }
     
 }
 </script>
@@ -69,4 +75,6 @@ export default {
     background-repeat : no-repeat;
     background-size : 100%;
   }
+
+
 </style>
