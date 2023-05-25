@@ -6,7 +6,7 @@
     </div>
     <div class="content">
       <div class="inner">
-        <h1>WWM</h1>
+        <h1 class="mouse" @click="goMain">WWM</h1>
         <p v-if="isLogin === false" class="logoline">
         WWM의 서비스를 이용할 준비가 되셨나요? 그렇다면
         <router-link class="line" :to="{name : 'LoginView'}">로그인</router-link>을 하세요 !
@@ -21,7 +21,7 @@
           <router-link class="line" :to="{name : 'MovieMainView'}" @click.native="logOut">logOut</router-link>
         </p>
         <br>
-        <p v-if="isLogin !== false" class="logoline">현재 위치 날씨 : {{weathers}}</p>
+        <p v-if="isLogin !== false" class="logoline">현재 위치 날씨 : {{weather}}</p>
         <!-- <p><small>Current Location City : {{local}}</small></p> -->
         <p v-if="isLogin !== false"><small>Current Location City : Gangseo-gu</small></p>
       </div>
@@ -51,6 +51,11 @@ import VueGeolocationApi from 'vue-geolocation-api'
 Vue.use(VueGeolocationApi)
 export default {
   name: 'App',
+  data() {
+    return {
+      weather : null
+    }
+  },
   computed: {
     isLogin() {
       return this.$store.getters.isLogin
@@ -90,6 +95,9 @@ export default {
     this.getMovieWeather()
     this.getMovieList()      
 
+    
+  },
+  mounted() {
     if (this.weathers === 'Clouds') {
       this.weather = '흐림 ☁'
     } else if (this.weathers === 'Rain') {
