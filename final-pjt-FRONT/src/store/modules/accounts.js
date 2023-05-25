@@ -46,7 +46,7 @@ const accounts = {
                 context.commit('SAVE_TOKEN', res.data.key)
             })
             .catch(err => {
-                console.log(err.response.data)
+                // console.log(err.response.data)
                 if (err.response.data.username) {
                     alert(err.response.data.username)
                 }
