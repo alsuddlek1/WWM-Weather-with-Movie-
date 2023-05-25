@@ -100,6 +100,9 @@ export default {
 
 <style>
   .buttonColor{
+    /* color: brown; */
+    /* border-color: brown; */
+    /* outline-color: brown; */
     background-color: rgba(255, 255, 255, 0.274);
     transition: 0.5s;
     margin-left: auto;
@@ -112,6 +115,9 @@ export default {
     transition: 0.5s;
     /* height: 28px; */
     width: 80px;
+  }
+  .notclikck:hover{
+    background-color: rgba(255, 255, 255, 0.274);
   }
   .buttonsize {
     width: 100%;

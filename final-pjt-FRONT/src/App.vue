@@ -1,10 +1,8 @@
 <template>
   <div id="header" class="fontcolor font">
-    <div class="logo">
-      <router-link :to="{name : 'MovieMainView'}">
-        <!-- 메인 페이지로 이동 -->
-        <span class="icon fa-gem logoline"></span> 
-      </router-link>
+    <div class="mouse logo" @click="goMain">
+        <h1 class="cloud">☁</h1>
+        <span class="logoline"></span> 
     </div>
     <div class="content">
       <div class="inner">
@@ -79,6 +77,9 @@ export default {
     getMovieList() {
         this.$store.dispatch('getMovieList')
       },
+    goMain() {
+      this.$router.push({name : 'MovieMainView'})
+    }
     
   },
 
@@ -222,5 +223,10 @@ button,
 
 .button_mg {
   margin : 10px;
+}
+
+.cloud{
+  margin-top: 25%;
+  margin-left: 10%;
 }
 </style>
