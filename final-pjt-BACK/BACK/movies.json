@@ -1824,26 +1824,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 105,
-		"fields": {
-			"movie_id": 950141,
-			"title": "Organ Trail",
-			"adult": false,
-			"popularity": 236.576,
-			"poster_path": "/s9nwiVMOVvnS2Jt6hdy7UHoFSD0.jpg",
-			"backdrop_path": "/dE1SUD70ptplI0bKbdQCbbS8RZ0.jpg",
-			"release_date": "2023-04-14",
-			"vote_average": 6.2,
-			"vote_count": 9,
-			"overview": "",
-			"genres": [
-				37,
-				27
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 106,
 		"fields": {
 			"movie_id": 736526,
@@ -2804,26 +2784,6 @@
 			"genres": [
 				27,
 				53
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 161,
-		"fields": {
-			"movie_id": 823999,
-			"title": "Diabolik - Ginko all'attacco!",
-			"adult": false,
-			"popularity": 126.924,
-			"poster_path": "/8QVbWBv94BAT9u1q9uJccwOxMzt.jpg",
-			"backdrop_path": "/xnAi4BRoO3ZQ3wwxGn6UNoxQzDq.jpg",
-			"release_date": "2022-11-17",
-			"vote_average": 5.9,
-			"vote_count": 252,
-			"overview": "",
-			"genres": [
-				80,
-				28
 			]
 		}
 	},
@@ -9052,25 +9012,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 514,
-		"fields": {
-			"movie_id": 726366,
-			"title": "Venus",
-			"adult": false,
-			"popularity": 101.032,
-			"poster_path": "/5WEBHjFFAo9QiRsvunyqPPPTiLi.jpg",
-			"backdrop_path": "/dWMQIKsIuRKytysLWqpyXO3gx5V.jpg",
-			"release_date": "2023-02-17",
-			"vote_average": 6,
-			"vote_count": 3,
-			"overview": "",
-			"genres": [
-				18
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 515,
 		"fields": {
 			"movie_id": 917300,
@@ -9304,26 +9245,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 527,
-		"fields": {
-			"movie_id": 559682,
-			"title": "후배부부와 교환섹스",
-			"adult": false,
-			"popularity": 75.572,
-			"poster_path": "/sfvm3b97Qqkb7IacjApJjZFno80.jpg",
-			"backdrop_path": "/7Wv1GSb9qyvVgpVWhps369kPqm8.jpg",
-			"release_date": "2018-06-29",
-			"vote_average": 1.5,
-			"vote_count": 2,
-			"overview": "",
-			"genres": [
-				18,
-				10749
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 528,
 		"fields": {
 			"movie_id": 284052,
@@ -9465,46 +9386,6 @@
 				12,
 				14,
 				28
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 535,
-		"fields": {
-			"movie_id": 893694,
-			"title": "Eva",
-			"adult": false,
-			"popularity": 46.355,
-			"poster_path": "/3Fe75Lf6VT7wvYMK8YQhRusbJjc.jpg",
-			"backdrop_path": "/ougkufYSiruP8jrEHQanXN7DxRv.jpg",
-			"release_date": "2021-12-24",
-			"vote_average": 5.2,
-			"vote_count": 9,
-			"overview": "",
-			"genres": [
-				18,
-				10749
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 536,
-		"fields": {
-			"movie_id": 1097653,
-			"title": "El Hogar",
-			"adult": false,
-			"popularity": 42.109,
-			"poster_path": "/7jAU8PoS80O8ojsk6mMhF3Sekle.jpg",
-			"backdrop_path": "/3Q4VQS7di4s56Ut7iJ3cMOqph3j.jpg",
-			"release_date": "2022-10-31",
-			"vote_average": 5,
-			"vote_count": 2,
-			"overview": "",
-			"genres": [
-				35,
-				18
 			]
 		}
 	},
@@ -9739,26 +9620,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 548,
-		"fields": {
-			"movie_id": 452251,
-			"title": "미용실 : 특별한 서비스",
-			"adult": false,
-			"popularity": 61.558,
-			"poster_path": "/z3Vse8jRnmKJyZFK6VSw1G6jHnY.jpg",
-			"backdrop_path": "/2DbSpBgjHASSOXe5eHC9qVtif0F.jpg",
-			"release_date": "2016-12-29",
-			"vote_average": 6.2,
-			"vote_count": 11,
-			"overview": "",
-			"genres": [
-				10749,
-				18
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 549,
 		"fields": {
 			"movie_id": 58,
@@ -9855,46 +9716,6 @@
 				28,
 				18
 			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 554,
-		"fields": {
-			"movie_id": 1015724,
-			"title": "Trick or Treat Scooby-Doo!",
-			"adult": false,
-			"popularity": 56.113,
-			"poster_path": "/r4ZDV5Xm8qrbG2TIPlocs2wJxHL.jpg",
-			"backdrop_path": "/zoL7dO6Uw8wOtkhfrwryevQudSK.jpg",
-			"release_date": "2022-10-04",
-			"vote_average": 7.3,
-			"vote_count": 154,
-			"overview": "",
-			"genres": [
-				12,
-				9648,
-				35,
-				16,
-				10751
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 555,
-		"fields": {
-			"movie_id": 449302,
-			"title": "嬌妻四艷鬼",
-			"adult": false,
-			"popularity": 62.78,
-			"poster_path": "/nODjK3FePbOQvQrLxInHoCIqAEA.jpg",
-			"backdrop_path": "/llLsvucZRrpjTMpz7Fczp7vZut4.jpg",
-			"release_date": "1994-03-26",
-			"vote_average": 0,
-			"vote_count": 0,
-			"overview": "",
-			"genres": []
 		}
 	},
 	{
@@ -10022,46 +9843,6 @@
 				80,
 				28,
 				12
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 564,
-		"fields": {
-			"movie_id": 689948,
-			"title": "안마방 여대생들",
-			"adult": false,
-			"popularity": 78.137,
-			"poster_path": "/1dXKc0nrk5BewADLyfqD6i096tA.jpg",
-			"backdrop_path": "/k2BJnusbORebY4xV6ZlVNb6pGwF.jpg",
-			"release_date": "2020-04-03",
-			"vote_average": 7.1,
-			"vote_count": 5,
-			"overview": "2020년 현재 한국을 대표하는 AV 남녀배우 어벤져스급 출연진.\r 안마방에 간 남자들의 이야기를 다룬 성애 영화",
-			"genres": [
-				18,
-				10749
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 565,
-		"fields": {
-			"movie_id": 619329,
-			"title": "முந்திரிக்காடு",
-			"adult": false,
-			"popularity": 69.97,
-			"poster_path": "/k7iEwxmphkr1bwb66CHA4dhyyBF.jpg",
-			"backdrop_path": "/kZ7unRnWe8UwpJsc1n5venXr9u2.jpg",
-			"release_date": "2023-04-07",
-			"vote_average": 4.3,
-			"vote_count": 3,
-			"overview": "",
-			"genres": [
-				18,
-				28
 			]
 		}
 	},
@@ -10404,27 +10185,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 582,
-		"fields": {
-			"movie_id": 410119,
-			"title": "육보단",
-			"adult": false,
-			"popularity": 61.74,
-			"poster_path": "/u7CGXhUV9MUxjJdjLy4mHbDVUfX.jpg",
-			"backdrop_path": "/lhHxiwtHq1GG5MhPyWaETvKjoGg.jpg",
-			"release_date": "1987-10-15",
-			"vote_average": 6.2,
-			"vote_count": 3,
-			"overview": "청년시절 여인을 탐하는 꿈을 자주 꾸던 이운생은 소향과 결혼한 후, 과거보러 떠난 길에 명주실 짜는 옥분을 알게 되어 사랑에 빠진다. 옥분의 남편 관녹지는 위자료를 받아낸 뒤, 운생의 집에 머슴으로 들어가 소향과 밀애후 도피행각을 하기에 이른다. 복수가 목적이었던 곽녹지는 소향을 홍루에 팔아버린 후, 절에 들어간다. 한편, 집에 돌아와 장인으로부터 아내가 상사병에 걸려 죽었다는 말을 듣고 다시 길을 떠나다 홍루에서 기생이 된 아내를 만나게 된 운생은 모든 사실을 알게된다. 소향이 고심 씉에 목을 매어 자살하자, 이운생은 삭발 후 절에 들어가 판녹지와 함께 큰스님을 모신다.",
-			"genres": [
-				18,
-				14,
-				10749
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 583,
 		"fields": {
 			"movie_id": 9820,
@@ -10738,26 +10498,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 598,
-		"fields": {
-			"movie_id": 61979,
-			"title": "쓰리 미터스 어보브 헤븐",
-			"adult": false,
-			"popularity": 58.358,
-			"poster_path": "/nNoMfNPnvEzGADXDkP6eJAP81KB.jpg",
-			"backdrop_path": "/2Mq10FWFbxoYgsZysWlw7T9wSNe.jpg",
-			"release_date": "2010-12-03",
-			"vote_average": 7.8,
-			"vote_count": 2720,
-			"overview": "",
-			"genres": [
-				10749,
-				18
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 599,
 		"fields": {
 			"movie_id": 280,
@@ -10794,25 +10534,6 @@
 			"genres": [
 				27,
 				53
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 601,
-		"fields": {
-			"movie_id": 185605,
-			"title": "유두에 피어싱한 여자",
-			"adult": false,
-			"popularity": 64.437,
-			"poster_path": "/gtp2jQ1I8XxyH4bQo1n0KGjqma7.jpg",
-			"backdrop_path": "/xoaclowHTtoJ4swFMqQpdTXKPsI.jpg",
-			"release_date": "1983-04-15",
-			"vote_average": 4.4,
-			"vote_count": 8,
-			"overview": "성형외과에서 근무하는 간호사인 여주인공이 매일 장미꽃을 보내주던 남자에게 빠져들면서 그의 애완 여자가 된다는 내용",
-			"genres": [
-				18
 			]
 		}
 	},
@@ -10919,26 +10640,6 @@
 			"overview": "1년에 한 번 할로윈 축제를 위해서 사는 할로윈 마을의 리더인 잭은 해골 귀신이다. 여느 때와 마찬가지로 할로윈을 준비해야 하는 잭은 반복되는 일상에 염증을 느낀다. 어느 날 잭은 우연히 할로윈 마을을 벗어나 크리스마스 마을에 도착한다. 할로윈 마을과는 판이하게 다른 크리스마스 마을을 보고 잭은 할로윈 마을에서 크리스마스 축제를 맡기로 한다. 잭과 그의 일당은 산타를 납치하고 산타 대신 해골이나 거미, 뱀 등을 크리스마스 선물로 준비해서 아이들에게 나누어주지만, 크리스마스의 들뜬 기분은 사라지고 온통 소동만 일어나는데...",
 			"genres": [
 				14,
-				16,
-				10751
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 607,
-		"fields": {
-			"movie_id": 987750,
-			"title": "Inspector Sun y la maldición de la viuda negra",
-			"adult": false,
-			"popularity": 61.956,
-			"poster_path": "/aGp9ghdIcw74K2VJ1Godcsb9MQo.jpg",
-			"backdrop_path": "/oMsoN3RsJEjxOWcImvwTffEnkMd.jpg",
-			"release_date": "2022-12-28",
-			"vote_average": 6.8,
-			"vote_count": 123,
-			"overview": "",
-			"genres": [
 				16,
 				10751
 			]
@@ -11136,25 +10837,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 617,
-		"fields": {
-			"movie_id": 1119744,
-			"title": "Fall Guy",
-			"adult": false,
-			"popularity": 63.291,
-			"poster_path": "/sPU7GkL58qKE5fKFgGb2qoTlt7G.jpg",
-			"backdrop_path": "/82mZolpUY1tKYaR5RFGcvzeIubq.jpg",
-			"release_date": "2023-05-12",
-			"vote_average": 2,
-			"vote_count": 1,
-			"overview": "",
-			"genres": [
-				18
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 618,
 		"fields": {
 			"movie_id": 345938,
@@ -11255,25 +10937,6 @@
 				14,
 				10749,
 				18
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 623,
-		"fields": {
-			"movie_id": 892535,
-			"title": "Joyeuse retraite 2",
-			"adult": false,
-			"popularity": 37.83,
-			"poster_path": "/yKAJgM7oWE787HwKYSejg3Q6ocL.jpg",
-			"backdrop_path": "/nbXPQ6iEjIcOcc2pBtHo6G2K06q.jpg",
-			"release_date": "2022-07-20",
-			"vote_average": 5.5,
-			"vote_count": 62,
-			"overview": "",
-			"genres": [
-				35
 			]
 		}
 	},
@@ -11484,25 +11147,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 634,
-		"fields": {
-			"movie_id": 887379,
-			"title": "Luz Mala",
-			"adult": false,
-			"popularity": 45.028,
-			"poster_path": "/yMZdLhcbszstxmdOH4cuuMxaSM7.jpg",
-			"backdrop_path": "/9MwjblYesldq7kfPRSgLpjfaO8q.jpg",
-			"release_date": "2022-11-17",
-			"vote_average": 4.3,
-			"vote_count": 3,
-			"overview": "",
-			"genres": [
-				27
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 635,
 		"fields": {
 			"movie_id": 744,
@@ -11564,25 +11208,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 638,
-		"fields": {
-			"movie_id": 968857,
-			"title": "Looks Can Kill",
-			"adult": false,
-			"popularity": 50.768,
-			"poster_path": "/qDfTJINiBEoXEIxKoE4ibF1vVRL.jpg",
-			"backdrop_path": "/zlLQXKsSa2CEkz3UBFWPUPX90PN.jpg",
-			"release_date": "2022-02-01",
-			"vote_average": 4.6,
-			"vote_count": 14,
-			"overview": "",
-			"genres": [
-				53
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 639,
 		"fields": {
 			"movie_id": 150689,
@@ -11601,23 +11226,6 @@
 				10751,
 				18
 			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 640,
-		"fields": {
-			"movie_id": 105812,
-			"title": "青樓十二房",
-			"adult": false,
-			"popularity": 86.79,
-			"poster_path": "/53AdAWdL7pJnWzvfSfDq30MJaFw.jpg",
-			"backdrop_path": "/fsBnJV0K5bcmzUAwL47A9FqoKae.jpg",
-			"release_date": "1994-09-15",
-			"vote_average": 5.5,
-			"vote_count": 2,
-			"overview": "",
-			"genres": []
 		}
 	},
 	{
@@ -11874,45 +11482,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 653,
-		"fields": {
-			"movie_id": 75338,
-			"title": "강간 2 - 제복유혹",
-			"adult": false,
-			"popularity": 67.788,
-			"poster_path": "/xkRK9fXGgOZZsXUbla2zVpJSYgS.jpg",
-			"backdrop_path": "/1hXAsJTBwwdMTjFEEQaPf9jMY2S.jpg",
-			"release_date": "1998-03-06",
-			"vote_average": 4.7,
-			"vote_count": 11,
-			"overview": "13살 때 사촌누나로부터 성을 경험한 필립은 제복 입은 여자에게 특히 매료된다. 간호사와 사귀고 싶어 치과의사가 된 필립은 자기 병원 간호사를 애인으로 삼아 섹스를 즐기는 한편 색다른 제복의 여성을 찾는다. 그는 여자 주차단속원을 강간한 후 증거를 남기지 않기 위해 살해해버린다. 한편 여자 밝힘증 때문에 감옥에 갔던 건달 통치는 출감해 이 사건에 휘말린다.",
-			"genres": [
-				27,
-				53
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 654,
-		"fields": {
-			"movie_id": 791333,
-			"title": "El cuarto pasajero",
-			"adult": false,
-			"popularity": 46.309,
-			"poster_path": "/nJNxJdD5F3cAXglCtwjumTB5tl7.jpg",
-			"backdrop_path": "/jqYFLfMF0liCsHAVEejaFfHl81Y.jpg",
-			"release_date": "2022-10-28",
-			"vote_average": 6.6,
-			"vote_count": 67,
-			"overview": "",
-			"genres": [
-				35
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 655,
 		"fields": {
 			"movie_id": 337401,
@@ -11956,45 +11525,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 657,
-		"fields": {
-			"movie_id": 1113013,
-			"title": "Cocaine Bear: The True Story",
-			"adult": false,
-			"popularity": 53.958,
-			"poster_path": "/oVOzTMjmERFxlvwIIWCB3Tyopfj.jpg",
-			"backdrop_path": "/e3kaIotMYdIfbJatiAppDVgYiow.jpg",
-			"release_date": "2023-04-13",
-			"vote_average": 5.4,
-			"vote_count": 4,
-			"overview": "",
-			"genres": [
-				99
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 658,
-		"fields": {
-			"movie_id": 928773,
-			"title": "Whisper",
-			"adult": false,
-			"popularity": 49.883,
-			"poster_path": "/3zunvPLgM9qGFr8ob2BpaKSuAJI.jpg",
-			"backdrop_path": "/t0qAnq1iOno3Z926Fc1OeKk43Qu.jpg",
-			"release_date": "2022-01-23",
-			"vote_average": 6.4,
-			"vote_count": 56,
-			"overview": "",
-			"genres": [
-				27,
-				53
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 659,
 		"fields": {
 			"movie_id": 722149,
@@ -12030,27 +11560,6 @@
 				16,
 				35,
 				10751
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 661,
-		"fields": {
-			"movie_id": 985932,
-			"title": "Virgin Forest",
-			"adult": false,
-			"popularity": 52.242,
-			"poster_path": "/6AnFbpUmxAjhInm04cl0sfCko6J.jpg",
-			"backdrop_path": "/n5QtdxCS75UXSNzFCviXmgpysZA.jpg",
-			"release_date": "2022-06-24",
-			"vote_average": 5.6,
-			"vote_count": 10,
-			"overview": "",
-			"genres": [
-				53,
-				80,
-				18
 			]
 		}
 	},
@@ -12155,25 +11664,6 @@
 			"genres": [
 				18,
 				10749
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 667,
-		"fields": {
-			"movie_id": 1008779,
-			"title": "La Princesa",
-			"adult": false,
-			"popularity": 52.251,
-			"poster_path": "/ksxiXqwPuEjh3gct1zUpyzNoQFt.jpg",
-			"backdrop_path": "/iGHFjqxH5c8zRibnZbh9qEYTBho.jpg",
-			"release_date": "2022-02-01",
-			"vote_average": 7.3,
-			"vote_count": 87,
-			"overview": "",
-			"genres": [
-				28
 			]
 		}
 	},
@@ -12301,25 +11791,6 @@
 			"genres": [
 				10749,
 				35
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 674,
-		"fields": {
-			"movie_id": 405871,
-			"title": "젊은 아가씨 고기 노예",
-			"adult": false,
-			"popularity": 45.803,
-			"poster_path": "/nrUDsisIxwAB9s5caM5SE0HJEHe.jpg",
-			"backdrop_path": "/wRWEA3TeGGyocIPKFiTDzPK3HfN.jpg",
-			"release_date": "1985-08-24",
-			"vote_average": 5,
-			"vote_count": 8,
-			"overview": "",
-			"genres": [
-				18
 			]
 		}
 	},
@@ -12621,27 +12092,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 689,
-		"fields": {
-			"movie_id": 928015,
-			"title": "Dracula: The Original Living Vampire",
-			"adult": false,
-			"popularity": 44.413,
-			"poster_path": "/9nbw6eAYOhYEjI1wODekAG6svZF.jpg",
-			"backdrop_path": "/wfdc6HVUiIluKxFxe7deJUvnwN0.jpg",
-			"release_date": "2022-01-28",
-			"vote_average": 5.4,
-			"vote_count": 73,
-			"overview": "",
-			"genres": [
-				27,
-				14,
-				53
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 690,
 		"fields": {
 			"movie_id": 628900,
@@ -12658,44 +12108,6 @@
 				28,
 				12,
 				53
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 691,
-		"fields": {
-			"movie_id": 185664,
-			"title": "단 오니로쿠 - 밧줄 지옥의 수녀",
-			"adult": false,
-			"popularity": 68.118,
-			"poster_path": "/AdbDpP5vGeRX7tKFoipEreYVVRs.jpg",
-			"backdrop_path": "/pKaS8OTLlDJPJh5jZdm8wmFSPYS.jpg",
-			"release_date": "1984-05-25",
-			"vote_average": 5.9,
-			"vote_count": 7,
-			"overview": "단 오니로쿠의 원작 - 타카코는 연인의 아내가 그들을 현장에서 붙잡은 후 수녀원에 들어간다. 그녀는 수녀들과 성공한 작가가 퇴폐적인 S&M에 관여하기 위해 공모했다는 것을 곧 알게 된다.",
-			"genres": [
-				18
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 692,
-		"fields": {
-			"movie_id": 1029446,
-			"title": "Selina's Gold",
-			"adult": false,
-			"popularity": 47.754,
-			"poster_path": "/4a0X2GKDmhhp1U2FUKtKY6uNQHL.jpg",
-			"backdrop_path": "/ru5zAV1Ij6bQGedBkczqhiBmjzn.jpg",
-			"release_date": "2022-10-28",
-			"vote_average": 7.2,
-			"vote_count": 23,
-			"overview": "",
-			"genres": [
-				18
 			]
 		}
 	},
@@ -12888,25 +12300,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 703,
-		"fields": {
-			"movie_id": 1046043,
-			"title": "Wait With Me",
-			"adult": false,
-			"popularity": 43.108,
-			"poster_path": "/34cgjVoAIXVsZ2uZkTsdxWhv2Si.jpg",
-			"backdrop_path": "/laFqaSXhTcsM9gMzlrMZRYGgUIQ.jpg",
-			"release_date": "2023-03-30",
-			"vote_average": 5.7,
-			"vote_count": 6,
-			"overview": "",
-			"genres": [
-				10749
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 704,
 		"fields": {
 			"movie_id": 843269,
@@ -13078,26 +12471,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 712,
-		"fields": {
-			"movie_id": 892048,
-			"title": "Todos lo hacen",
-			"adult": false,
-			"popularity": 35.11,
-			"poster_path": "/5wKnypXIVtMd7hLROss67dwwvQB.jpg",
-			"backdrop_path": "/sedlPO9Rl2iCMh24hoMUUhVsEFB.jpg",
-			"release_date": "2022-12-28",
-			"vote_average": 6.5,
-			"vote_count": 17,
-			"overview": "",
-			"genres": [
-				35,
-				80
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 713,
 		"fields": {
 			"movie_id": 696806,
@@ -13236,25 +12609,6 @@
 			"genres": [
 				878,
 				28
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 720,
-		"fields": {
-			"movie_id": 1086990,
-			"title": "Malcriados",
-			"adult": false,
-			"popularity": 48.214,
-			"poster_path": "/3WiDmXSZoDGkDweMc4dosZsDjpn.jpg",
-			"backdrop_path": "/1570OZ9lWy94ekK505RDxElp4qx.jpg",
-			"release_date": "2023-02-15",
-			"vote_average": 7.9,
-			"vote_count": 44,
-			"overview": "",
-			"genres": [
-				35
 			]
 		}
 	},
@@ -13492,44 +12846,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 733,
-		"fields": {
-			"movie_id": 750209,
-			"title": "위험한 과외",
-			"adult": false,
-			"popularity": 49.949,
-			"poster_path": "/uU58hfOpByKiYlXHdH5I9IeMD6R.jpg",
-			"backdrop_path": "/buDwc8eqxF1s1paGZUeDgfvEOPh.jpg",
-			"release_date": "2020-10-02",
-			"vote_average": 5.3,
-			"vote_count": 4,
-			"overview": "",
-			"genres": [
-				18
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 734,
-		"fields": {
-			"movie_id": 225886,
-			"title": "S테이프",
-			"adult": false,
-			"popularity": 62.318,
-			"poster_path": "/u2h7UnSHrbAA5WBoKhdH1rlDZfz.jpg",
-			"backdrop_path": "/nFCUBRDF4C6RWopNo0nAfvMA6mm.jpg",
-			"release_date": "2014-07-17",
-			"vote_average": 5.4,
-			"vote_count": 3805,
-			"overview": "애니(카메론 디아즈)와 제이(제이슨 시겔)는 대학 시절 뜨거운 사랑에 빠져 어린 나이에 결혼한 10년차 부부다. 아이들이 없는 틈을 타서 모처럼 사랑을 나누게 된 두 사람은, 무미건조한 섹스에 실망하여 극단의 조치를 취한다. 바로 둘만의 포르노를 만드는 것. 무려 3시간 동안의 섹스를 아이패드로 촬영한 두 사람은 기진맥진하여 잠이 든다. 다음 날, 제이는 동영상을 잘 봤다는 의문의 문자를 받고는 자신의 실수를 깨닫는다. 섹스 동영상이 그가 선물해준 아이패드에 동기화되어 버린 것이다. 우여곡절 끝에 두 사람은 절친한 친구 로비(롭 코드리) 부부, 사업가 행크의 아이패드를 회수하는데 성공한다. 하지만 문자의 범인인 하워드 때문에 안심할 수는 없는 상황. 로비의 아들인 하워드는 동영상 파일의 복사본을 갖고 있으며, 2만5천 달러를 주지 않으면 포르노 사이트에 파일을 올리겠다고 제이를 협박하는데…",
-			"genres": [
-				35
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 735,
 		"fields": {
 			"movie_id": 39145,
@@ -13606,45 +12922,6 @@
 			"overview": "긴급 경보 : 교내 총격 테러 발생  오전 8:00 에이미는 학교를 가기 싫어하는 아들을 뒤로 한 채 조깅을 나선다. 오전 8:59 아들의 학교에서 총격 테러가 발생했다. 오전 9:00 아들에게 연락이 닿지 않는다. 오전 9:36 아들이 유력한 용의자로 의심받고 있는 것을 알게 된다.  단 한 걸음도, 단 한 순간도 놓치지 못할 리얼 타임 서스펜스가 펼쳐진다!",
 			"genres": [
 				53
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 739,
-		"fields": {
-			"movie_id": 848526,
-			"title": "Arsenault & Fils",
-			"adult": false,
-			"popularity": 39.377,
-			"poster_path": "/qyNtamJnsQTUXfnl41cwwIkRAea.jpg",
-			"backdrop_path": "/bzE52pxszAyHhq9lEZS1VELMRNp.jpg",
-			"release_date": "2022-06-17",
-			"vote_average": 6.1,
-			"vote_count": 10,
-			"overview": "",
-			"genres": [
-				53,
-				18
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 741,
-		"fields": {
-			"movie_id": 67398,
-			"title": "The Dallas Connection",
-			"adult": false,
-			"popularity": 60.603,
-			"poster_path": "/yHrd3gMBi5VgZZEpxixtQpbNZEh.jpg",
-			"backdrop_path": "/8uCVCjFC5zSzeWvaC60syTv9UJk.jpg",
-			"release_date": "1994-10-02",
-			"vote_average": 4.7,
-			"vote_count": 28,
-			"overview": "",
-			"genres": [
-				28
 			]
 		}
 	},
@@ -13859,25 +13136,6 @@
 				28,
 				12,
 				878
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 753,
-		"fields": {
-			"movie_id": 643274,
-			"title": "미용실 : 특별한 서비스 3",
-			"adult": false,
-			"popularity": 56.189,
-			"poster_path": "/fMksaQrIVsFlVCLS8KQfLGZ5vgt.jpg",
-			"backdrop_path": "/4yABbmwq7D0vsSmDVzpJbQdFGJW.jpg",
-			"release_date": "2019-04-29",
-			"vote_average": 6.4,
-			"vote_count": 8,
-			"overview": "",
-			"genres": [
-				10749
 			]
 		}
 	},
@@ -14113,25 +13371,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 766,
-		"fields": {
-			"movie_id": 191561,
-			"title": "大內密探之零零性性",
-			"adult": false,
-			"popularity": 65.242,
-			"poster_path": "/jup92IAVHImhIERJC3jP5of7oV9.jpg",
-			"backdrop_path": "/n2b9fTgkRosM0UrAdD7UkkHz5Ky.jpg",
-			"release_date": "1996-08-10",
-			"vote_average": 5.6,
-			"vote_count": 6,
-			"overview": "",
-			"genres": [
-				18
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 767,
 		"fields": {
 			"movie_id": 141052,
@@ -14213,26 +13452,6 @@
 				16,
 				28,
 				878
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 771,
-		"fields": {
-			"movie_id": 1017066,
-			"title": "Heaven in Hell",
-			"adult": false,
-			"popularity": 41.624,
-			"poster_path": "/rvWpNIkOYQb4nd4wF8rw8wifF0G.jpg",
-			"backdrop_path": "/5FQZ5fnveOkAsxeCTK94KqZg0WA.jpg",
-			"release_date": "2023-02-10",
-			"vote_average": 3.1,
-			"vote_count": 6,
-			"overview": "",
-			"genres": [
-				18,
-				10749
 			]
 		}
 	},
@@ -14663,44 +13882,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 793,
-		"fields": {
-			"movie_id": 560821,
-			"title": "일본 엄마 2",
-			"adult": false,
-			"popularity": 46.454,
-			"poster_path": "/y09bSBYUj71mYxOXDnq9vgJmeuO.jpg",
-			"backdrop_path": "/wfYU5D4A2fMe5dUdLK5FeGrpuH2.jpg",
-			"release_date": "2017-10-31",
-			"vote_average": 5,
-			"vote_count": 2,
-			"overview": "",
-			"genres": [
-				10749
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 794,
-		"fields": {
-			"movie_id": 99361,
-			"title": "Sechs Schwedinnen von der Tankstelle",
-			"adult": false,
-			"popularity": 50.675,
-			"poster_path": "/hmlq4Zw1U4O7lCJZ6Fts18ZHlUR.jpg",
-			"backdrop_path": "/pFqYDFHjbjF1suFF1fZv2ZbxahP.jpg",
-			"release_date": "1980-09-19",
-			"vote_average": 6.7,
-			"vote_count": 18,
-			"overview": "",
-			"genres": [
-				35
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 795,
 		"fields": {
 			"movie_id": 297761,
@@ -15021,27 +14202,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 810,
-		"fields": {
-			"movie_id": 670327,
-			"title": "まるだせ金太狼",
-			"adult": false,
-			"popularity": 43.175,
-			"poster_path": "/70gildhMU2bX8D9zMbDylZBWpeY.jpg",
-			"backdrop_path": "/jtIEiNgADgLiLEnQHaadheAZ943.jpg",
-			"release_date": "2020-12-11",
-			"vote_average": 5.1,
-			"vote_count": 4,
-			"overview": "",
-			"genres": [
-				10749,
-				35,
-				16
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 811,
 		"fields": {
 			"movie_id": 883083,
@@ -15057,45 +14217,6 @@
 			"genres": [
 				27,
 				18
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 812,
-		"fields": {
-			"movie_id": 1012801,
-			"title": "Barbie: Mermaid Power",
-			"adult": false,
-			"popularity": 44.336,
-			"poster_path": "/8qb8cLDBAWdahrtixN2mQdI6e52.jpg",
-			"backdrop_path": "/orsOF8IJByvs5CvYBFclXATTE9B.jpg",
-			"release_date": "2022-10-14",
-			"vote_average": 7.3,
-			"vote_count": 49,
-			"overview": "",
-			"genres": [
-				16
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 813,
-		"fields": {
-			"movie_id": 673836,
-			"title": "Ang Mga Kaibigan ni Mama Susan",
-			"adult": false,
-			"popularity": 41.59,
-			"poster_path": "/cYUuEQ6a2kGsjeJVnwLEMGF87b5.jpg",
-			"backdrop_path": "/ilvUBlvsEq4WFJe1gDXJsJMr5vg.jpg",
-			"release_date": "2023-05-18",
-			"vote_average": 6,
-			"vote_count": 3,
-			"overview": "",
-			"genres": [
-				27,
-				53
 			]
 		}
 	},
@@ -15137,25 +14258,6 @@
 				27,
 				28,
 				53
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 816,
-		"fields": {
-			"movie_id": 106909,
-			"title": "L'Insegnante",
-			"adult": false,
-			"popularity": 74.763,
-			"poster_path": "/zUj1OaQadqo43eo1OMnueTCJDmY.jpg",
-			"backdrop_path": "/69oR6A1Rv89KM3n0BgIIQ6gocSI.jpg",
-			"release_date": "1975-07-11",
-			"vote_average": 5.6,
-			"vote_count": 43,
-			"overview": "",
-			"genres": [
-				35
 			]
 		}
 	},
@@ -15321,26 +14423,6 @@
 				28,
 				12,
 				53
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 825,
-		"fields": {
-			"movie_id": 731159,
-			"title": "여사장 후리꾼",
-			"adult": false,
-			"popularity": 43.509,
-			"poster_path": "/gR1UjgajcXKgFgsl0ppTUbauZPG.jpg",
-			"backdrop_path": "/9DEqf5cy4YbVwbvHprUXlnLZ9FQ.jpg",
-			"release_date": "2020-08-31",
-			"vote_average": 10,
-			"vote_count": 1,
-			"overview": "작은 가게를 운영하는 은제의 남자친구는 놀고 먹는 취준생 지철.\r 한편, 히키코모리인 중후는 우연히 가게에서 은제를 본 후 단골이 되었다. 그녀의 친절함이 자신을 향한 애정인 듯 착각하고 있다. 그녀의 SNS를 매일 보면서 스토킹하기 시작하는 중후. 결국, 순진한 얼굴로 은제에게 접근한 후, 은제를 감금하는데 성공한다.\r 은제가 사라지고 돈줄이 끊기자 지철은 은제를 찾느라 혈안이 된다. 안위가 걱정되기 보다는 돈이 아쉬운 지철은 미선을 꼬셔 푼돈이라도 털어내려고 한다. 두 사람의 정사 장면을 몰래카메라로 보게 된 은제, 어떻게든 여기서 빠져나가야겠다는 생각에 중후와 술을 마시며 중후를 무장해제 시킨다. 결국 탈출하는 은제.\r 은제가 없어 허전한 중후는 자신을 무시했던 미선을 감금한다. 3개월 후, 누군가가 중후의 집으로 찾아오는데..​",
-			"genres": [
-				18,
-				10749
 			]
 		}
 	},
@@ -15953,26 +15035,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 858,
-		"fields": {
-			"movie_id": 1023156,
-			"title": "O Corpo Aberto",
-			"adult": false,
-			"popularity": 35.462,
-			"poster_path": "/safBynAB9Z5mjzyfgVpj2vCZrgE.jpg",
-			"backdrop_path": "/ol2uNjal2zBgD2KxvBbXlK8jRPJ.jpg",
-			"release_date": "2022-12-09",
-			"vote_average": 4.5,
-			"vote_count": 2,
-			"overview": "",
-			"genres": [
-				27,
-				18
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 859,
 		"fields": {
 			"movie_id": 2907,
@@ -16008,27 +15070,6 @@
 			"genres": [
 				27,
 				878
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 861,
-		"fields": {
-			"movie_id": 77321,
-			"title": "Silip",
-			"adult": false,
-			"popularity": 36.641,
-			"poster_path": "/v49jwF7f3aTzQrrOnWmEnW0mStH.jpg",
-			"backdrop_path": "/uBsLjwr52IP177jw5QtF8m3I1xP.jpg",
-			"release_date": "1985-02-07",
-			"vote_average": 5.4,
-			"vote_count": 12,
-			"overview": "",
-			"genres": [
-				27,
-				18,
-				80
 			]
 		}
 	},
@@ -16492,26 +15533,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 884,
-		"fields": {
-			"movie_id": 75432,
-			"title": "맛있는 섹스 그리고 사랑",
-			"adult": false,
-			"popularity": 43.909,
-			"poster_path": "/k6qMGLTqA32HuKVLctZHfs596Fe.jpg",
-			"backdrop_path": "/8Id5xQr54BCdVRDQM9i0s8P9BUw.jpg",
-			"release_date": "2003-06-27",
-			"vote_average": 4.4,
-			"vote_count": 17,
-			"overview": "대학선배 기현(주우 분)과 사귀면서도 늘 자유로운 사랑을 꿈꾸는 신아(김서형 분). 한 곳에 안주하기 보다는 늘 새로운 것을 추구하는 동기(김성수 분). 우연히 마주친 두 사람은 40도를 웃도는 빼갈처럼 격정적인 하룻밤을 보낸다. 각자의 일상으로 돌아간 두 사람. 그러나 그날의 기억은 갑갑한 일상 속에 머무는 신아와 동기를 미소짖게 만드는 낯선 자극이었다. 그러던 어느날 신아에게 동기의 전화가 걸려오고... 그날 밤, 두 사람은 아주 오랫동안 뜨겁게 서로의 몸을 품으며 사랑을 써내려 간다.  시간이 지날 수록 서로의 몸에만 익숙해졌을 뿐 서로에 대한 이해가 부족함을 알게 되는 두 사람. 이런 현실은 일상에서 생기는 사소한 오해를 만들며 둘 사이의 균열을 만든다. 완전히 사랑했지만 완전히 이해하지 못했던 신아와 동기는 현실을 인정하지 않고 관계회복을 위한 또 다른 돌파구를 찾기 시작한다.",
-			"genres": [
-				10749,
-				18
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 885,
 		"fields": {
 			"movie_id": 23168,
@@ -16634,27 +15655,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 891,
-		"fields": {
-			"movie_id": 941520,
-			"title": "Alien Sniperess",
-			"adult": false,
-			"popularity": 37.449,
-			"poster_path": "/zDNjLGCgsdbxlEanENc94ECdzw4.jpg",
-			"backdrop_path": "/3RJ0B8JnwuOaQf6qmwTILXibcJj.jpg",
-			"release_date": "2022-04-08",
-			"vote_average": 4.1,
-			"vote_count": 16,
-			"overview": "",
-			"genres": [
-				28,
-				878,
-				14
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 892,
 		"fields": {
 			"movie_id": 297762,
@@ -16692,25 +15692,6 @@
 				27,
 				18,
 				878
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 894,
-		"fields": {
-			"movie_id": 1113566,
-			"title": "AFAM",
-			"adult": false,
-			"popularity": 50.16,
-			"poster_path": "/4ZEQnd2Ar5S0ETnFL4dSenCVpi6.jpg",
-			"backdrop_path": "/ysoQdej0fXBlkSUdeEeCheBzpwn.jpg",
-			"release_date": "2023-05-05",
-			"vote_average": 2,
-			"vote_count": 1,
-			"overview": "",
-			"genres": [
-				35
 			]
 		}
 	},
@@ -16879,25 +15860,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 903,
-		"fields": {
-			"movie_id": 505292,
-			"title": "어린 누나",
-			"adult": false,
-			"popularity": 64.586,
-			"poster_path": "/e2uKsBgakda3XyHKCLPcUfKsmFw.jpg",
-			"backdrop_path": "/pi3GUYa57tvYmesV84xujdA3ztH.jpg",
-			"release_date": "2018-03-15",
-			"vote_average": 0,
-			"vote_count": 0,
-			"overview": "看黄片 网祉 【 4ｈhｘ. cｏm】  看黄片 网祉 【 4ｈhｘ. cｏm】  看黄片 网祉 【 4ｈhｘ. cｏm】  看黄片 网祉 【 4ｈhｘ. cｏm】  看黄片 网祉 【 4ｈhｘ. cｏm】  看黄片 网祉 【 4ｈhｘ. cｏm】  看黄片 网祉 【 4ｈhｘ. cｏm】\r 어린 시절 친남매처럼 자란 사촌 사이던 은정과 태수.  20년이 흘러서 은정은 시나리오 작가로 활동하고 있다. 태수는 마음속에  담고 있던 사촌 누나 은정을 짝사랑 하던 것을 생각해 내고 사업구상을  핑계로 사촌누나 은정의 집으로 찾아온다.  하지만, 은정의 집에는 은정의 친구이자 보조 작가인 미란이 함께 있었고  세 사람의 미묘한 동거가 시작되는데...",
-			"genres": [
-				10749
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 904,
 		"fields": {
 			"movie_id": 263115,
@@ -16914,26 +15876,6 @@
 				28,
 				18,
 				878
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 905,
-		"fields": {
-			"movie_id": 1098239,
-			"title": "Tangos, tequilas, y algunas mentiras",
-			"adult": false,
-			"popularity": 34.734,
-			"poster_path": "/o9S6GW9MGyQZpRpPj65k0RIqYNL.jpg",
-			"backdrop_path": "/uJAR8HJCNgedmgMz0G8EzGCoZAE.jpg",
-			"release_date": "2023-03-09",
-			"vote_average": 7.3,
-			"vote_count": 64,
-			"overview": "",
-			"genres": [
-				35,
-				10749
 			]
 		}
 	},
@@ -17107,27 +16049,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 914,
-		"fields": {
-			"movie_id": 904039,
-			"title": "Madagascar: A Little Wild Holiday Goose Chase",
-			"adult": false,
-			"popularity": 44.754,
-			"poster_path": "/h6TUQegjmCafQMswFW0SgCM3JeK.jpg",
-			"backdrop_path": "/oUCq5CC1LPRDd9nDDXgve5gb2tM.jpg",
-			"release_date": "2021-11-26",
-			"vote_average": 6.3,
-			"vote_count": 15,
-			"overview": "",
-			"genres": [
-				16,
-				35,
-				10751
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 915,
 		"fields": {
 			"movie_id": 660982,
@@ -17142,26 +16063,6 @@
 			"overview": "",
 			"genres": [
 				35
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 916,
-		"fields": {
-			"movie_id": 298094,
-			"title": "我為卿狂",
-			"adult": false,
-			"popularity": 45.433,
-			"poster_path": "/11q3RjD5JkFwp0byf4F4aidcLSa.jpg",
-			"backdrop_path": "/spJ063LkpTk2BMiYx4L1dOGZnBv.jpg",
-			"release_date": "1991-11-15",
-			"vote_average": 4,
-			"vote_count": 6,
-			"overview": "",
-			"genres": [
-				10749,
-				18
 			]
 		}
 	},
@@ -17206,25 +16107,6 @@
 				18,
 				12,
 				53
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 919,
-		"fields": {
-			"movie_id": 630639,
-			"title": "高校教師・成熟",
-			"adult": false,
-			"popularity": 42.098,
-			"poster_path": "/qB7Sj1ueAFPIDNenSjpjagzYI6L.jpg",
-			"backdrop_path": "/1Ve7VYC5yCHRA1KQU8tB5XH7F43.jpg",
-			"release_date": "1985-01-15",
-			"vote_average": 6,
-			"vote_count": 15,
-			"overview": "",
-			"genres": [
-				18
 			]
 		}
 	},
@@ -17328,26 +16210,6 @@
 				12,
 				28,
 				878
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 926,
-		"fields": {
-			"movie_id": 481871,
-			"title": "엄마의 직업",
-			"adult": false,
-			"popularity": 53.711,
-			"poster_path": "/hYVCfBkpi1ziTfinKzmh4PtC5g5.jpg",
-			"backdrop_path": "/gLwJ5SsmTqqUVn3lahlBacYSrGH.jpg",
-			"release_date": "2017-07-27",
-			"vote_average": 3.8,
-			"vote_count": 8,
-			"overview": "",
-			"genres": [
-				10749,
-				18
 			]
 		}
 	},
@@ -17646,25 +16508,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 941,
-		"fields": {
-			"movie_id": 4705,
-			"title": "L'infermiera",
-			"adult": false,
-			"popularity": 53.832,
-			"poster_path": "/mDGEfcxlkP0EMzIH0AVKnde66wS.jpg",
-			"backdrop_path": "/6rHcH5migL0mXUf5Fd3q2paKceY.jpg",
-			"release_date": "1975-12-19",
-			"vote_average": 5.5,
-			"vote_count": 31,
-			"overview": "",
-			"genres": [
-				35
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 942,
 		"fields": {
 			"movie_id": 758336,
@@ -17702,25 +16545,6 @@
 				28,
 				12,
 				878
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 944,
-		"fields": {
-			"movie_id": 185689,
-			"title": "団鬼六　美女縄地獄",
-			"adult": false,
-			"popularity": 54.679,
-			"poster_path": "/mPNfIMlvszuKvwFO3v4HHT4E9Mu.jpg",
-			"backdrop_path": "/577JqKM9pUbaJxgubsq4xu7Kzjl.jpg",
-			"release_date": "1983-08-26",
-			"vote_average": 5.4,
-			"vote_count": 7,
-			"overview": "",
-			"genres": [
-				18
 			]
 		}
 	},
@@ -17807,26 +16631,6 @@
 				35,
 				10749,
 				18
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 949,
-		"fields": {
-			"movie_id": 919873,
-			"title": "Arctic Void",
-			"adult": false,
-			"popularity": 34.335,
-			"poster_path": "/2OkdcVn1wIgRA4zo8tTbn7NNDUT.jpg",
-			"backdrop_path": "/ujL5e6S2PSkPE3FNSNrPGlB2haF.jpg",
-			"release_date": "2022-01-14",
-			"vote_average": 5.2,
-			"vote_count": 22,
-			"overview": "",
-			"genres": [
-				878,
-				53
 			]
 		}
 	},
@@ -17935,27 +16739,6 @@
 				16,
 				35,
 				12
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 955,
-		"fields": {
-			"movie_id": 892527,
-			"title": "King",
-			"adult": false,
-			"popularity": 37.638,
-			"poster_path": "/kEyi52oFS45X5sb78kAMnfrenxm.jpg",
-			"backdrop_path": "/A65oYGOeBQDoxhwkeVLnBPNWItK.jpg",
-			"release_date": "2022-02-16",
-			"vote_average": 6.6,
-			"vote_count": 148,
-			"overview": "",
-			"genres": [
-				12,
-				35,
-				10751
 			]
 		}
 	},
@@ -18150,27 +16933,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 965,
-		"fields": {
-			"movie_id": 888257,
-			"title": "Ghosts of the Ozarks",
-			"adult": false,
-			"popularity": 32.068,
-			"poster_path": "/5KgBwcelQoxWgplfJhY46Urz3Cf.jpg",
-			"backdrop_path": "/qQWR4f765vp8uRKaY39R8W47wLX.jpg",
-			"release_date": "2022-02-04",
-			"vote_average": 6.3,
-			"vote_count": 16,
-			"overview": "",
-			"genres": [
-				37,
-				27,
-				9648
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 966,
 		"fields": {
 			"movie_id": 877183,
@@ -18293,45 +17055,6 @@
 			"genres": [
 				53,
 				27
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 972,
-		"fields": {
-			"movie_id": 969160,
-			"title": "Deinfluencer",
-			"adult": false,
-			"popularity": 34.333,
-			"poster_path": "/tLA4839HtC5GelEsUTFFtAL2ar5.jpg",
-			"backdrop_path": "/23sJzwaYazdzqnp2gm6GAQk4sCc.jpg",
-			"release_date": "2022-12-06",
-			"vote_average": 4.8,
-			"vote_count": 15,
-			"overview": "",
-			"genres": [
-				27,
-				53
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 973,
-		"fields": {
-			"movie_id": 386716,
-			"title": "젊은 엄마 3",
-			"adult": false,
-			"popularity": 50.425,
-			"poster_path": "/ja55Vurq2Ycp6kWqWixC35lKIEw.jpg",
-			"backdrop_path": "/73cRGkSAqitTtHNvJqTTycg2Mx7.jpg",
-			"release_date": "2015-09-03",
-			"vote_average": 5.2,
-			"vote_count": 9,
-			"overview": "잠든 새 엄마의 옷 속으로 그의 손이 들어갔다.\r 그의 손끝 하나하나에 새 엄마는 숨결이 거칠어졌다.  아버지와 단 둘이서 사는 스무 살 청년 기찬. 어느 날 서른 두 살의 새 엄마 윤서(김정아 분)가 이들이 사는 집으로 들어 온다. 아들 기찬과 친해지려고 노력하는 젊은 엄마와 달리 기찬은 언제부터인가 윤서가 여자로 느껴지고, 그 마음을 노골적으로 표현하기 시작한다. 윤서는 강하게 거부하지만 기찬은 직감적으로 알 수 있다. 윤서도 간절히 원하는 것을… 그렇게 아슬아슬하고 위험한 사랑이 시작된다. 그러던 어느 날, 기찬을 오랫동안 짝사랑해 온 민정에게 이들의 관계가 발각된다. 남편을 속이고 아들과 사랑을 나누던 젊은 엄마와 아버지의 여자를 사랑하게 된 기찬. 이들은 민정의 마음을 달래 주기 위해 파격적인 제안을 한다.",
-			"genres": [
-				10749
 			]
 		}
 	},
@@ -19011,25 +17734,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 1006,
-		"fields": {
-			"movie_id": 1010581,
-			"title": "Culpa mía",
-			"adult": false,
-			"popularity": 44.186,
-			"poster_path": "/gp31EwMH5D2bftOjscwkgTmoLAB.jpg",
-			"backdrop_path": "/ytp4DLPaWryo8rrTNBSYPIOJfDw.jpg",
-			"release_date": "2023-06-08",
-			"vote_average": 0,
-			"vote_count": 0,
-			"overview": "",
-			"genres": [
-				10749
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 1007,
 		"fields": {
 			"movie_id": 9902,
@@ -19136,25 +17840,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 1012,
-		"fields": {
-			"movie_id": 660653,
-			"title": "젊은 친구엄마",
-			"adult": false,
-			"popularity": 47.186,
-			"poster_path": "/9KumU7gLIDhbNBKOcGbDbXEAwh9.jpg",
-			"backdrop_path": "/7D8PhcRHUt2P8e5hAp3CBF0Wc4V.jpg",
-			"release_date": "2019-10-23",
-			"vote_average": 3,
-			"vote_count": 2,
-			"overview": "아들 친구를 유혹하는 유부녀의 이야기를 다룬 성애 영화",
-			"genres": [
-				10749
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 1013,
 		"fields": {
 			"movie_id": 126889,
@@ -19191,26 +17876,6 @@
 			"genres": [
 				28,
 				53
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 1016,
-		"fields": {
-			"movie_id": 987787,
-			"title": "Un parcero en Nueva York",
-			"adult": false,
-			"popularity": 28.383,
-			"poster_path": "/nZLgLooB0zaixBiT5NHo06mCiyO.jpg",
-			"backdrop_path": "/j0on7nNuX5DIcvZO29ztqQ6fzkU.jpg",
-			"release_date": "2022-08-18",
-			"vote_average": 7.3,
-			"vote_count": 7,
-			"overview": "",
-			"genres": [
-				35,
-				18
 			]
 		}
 	},
@@ -19377,26 +18042,6 @@
 			"overview": "유령이 나올 것처럼 스산한 기운이 감도는 밤. 어느 대저택에서 한 무리의 사람들이 피아노 반주에 맞춰 엉덩이를 흔들며 신나게 노래를 부르고 있다. 이때 하얀 잠옷을 입은 소녀가 이들 앞에서 엄청난 양의 오줌을 질질 싸댄다.  이 소녀가 바로 악령이 깃들였다는 이 집 딸 나타샤.  괴상한 짓을 일삼지만 유능한(?) 사제인 맥필리 신부가 그녀에게 깃들인 악령을 쫓아내기 위해 찾아온다. 잠시 후 악령을 쫓아내려는 신부와 나타샤의 몸에서 쫓겨나지 않으려는 악령은 서로의 얼굴에 구토를 해대는 등 온갖 더럽고 추악한 짓으로 힘겨루기를 한다.  그로부터 1년 뒤 악령의 존재를 밝혀내 명예를 얻으려는 심리학 교수 올드먼이 실험대상인 제자들을 데리고 악령의 집을 찾는다.",
 			"genres": [
 				35
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 1025,
-		"fields": {
-			"movie_id": 112160,
-			"title": "밝히는 가족의 섹스 스토리",
-			"adult": false,
-			"popularity": 42.752,
-			"poster_path": "/vQDwzFYs1T3CQ26kzJVTWSeAocQ.jpg",
-			"backdrop_path": "/6V6y3aBbzO9fQDDjEPxtOI6vzBh.jpg",
-			"release_date": "2012-05-09",
-			"vote_average": 4.9,
-			"vote_count": 242,
-			"overview": "프랑스 교외 도시의 평범한 가족. 하지만 모든 가족에게 비밀은 있다. 자위에 집착하고 수업시간에 핸드폰으로 몰래 자신을 촬영하는 데 재미를 붙인 로맹으로 인해 가족의 평온한 일상은 흔들리기 시작하고, 가족 내에서 금기시되었던 섹스는 중요한 관심사로 변한다. 10대 청소년에서 70대 노인까지, 섹스는 누구에게나 풀리지 않는 숙제인 법.",
-			"genres": [
-				35,
-				18
 			]
 		}
 	},
@@ -19668,46 +18313,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 1039,
-		"fields": {
-			"movie_id": 554447,
-			"title": "여직원의 맛",
-			"adult": false,
-			"popularity": 51.666,
-			"poster_path": "/sf5l6ZsSgzgxZ3IicFfkOXp8AZy.jpg",
-			"backdrop_path": "/t1XwJqQNH6CPgkG2vU5i82U12Tt.jpg",
-			"release_date": "2018-05-28",
-			"vote_average": 5.2,
-			"vote_count": 32,
-			"overview": "*여직원의 맛*  박과장은 사무실에서 호시탐탐 여직원 가희를 두고 혼자만의 상상을 하는데 이런 박과장의 시선이 너무 부담스러운 가희, 어느날 박과장이 먼저 퇴근하고 비밀연애를 하는 직장동료 우진과 사무실에서 섹스를 즐긴다. 잠시후 퇴근한 박과장이 문을 여는데...  *극장의 맛1*  극장에서 영화를 보고있는 연인, 영호와 수련은 주변에 사람이 없자 수련에게 들이대는 영호, 뒤에 사람이 있다며 영호를 말린다. 잠시후 화장실에 갔다온 수련은 안경이 부서져서 앞을 잘 못보고 영호가 아닌, 낯선 남자 옆으로 가는데...  *모텔의 맛*  학교선후배 영호와 혜진이 모텔에서 맥주를 마신다. 혜진이 조만간 남자친구와 첫날밤을 치룰 것이라며, 예행연습을 하자고 후배한테 제안한다. 영호는 걱정말라며 호기롭게 이야기 하지만, 이내 혜진의 첫경험이 처음이 아닌 것을 느낀다.  *극장의 맛2*  시련의 상처로 혼자 영화보고 있는 영호 옆으로 낯선 여자 수련이 앉는다.영호의 사연을 우연히 듣게 되고, 영호를 위로하던 중 조용한 극장에서 둘만의 섹스를 즐긴다.",
-			"genres": [
-				18,
-				10749
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 1040,
-		"fields": {
-			"movie_id": 611861,
-			"title": "음란 과외 2",
-			"adult": false,
-			"popularity": 54.327,
-			"poster_path": "/ggm6I9NDCROHQFKZ2q9IZPr93rw.jpg",
-			"backdrop_path": "/rR0DIRavoZAbxb37zVx751DBi4.jpg",
-			"release_date": "2019-06-07",
-			"vote_average": 6.8,
-			"vote_count": 4,
-			"overview": "사수생 유정은 공부 보다는 섹스에 관심이 많다. 남친이 소개 시켜준 과외 선생님의 은밀하고 특별한 과외 덕에 성적이 쑥쑥 올라간다.\r 유정의 엄마 미진은 딸의 과외선생님에게 호감을 느끼고 유혹하기 시작하는데...",
-			"genres": [
-				10749,
-				18
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 1042,
 		"fields": {
 			"movie_id": 10009,
@@ -19744,26 +18349,6 @@
 			"genres": [
 				28,
 				878
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 1044,
-		"fields": {
-			"movie_id": 916386,
-			"title": "Der Passfälscher",
-			"adult": false,
-			"popularity": 33.855,
-			"poster_path": "/zgIL0Rr0vBi6TLO4blIXZAgLWwg.jpg",
-			"backdrop_path": "/f76pf0QxldYY8mMHW4kudXhuLZB.jpg",
-			"release_date": "2022-10-13",
-			"vote_average": 6.1,
-			"vote_count": 12,
-			"overview": "",
-			"genres": [
-				18,
-				36
 			]
 		}
 	},
@@ -19978,45 +18563,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 1055,
-		"fields": {
-			"movie_id": 960096,
-			"title": "El monte",
-			"adult": false,
-			"popularity": 28.771,
-			"poster_path": "/xlwt27iWubh6DEiQhc3kyVMjCU5.jpg",
-			"backdrop_path": "/lGFnHBpJqk7juSbQzggFkI0Y1QH.jpg",
-			"release_date": "2022-08-18",
-			"vote_average": 6.7,
-			"vote_count": 3,
-			"overview": "",
-			"genres": [
-				53
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 1056,
-		"fields": {
-			"movie_id": 264859,
-			"title": "Sechs Schwedinnen auf der Alm",
-			"adult": false,
-			"popularity": 46.554,
-			"poster_path": "/5kk9GUeeGTdyhcerUfxzhJYt6Gm.jpg",
-			"backdrop_path": "/dLfPOTB9zlGCNZJinYvf9yygaX6.jpg",
-			"release_date": "1983-07-22",
-			"vote_average": 5.4,
-			"vote_count": 16,
-			"overview": "",
-			"genres": [
-				10749,
-				35
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 1057,
 		"fields": {
 			"movie_id": 39105,
@@ -20197,25 +18743,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 1066,
-		"fields": {
-			"movie_id": 772446,
-			"title": "No abras la puerta",
-			"adult": false,
-			"popularity": 33.508,
-			"poster_path": "/qumlmYYopqgAQUdwT9wgVyhxBBb.jpg",
-			"backdrop_path": "/m1KW4Qcr6Qudqx058CpQK9IgGr8.jpg",
-			"release_date": "2022-11-30",
-			"vote_average": 7.2,
-			"vote_count": 28,
-			"overview": "",
-			"genres": [
-				27
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 1067,
 		"fields": {
 			"movie_id": 911129,
@@ -20230,25 +18757,6 @@
 			"overview": "놀라운 재능을 지닌 젊은 여성. 세계적인 기록을 보유한 노 리미트 프리 다이빙 강사와 깊고 파괴적인 사랑에 빠진다. 매혹적인 영상미의 로맨틱 드라마 영화.",
 			"genres": [
 				18
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 1068,
-		"fields": {
-			"movie_id": 893370,
-			"title": "Virus: 32",
-			"adult": false,
-			"popularity": 43.299,
-			"poster_path": "/qDNZWDJGU2LTPpPpVGPQMxKv8xl.jpg",
-			"backdrop_path": "/3AkLQG72soWvvmTFNkPWoOITz1Y.jpg",
-			"release_date": "2022-04-21",
-			"vote_average": 6.9,
-			"vote_count": 210,
-			"overview": "",
-			"genres": [
-				27
 			]
 		}
 	},
@@ -20393,25 +18901,6 @@
 				27,
 				9648,
 				80
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 1076,
-		"fields": {
-			"movie_id": 359289,
-			"title": "맛 2",
-			"adult": false,
-			"popularity": 42.201,
-			"poster_path": "/eX0Wdm9hy7qjrCSTBAX5CwdbzfC.jpg",
-			"backdrop_path": "/ckjIV9X3GuYVM49TDBunTvCx3rx.jpg",
-			"release_date": "2015-09-02",
-			"vote_average": 5.6,
-			"vote_count": 5,
-			"overview": "",
-			"genres": [
-				10749
 			]
 		}
 	},
@@ -20714,25 +19203,6 @@
 	},
 	{
 		"model": "movies.movie",
-		"pk": 1092,
-		"fields": {
-			"movie_id": 440249,
-			"title": "포르노의 막이 내린 후에 2",
-			"adult": false,
-			"popularity": 48.106,
-			"poster_path": "/rfItXrtDGILwsCdmgVxX79phFuI.jpg",
-			"backdrop_path": "/n9BtaFW7aMDNiX9Rrc858vR5TTn.jpg",
-			"release_date": "2017-03-28",
-			"vote_average": 5.4,
-			"vote_count": 212,
-			"overview": "은퇴한 포르노 스타들을 만나 성공담과 애환, 후회되는 일 등 성인영화 업계에 몸담았던 시절의 경험담을 들어본다.",
-			"genres": [
-				99
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
 		"pk": 1093,
 		"fields": {
 			"movie_id": 536437,
@@ -20749,27 +19219,6 @@
 				80,
 				9648,
 				53
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"pk": 1094,
-		"fields": {
-			"movie_id": 28152,
-			"title": "スーパーマリオブラザーズ ピーチ姫救出大作戦!",
-			"adult": false,
-			"popularity": 37.604,
-			"poster_path": "/wqmGhXHih5MaahYO0JqKW2fvHNy.jpg",
-			"backdrop_path": "/7PzpnGL4W0oy1NAd0toIZeuDt0G.jpg",
-			"release_date": "1986-07-20",
-			"vote_average": 6.4,
-			"vote_count": 38,
-			"overview": "",
-			"genres": [
-				16,
-				35,
-				14
 			]
 		}
 	},
