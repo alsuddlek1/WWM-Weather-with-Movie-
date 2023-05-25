@@ -12,7 +12,7 @@
         </div>
         <button class="mouse fontcolor font m-5" @click="getMovies">더보기</button>
     </div>
-        <button @click="goTop">TOP</button>
+        <h3 @click="goTop" class="mouse" style="position: fixed; bottom: 10px; right:30px;">▲</h3>
 </div>
 </template>
 
