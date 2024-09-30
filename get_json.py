@@ -31,7 +31,6 @@ for _ in range(515):
         'without_keyword' : 'sexuality',
         'without_keyword' : 'erotic movie',
         'without_keyword' : 'sexual fantasy',
-
     }
 
     movies = requests.get(URL,params=params).json()
