@@ -1,4 +1,4 @@
-# 🎬영화 추천 플랫폼 구현 project
+### 🎬영화 추천 플랫폼 구현 project
 
 # ☁️ WWM : Weather-With-Movie
 
@@ -44,7 +44,7 @@
 
 ### ERD
 
-![Untitled.png](README_asset/c0d6100c20ac16810b68e850d2b22078b405c34b.png)
+![alt text](README_asset/WWM_back_ERD.png)
 
 ## 5. 프로젝트 주요 기능
 
@@ -73,107 +73,117 @@
 
 ### 7-1. 첫 화면 & 로그인/회원가입 화면
 
-![Untitled 1.png](README_asset/WWM_LOGIN.gif)
+<b>첫 화면 & 로그인 화면</b>
 
-- 첫 화면 & 로그인 화면
-  - 로그인을 해야만 이용할 수 있는 서비스로, sign up 버튼 클릭 시 회원가입 창 연결
-  - 정확한 정보를 입력하지 않으면 alert를 통해 정확한 정보를 입력하도록 안내
+- 로그인을 해야만 이용할 수 있는 서비스로, sign up 버튼 클릭 시 회원가입 창 연결
+- 정확한 정보를 입력하지 않으면 alert를 통해 정확한 정보를 입력하도록 안내
 
-![Untitled 2.png](README_asset/WWM_SIGNUP.gif)
+  ![Untitled 1.png](README_asset/WWM_LOGIN.gif)
 
-- 회원 가입 화면
-  - id, nickname, birth, password 각각 알맞은 형태의 정보를 입력하지 않거나 비밀번호 확인 오류 시 alert를 통해 각 상황에 맞는 오류 안내
+###
+
+<b>회원가입 화면</b>
+
+- id, password 각각 알맞은 형태의 정보를 입력
+  ![Untitled 2.png](README_asset/WWM_SIGNUP.gif)
+
+##
 
 ### 7-2. 메인 & 인트로 페이지
 
-![WWM_Main.png](README_asset/WWM_Main.png)
+<b>메인 화면</b>
 
-- 메인 화면
+- 로그인 후 나타나는 화면
+- 현재 위치와 날씨 안내
+- 메뉴 안내
+  ![WWM_Main.png](README_asset/WWM_Main.png)
 
-  - 처음 들어올 시 사이트 로고와 particle.js 를 활용한 우주 배경을 통해 사이트 안내
-  - Enter 버튼 클릭 시 login 화면으로 이동
+###
 
-![WWM_Main.png](README_asset/WWM_INTRO.gif)
+<b>인트로 화면</b>
 
-- 인트로 화면
+- 서비스 이용 안내 페이지
+  ![WWM_Main.png](README_asset/WWM_INTRO.gif)
 
-  - 처음 들어올 시 사이트 로고와 particle.js 를 활용한 우주 배경을 통해 사이트 안내
-  - Enter 버튼 클릭 시 login 화면으로 이동
+##
 
 ### 7-3. 영화 데이터 기반 추천 서비스
 
-![Untitled 11.png](README_asset/WWM_LIST.gif)
+<b>영화 전체 목록 화면</b>
 
-- 메인 화면
+- 약 1000여 개의 영화 전체 목록
+- "더보기" 버튼을 통해 20개의 영화씩 추가로 확인 가능하도록 하여 로딩 속도 단축
+- ▲ 버튼 클릭시 페이지 상단으로 이동
+  ![Untitled 11.png](README_asset/WWM_LIST.gif)
 
-  - 처음 들어올 시 사이트 로고와 particle.js 를 활용한 우주 배경을 통해 사이트 안내
-  - Enter 버튼 클릭 시 login 화면으로 이동
+###
 
-![Untitled 11.png](README_asset/WWM_SEARCH.gif)
+<b>영화 검색 화면</b>
 
-- 메인 화면
+- 영화 검색 가능
+- 띄어쓰기 / 순서 제한 없이 검색
+  ![Untitled 11.png](README_asset/WWM_SEARCH.gif)
 
-  - 처음 들어올 시 사이트 로고와 particle.js 를 활용한 우주 배경을 통해 사이트 안내
-  - Enter 버튼 클릭 시 login 화면으로 이동
+##
 
 ### 7-4. 알고리즘 기반 영화 추천 서비스
 
-![Untitled 11.png](README_asset/WWM_TODAY.gif)
+<b>오늘의 영화 화면</b>
 
-- 메인 화면
+- 약 1000개의 영화 중 랜덤으로 오늘의 영화를 추천
+- 영화의 포스터, 제목, 평점, 개봉일자 확인 가능
+  ![Untitled 11.png](README_asset/WWM_TODAY.gif)
 
-  - 처음 들어올 시 사이트 로고와 particle.js 를 활용한 우주 배경을 통해 사이트 안내
-  - Enter 버튼 클릭 시 login 화면으로 이동
+###
 
-![Untitled 11.png](README_asset/WWM_POPULAR.gif)
+<b>인기영화 화면</b>
 
-- 메인 화면
+- 약 1000여개의 영화 중 관객 수 기준으로 인기 영화 목록 제공
+- 포스터 토글 시 제목, 줄거리, 개봉일자 확인 가능
+- 포스터 클릭 시 영화 세부 내용
+  ![Untitled 11.png](README_asset/WWM_POPULAR.gif)
 
-  - 처음 들어올 시 사이트 로고와 particle.js 를 활용한 우주 배경을 통해 사이트 안내
-  - Enter 버튼 클릭 시 login 화면으로 이동
+###
 
-![Untitled 11.png](README_asset/WWM_WEATHER.gif)
+<b>날씨 기반 추천 영화 화면</b>
 
-- 메인 화면
+- 현재 날씨를 기반으로 영화 추천
+- 예) 맑은 날 -> 로맨스, 애니메이션 등
+  ![Untitled 11.png](README_asset/WWM_WEATHER.gif)
 
-  - 처음 들어올 시 사이트 로고와 particle.js 를 활용한 우주 배경을 통해 사이트 안내
-  - Enter 버튼 클릭 시 login 화면으로 이동
+##
 
 ### 7-5. 커뮤니티
 
-![Untitled 11.png](README_asset/WWM_REVIEW.gif)
+<b>영화 리뷰 기능</b>
 
-- 메인 화면
+- 영화에 대한 리뷰 CRUD 기능 제공
+- 본인의 아이디 일때만 수정/삭제 가능
+  ![Untitled 11.png](README_asset/WWM_REVIEW.gif)
 
-  - 처음 들어올 시 사이트 로고와 particle.js 를 활용한 우주 배경을 통해 사이트 안내
-  - Enter 버튼 클릭 시 login 화면으로 이동
+###
 
-![Untitled 11.png](README_asset/WWM_COMENT.gif)
+<b>영화 리뷰 댓글 기능</b>
 
-- 메인 화면
+- 영화에 대한 리뷰 댓글 CRUD 기능 제공
+- 본인의 아이디 일때만 수정/삭제 가능
+  ![Untitled 11.png](README_asset/WWM_COMENT.gif)
 
-  - 처음 들어올 시 사이트 로고와 particle.js 를 활용한 우주 배경을 통해 사이트 안내
-  - Enter 버튼 클릭 시 login 화면으로 이동
+###
 
-![Untitled 11.png](README_asset/WWM_LIKE.gif)
+<b>영화 좋아요 기능</b>
 
-- 메인 화면
+- ♥ 버튼 클릭시 영화 '좋아요'
+- '좋아요' 한 영화는 'LIKED'에서 확인 가능
+- ♥ 버튼 재클릭시 '좋아요' 목록에서 삭제
+  ![Untitled 11.png](README_asset/WWM_LIKE.gif)
 
-  - 처음 들어올 시 사이트 로고와 particle.js 를 활용한 우주 배경을 통해 사이트 안내
-  - Enter 버튼 클릭 시 login 화면으로 이동
+##
 
 ### 7-6. 추가 기능
 
-![Untitled 11.png](README_asset/WWM_FAVORITE.gif)
+<b>영화 월드컵 기능</b>
 
-- 메인 화면
-
-  - 처음 들어올 시 사이트 로고와 particle.js 를 활용한 우주 배경을 통해 사이트 안내
-  - Enter 버튼 클릭 시 login 화면으로 이동
-
-![Untitled 11.png](README_asset/WWM_LIKE.gif)
-
-- 에러 화면
-
-  - 처음 들어올 시 사이트 로고와 particle.js 를 활용한 우주 배경을 통해 사이트 안내
-  - Enter 버튼 클릭 시 login 화면으로 이동
+- '좋아요' 순으로 상위 64개 영화를 통해 16강 / 8강 선택
+- 두 영화 중 하나를 골라 최종 영화 선택
+  ![Untitled 11.png](README_asset/WWM_FAVORITE.gif)
