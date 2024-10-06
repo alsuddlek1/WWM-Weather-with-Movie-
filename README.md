@@ -29,7 +29,7 @@
 
 ### 개발 Tool
 
-- Back-end : Pythohn, Django REST Framework, Django-alluth, Django-cors-headers
+- Back-end : Python, Django REST Framework, Django-alluth, Django-cors-headers
 - DB : SQLite
 - Front-end : Vue.js, Vuex, CSS
 
